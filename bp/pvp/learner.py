@@ -52,26 +52,30 @@ class Buffer:
         return {k: np.concatenate(v) for k, v in out.items()}
 
 
+INT_KEYS = ("pet_int", "ab_int", "aura_int", "opp_act")
+
+
 def load_shard(path):
+    """A shard kept in its compact on-disk types (float16 / int8 / uint8): the replay buffer holds
+    millions of samples, float32 / int64 copies needed ~4x the memory (the PC swapped). batch()
+    converts only the sampled rows."""
     with np.load(path) as f:
         d = {k: f[k] for k in f.files}
-    for k in KEYS:
-        if k in ("pet_int", "ab_int", "aura_int"):
-            d[k] = d[k].astype(np.int64)
-        else:
-            d[k] = d[k].astype(np.float32)
     from .features import N_ABF, N_PET
     for k, n in (("pet_float", N_PET), ("ab_float", N_ABF)):  # shards from before the hint features
         if d[k].shape[-1] < n:
-            d[k] = np.concatenate([d[k], np.zeros(d[k].shape[:-1] + (n - d[k].shape[-1],), np.float32)], -1)
-    for k in ("mask", "pi", "q", "lo_y"):
-        d[k] = d[k].astype(np.float32)
-    d["z"] = d["z"].astype(np.float32)
-    d["zd"] = d["zd"].astype(np.float32) if "zd" in d else d["z"]
+            d[k] = np.concatenate([d[k], np.zeros(d[k].shape[:-1] + (n - d[k].shape[-1],), d[k].dtype)], -1)
+    if "zd" not in d:
+        d["zd"] = d["z"]
     # playout-cap randomisation (actor_rs): only deeply searched decisions train the policy
-    d["pw"] = d["pw"].astype(np.float32) if "pw" in d else np.ones(len(d["z"]), np.float32)
-    d["opp_act"] = d["opp_act"].astype(np.int64)
+    if "pw" not in d:
+        d["pw"] = np.ones(len(d["z"]), np.uint8)
     return d
+
+
+def batch_types(b):
+    """Sampled rows -> the types the network / losses use."""
+    return {k: (v.astype(np.int64) if k in INT_KEYS else v.astype(np.float32)) for k, v in b.items()}
 
 
 def main():
@@ -160,7 +164,7 @@ def main():
             continue
         # one optimizer step
         t_step = time.time()
-        batch = buf.sample(args.mb, rng)
+        batch = batch_types(buf.sample(args.mb, rng))
         net.train()
         opt.zero_grad(set_to_none=True)
         for s0 in range(0, args.mb, args.micro):
@@ -224,6 +228,8 @@ def main():
                 except Exception as ex:
                     print("bench error", ex, flush=True)
             if upd % 10 == 0:
+                torch.cuda.empty_cache()  # bench / exam batches reserve GPU memory; on Windows that also
+                # counts as committed RAM (the PC swapped with the actor on the same GPU)
                 for k, v in tactics.evaluate(net, suite).items():
                     if k != "n":
                         row[f"tac_{k}"] = v

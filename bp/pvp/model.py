@@ -172,8 +172,8 @@ def infer(net, obs, mask, device="cuda", chunk=4096, fixed=False):
                 a = obs[k][rows]
                 if k.startswith("aura"):
                     a = a[:, :na]
-                x[k] = torch.from_numpy(np.ascontiguousarray(a)).to(device, non_blocking=True)
-            m = torch.from_numpy(np.ascontiguousarray(mask[rows])).to(device, non_blocking=True)
+                x[k] = torch.from_numpy(np.ascontiguousarray(a)).to(device)
+            m = torch.from_numpy(np.ascontiguousarray(mask[rows])).to(device)
             logits, v, _, lo = net(x)
             pols[idx] = torch.softmax(masked(logits, m), -1).float().cpu().numpy()[:b]
             vals[idx] = v.float().cpu().numpy()[:b]

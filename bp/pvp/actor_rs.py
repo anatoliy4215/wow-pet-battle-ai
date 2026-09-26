@@ -156,6 +156,8 @@ def main():
                 print("reload failed:", e, flush=True)
         if now - last_log > 60:
             last_log = now
+            if device == "cuda":
+                torch.cuda.empty_cache()  # give cached blocks back: the learner shares this GPU
             m = (now - t0) / 60
             req, uniq = [sum(x) for x in zip(*dstats)]
             print(f"{m:.0f} min: {n_games} games, {n_samples} samples, {n_evals / (now - t0):,.0f} evals/s, "
