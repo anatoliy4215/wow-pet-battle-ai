@@ -190,6 +190,13 @@ impl Search {
                 self.prior = r0.pol;
                 self.value = r0.val;
                 self.lo = r0.lo;
+                if self.legal.len() > 1 && self.worlds.is_empty() {
+                    // no look-ahead (k = 0, the cheap decisions): play the network's own policy
+                    self.pi = self.prior;
+                    self.chosen = sample(&self.prior, rng);
+                    self.finish_done();
+                    return;
+                }
                 if self.legal.len() <= 1 {
                     self.pi = [0.0; 7];
                     self.chosen = *self.legal.first().unwrap_or(&A_PASS);
@@ -591,6 +598,35 @@ impl Pool {
     pub fn total_reqs(&self) -> usize {
         self.last_counts.iter().sum()
     }
+}
+
+/// Identical requests (same position seen by the same side: worlds without hidden abilities,
+/// rounds without dice) are sent to the network once. -> (unique requests, index of each request
+/// into the unique list)
+pub fn dedup<'a>(reqs: impl Iterator<Item = &'a Req>) -> (Vec<&'a Req>, Vec<u32>) {
+    use std::collections::HashMap;
+    let mut uniq: Vec<&'a Req> = Vec::new();
+    let mut by_hash: HashMap<u64, Vec<u32>> = HashMap::new();
+    let mut map = Vec::new();
+    for r in reqs {
+        let h = r.obs.hash(&r.mask);
+        let cands = by_hash.entry(h).or_default();
+        let found = cands.iter().copied().find(|&i| {
+            let u = uniq[i as usize];
+            u.mask == r.mask && u.obs == r.obs
+        });
+        let idx = match found {
+            Some(i) => i,
+            None => {
+                uniq.push(r);
+                let i = (uniq.len() - 1) as u32;
+                cands.push(i);
+                i
+            }
+        };
+        map.push(idx);
+    }
+    (uniq, map)
 }
 
 // ------------------------------------------------------------------------------------ helpers for python

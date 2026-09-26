@@ -28,7 +28,7 @@ def main():
     ap.add_argument("--threads", type=int, default=max(1, (os.cpu_count() or 2) - 2))
     ap.add_argument("--envs", type=int, default=256, help="battles per pool (two pools)")
     ap.add_argument("--k-deep", type=int, default=8)
-    ap.add_argument("--k-cheap", type=int, default=4)
+    ap.add_argument("--k-cheap", type=int, default=0, help="worlds for the cheap decisions (0: play the policy, no look-ahead)")
     ap.add_argument("--depth-deep", type=int, default=2)
     ap.add_argument("--deep", type=float, default=0.25, help="share of decisions searched deep")
     ap.add_argument("--tau", type=float, default=0.2)
@@ -42,7 +42,7 @@ def main():
     import torch
     from ..sim.rust import export_state, module, spec_tuple
     from .env import PvPEnv
-    from .model import load as load_net, masked
+    from .model import infer, load as load_net
     from .pool import TeamSampler
     from .scenarios import start as scenario_start
 
@@ -86,16 +86,7 @@ def main():
         return res
 
     def evaluate(obs, mask):
-        pols, vals, los = [], [], []
-        with torch.no_grad(), torch.autocast(device, dtype=torch.float16, enabled=device == "cuda"):
-            for s in range(0, len(mask), 4096):
-                x = {k: torch.from_numpy(obs[k][s:s + 4096]).to(device, non_blocking=True) for k in KEYS}
-                m = torch.from_numpy(mask[s:s + 4096]).to(device, non_blocking=True)
-                logits, v, _, lo = net(x)
-                pols.append(torch.softmax(masked(logits, m), -1).float())
-                vals.append(v.float())
-                los.append(torch.sigmoid(lo.float()))
-        return (torch.cat(pols).cpu().numpy(), torch.cat(vals).cpu().numpy(), torch.cat(los).cpu().numpy())
+        return infer(net, obs, mask, device)
 
     pools = [bpsim.ActorPool(args.envs, seed=seed * 10 + i, k_deep=args.k_deep, k_cheap=args.k_cheap,
                              depth_deep=args.depth_deep, deep_frac=args.deep, tau=args.tau) for i in range(2)]
@@ -160,7 +151,9 @@ def main():
         if now - last_log > 60:
             last_log = now
             m = (now - t0) / 60
+            req, uniq = [sum(x) for x in zip(*(p.dedup_stats() for p in pools))]
             print(f"{m:.0f} min: {n_games} games, {n_samples} samples, {n_evals / (now - t0):,.0f} evals/s, "
+                  f"{uniq / max(1, n_samples):.1f} evals/decision ({1 - uniq / max(1, req):.0%} merged), "
                   f"{len(list(out.glob('*.npz')))} shards waiting", flush=True)
         if (args.hours and now - t0 > args.hours * 3600) or (stop_file.exists() and stop_file.stat().st_mtime > t0):
             for f in futs:

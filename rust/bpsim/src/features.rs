@@ -24,7 +24,7 @@ const WEAK_MULT: f64 = 0.66;
 const S_ACCURACY: i64 = 41;
 const S_DODGE: i64 = 73;
 
-#[derive(Clone)]
+#[derive(Clone, PartialEq)]
 pub struct Obs {
     pub glob: [f32; N_GLOB],
     pub pet_int: [i64; 6],
@@ -38,6 +38,51 @@ pub struct Obs {
 }
 
 impl Obs {
+    /// Hash of every input value (for merging identical requests before the network).
+    pub fn hash(&self, mask: &[f32; 7]) -> u64 {
+        let mut h: u64 = 0xcbf2_9ce4_8422_2325;
+        let mut mix = |x: u64| {
+            h ^= x;
+            h = h.wrapping_mul(0x0100_0000_01b3);
+            h ^= h >> 29;
+        };
+        for &v in self.glob.iter().chain(mask.iter()) {
+            mix(v.to_bits() as u64);
+        }
+        for &v in &self.pet_int {
+            mix(v as u64);
+        }
+        for r in &self.pet_float {
+            for &v in r {
+                mix(v.to_bits() as u64);
+            }
+        }
+        for r in &self.ab_int {
+            for &v in r {
+                mix(v as u64);
+            }
+        }
+        for r in &self.ab_float {
+            for &v in r {
+                mix(v.to_bits() as u64);
+            }
+        }
+        for r in &self.aura_int {
+            for &v in r {
+                mix(v as u64);
+            }
+        }
+        for r in &self.aura_float {
+            for &v in r {
+                mix(v.to_bits() as u64);
+            }
+        }
+        for &v in self.ab_mask.iter().chain(self.aura_mask.iter()) {
+            mix(v.to_bits() as u64);
+        }
+        h
+    }
+
     fn zero() -> Obs {
         Obs {
             glob: [0.0; N_GLOB],

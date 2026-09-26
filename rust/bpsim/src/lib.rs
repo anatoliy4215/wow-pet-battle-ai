@@ -161,6 +161,8 @@ fn read_replies(pol: PyReadonlyArray2<f32>, val: PyReadonlyArray1<f32>, lo: PyRe
 struct PyActorPool {
     pool: search::Pool,
     seed_rng: rng::PyRandom,
+    map: Vec<u32>, // request -> unique request of the last requests() call
+    stats: (u64, u64), // (requests, unique requests) so far
 }
 
 #[pymethods]
@@ -170,7 +172,7 @@ impl PyActorPool {
     #[allow(clippy::too_many_arguments)]
     fn new(n_envs: usize, seed: u64, k_deep: usize, k_cheap: usize, depth_deep: usize, deep_frac: f64, tau: f32, gamma: f64) -> Self {
         let cfg = search::Cfg { k_deep, k_cheap, depth_deep, deep_frac, tau, gamma };
-        PyActorPool { pool: search::Pool::new(n_envs, seed, cfg), seed_rng: rng::PyRandom::new(seed ^ 0xabcdef) }
+        PyActorPool { pool: search::Pool::new(n_envs, seed, cfg), seed_rng: rng::PyRandom::new(seed ^ 0xabcdef), map: Vec::new(), stats: (0, 0) }
     }
 
     /// starts: [(team_a, team_b, state or None)]; None = a fresh battle with the lead pick
@@ -204,17 +206,27 @@ impl PyActorPool {
         self.pool.total_reqs()
     }
 
-    fn requests<'py>(&self, py: Python<'py>) -> PyResult<(Bound<'py, PyDict>, Bound<'py, PyAny>)> {
-        let n = self.pool.total_reqs();
-        let ob = search::stack_obs(self.pool.envs.iter().flat_map(|e| e.reqs()), n);
+    /// The unique requests of all battles (identical positions merged), as network input arrays.
+    fn requests<'py>(&mut self, py: Python<'py>) -> PyResult<(Bound<'py, PyDict>, Bound<'py, PyAny>)> {
+        let (uniq, map) = search::dedup(self.pool.envs.iter().flat_map(|e| e.reqs()));
+        self.stats.0 += map.len() as u64;
+        self.stats.1 += uniq.len() as u64;
+        let ob = search::stack_obs(uniq.iter().copied(), uniq.len());
+        self.map = map;
         batch_dict(py, ob)
     }
 
+    /// (requests, unique requests sent to the network) so far
+    fn dedup_stats(&self) -> (u64, u64) {
+        self.stats
+    }
+
     fn reply(&mut self, py: Python<'_>, pol: PyReadonlyArray2<f32>, val: PyReadonlyArray1<f32>, lo: PyReadonlyArray2<f32>) -> PyResult<()> {
-        let replies = read_replies(pol, val, lo)?;
-        if replies.len() != self.pool.total_reqs() {
-            return Err(PyValueError::new_err(format!("{} replies for {} requests", replies.len(), self.pool.total_reqs())));
+        let uniq = read_replies(pol, val, lo)?;
+        if self.map.len() != self.pool.total_reqs() || self.map.iter().any(|&i| i as usize >= uniq.len()) {
+            return Err(PyValueError::new_err(format!("{} replies do not fit {} requests", uniq.len(), self.pool.total_reqs())));
         }
+        let replies: Vec<search::Reply> = self.map.iter().map(|&i| uniq[i as usize]).collect();
         let pool = &mut self.pool;
         py.allow_threads(|| pool.work(&replies));
         Ok(())
@@ -269,6 +281,7 @@ impl PyActorPool {
 struct PySearch {
     s: search::Search,
     rng: rng::PyRandom,
+    map: Vec<u32>,
 }
 
 #[pymethods]
@@ -286,7 +299,7 @@ impl PySearch {
             a
         });
         let s = search::Search::new(&battle.b, side, phase, k, depth, tau, lo, &mut rng, true);
-        PySearch { s, rng }
+        PySearch { s, rng, map: Vec::new() }
     }
 
     #[getter]
@@ -294,15 +307,19 @@ impl PySearch {
         self.s.done()
     }
 
-    fn requests<'py>(&self, py: Python<'py>) -> PyResult<(Bound<'py, PyDict>, Bound<'py, PyAny>)> {
-        batch_dict(py, search::stack_obs(self.s.reqs.iter(), self.s.reqs.len()))
+    fn requests<'py>(&mut self, py: Python<'py>) -> PyResult<(Bound<'py, PyDict>, Bound<'py, PyAny>)> {
+        let (uniq, map) = search::dedup(self.s.reqs.iter());
+        let ob = search::stack_obs(uniq.iter().copied(), uniq.len());
+        self.map = map;
+        batch_dict(py, ob)
     }
 
     fn reply(&mut self, py: Python<'_>, pol: PyReadonlyArray2<f32>, val: PyReadonlyArray1<f32>, lo: PyReadonlyArray2<f32>) -> PyResult<()> {
-        let replies = read_replies(pol, val, lo)?;
-        if replies.len() != self.s.reqs.len() {
+        let uniq = read_replies(pol, val, lo)?;
+        if self.map.len() != self.s.reqs.len() || self.map.iter().any(|&i| i as usize >= uniq.len()) {
             return Err(PyValueError::new_err("reply count does not match the requests"));
         }
+        let replies: Vec<search::Reply> = self.map.iter().map(|&i| uniq[i as usize]).collect();
         let (s, rng) = (&mut self.s, &mut self.rng);
         py.allow_threads(|| s.advance(&replies, rng));
         Ok(())

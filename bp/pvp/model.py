@@ -58,7 +58,17 @@ class PvPNet(nn.Module):
         self.loadout_head = mlp(2 * d)
 
     def _abil(self, ids):
-        return self.ability(ids) + self.desc_proj(self.desc[ids])
+        if self.training or torch.is_grad_enabled():
+            return self.ability(ids) + self.desc_proj(self.desc[ids])
+        # inference: one table lookup instead of a projection per token (rebuilt after train())
+        if getattr(self, "_abil_table", None) is None:
+            with torch.autocast(ids.device.type, enabled=False):
+                self._abil_table = (self.ability.weight + self.desc_proj(self.desc)).detach()
+        return self._abil_table[ids]
+
+    def train(self, mode=True):
+        self._abil_table = None
+        return super().train(mode)
 
     def forward(self, o):
         B = o["glob"].shape[0]
@@ -69,10 +79,13 @@ class PvPNet(nn.Module):
         pets = self.family(o["pet_int"]) + self.pet_slot(slots) + self.pet_float(o["pet_float"][..., :self.n_pet]) + t[1]
         ai = o["ab_int"]
         abil = self._abil(ai[..., 0]) + self.pet_slot(ai[..., 1]) + self.ab_slot(ai[..., 2]) + self.ab_float(o["ab_float"][..., :self.n_abf]) + t[2]
-        ui = o["aura_int"]
-        aura = self._abil(ui[..., 0]) + self.holder(ui[..., 1]) + self.aura_float(o["aura_float"]) + t[3]
+        # aura slots are filled from the front: drop the ones no position in the batch uses
+        # (masked keys do not change anything; exact)
+        n_au = int(o["aura_mask"].sum(1).max().item()) if o["aura_mask"].shape[0] else 0
+        ui = o["aura_int"][:, :n_au]
+        aura = self._abil(ui[..., 0]) + self.holder(ui[..., 1]) + self.aura_float(o["aura_float"][:, :n_au]) + t[3]
         x = torch.cat([g, pets, abil, aura], 1)
-        pad = torch.cat([torch.zeros(B, 7, dtype=torch.bool, device=dev), o["ab_mask"] < 0.5, o["aura_mask"] < 0.5], 1)
+        pad = torch.cat([torch.zeros(B, 7, dtype=torch.bool, device=dev), o["ab_mask"] < 0.5, o["aura_mask"][:, :n_au] < 0.5], 1)
         h = self.norm(self.encoder(x, src_key_padding_mask=pad))
         hg, hp, ha = h[:, 0], h[:, 1:7], h[:, 7:7 + N_ABIL]
         # own active pet (pet_float[:, :, 6] = active flag); in the lead phase nobody is active
@@ -121,3 +134,25 @@ def masked(logits, mask):
 
 
 assert MAX_AURAS > 0
+
+
+def infer(net, obs, mask, device="cuda", chunk=4096):
+    """Batch evaluation for the actors / advisor: numpy in, numpy out (policy, value, loadout).
+    Positions are sorted by how many aura slots they use, so each chunk only carries the aura
+    tokens it needs (the model drops the unused tail); fp16 autocast."""
+    from .features import KEYS
+    n = len(mask)
+    order = np.argsort(obs["aura_mask"].sum(1), kind="stable")
+    pols = np.empty((n, 7), np.float32)
+    vals = np.empty(n, np.float32)
+    los = np.empty((n, 9), np.float32)
+    with torch.no_grad(), torch.autocast(device, dtype=torch.float16, enabled=device == "cuda"):
+        for s in range(0, n, chunk):
+            idx = order[s:s + chunk]
+            x = {k: torch.from_numpy(np.ascontiguousarray(obs[k][idx])).to(device, non_blocking=True) for k in KEYS}
+            m = torch.from_numpy(np.ascontiguousarray(mask[idx])).to(device, non_blocking=True)
+            logits, v, _, lo = net(x)
+            pols[idx] = torch.softmax(masked(logits, m), -1).float().cpu().numpy()
+            vals[idx] = v.float().cpu().numpy()
+            los[idx] = torch.sigmoid(lo.float()).cpu().numpy()
+    return pols, vals, los

@@ -163,11 +163,8 @@ class RustSearcher(Searcher):
     after it (Searcher depth=1 == RustSearcher depth=2)."""
 
     def _net(self, obs, mask):
-        with torch.no_grad(), torch.autocast("cuda", dtype=torch.float16):
-            x = {k_: torch.from_numpy(obs[k_]).to(self.device) for k_ in KEYS}
-            logits, v, _, lo = self.net(x)
-            p = torch.softmax(masked(logits, torch.from_numpy(mask).to(self.device)), -1)
-        return p.float().cpu().numpy(), v.float().cpu().numpy(), torch.sigmoid(lo.float()).cpu().numpy()
+        from .model import infer
+        return infer(self.net, obs, mask, self.device)
 
     def evaluate(self, battle, side, phase=PHASE_ROUND, k=16, depth=2, seed=0, max_rounds=100, lo=None):
         from ..sim.rust import module, to_rust
