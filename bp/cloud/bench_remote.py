@@ -97,7 +97,7 @@ def gpu_bench():
     B = 1024
     batch = {k: torch.as_tensor(np.stack([o[k]] * B)).to(dev) for k in KEYS}
     net.eval()
-    with torch.no_grad(), torch.autocast("cuda", dtype=torch.bfloat16):
+    with torch.no_grad(), torch.autocast("cuda", dtype=torch.float16):
         for _ in range(3):
             net(batch)
         torch.cuda.synchronize()
@@ -112,7 +112,7 @@ def gpu_bench():
         if i == 2:
             torch.cuda.synchronize()
             t = time.time()
-        with torch.autocast("cuda", dtype=torch.bfloat16):
+        with torch.autocast("cuda", dtype=torch.float16):
             lg, v, op, lo = net(batch)
             loss = lg.float().mean() + v.float().mean() + op.float().mean() + lo.float().mean()
         opt.zero_grad()

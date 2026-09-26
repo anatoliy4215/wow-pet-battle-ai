@@ -38,6 +38,16 @@ AVOID = ("CN", "China")
 # Ampere or newer: the image's PyTorch (CUDA 12.8) and bf16 inference need it
 GPU_OK = re.compile(r"RTX (30|40|50)\d\d|RTX A\d000|^A(10|40|4000|5000|6000)\b|^L4|RTX [456]000 Ada")
 STOP_FILE = ROOT / "logs" / "STOP_FLEET"
+BUILD_RUST = ("set -e; export DEBIAN_FRONTEND=noninteractive; "
+              "(command -v cc >/dev/null && command -v curl >/dev/null) || "
+              "(apt-get update -qq && apt-get install -y -qq build-essential curl >/dev/null); "
+              "[ -x $HOME/.cargo/bin/cargo ] || curl -sSf https://sh.rustup.rs | sh -s -- -y -q --profile minimal; "
+              "export PATH=$HOME/.cargo/bin:$PATH; PY=$(command -v python); "
+              "$PY -m pip install -q maturin 2>/dev/null || $PY -m pip install -q --break-system-packages maturin; "
+              "cd /root/bp/rust/bpsim && $PY -m maturin build --release -q -i $PY 2>&1 | tail -3; "
+              "($PY -m pip install -q --force-reinstall --no-deps target/wheels/*.whl 2>/dev/null || "
+              "$PY -m pip install -q --break-system-packages --force-reinstall --no-deps target/wheels/*.whl) && "
+              "cd /root/bp && python -c 'import bpsim; print(\"bpsim ok\")'")
 ACTOR_STOP = ROOT / "logs" / "STOP_ACTORS"
 
 
@@ -55,7 +65,10 @@ def cpu_speed(name):
 
 
 def offer_score(o):
-    return (o.get("cpu_cores_effective") or 0) * cpu_speed(o.get("cpu_name")) / max(0.01, o["dph_total"])
+    """Expected samples per dollar. Since the actor runs on the Rust engine (bp.pvp.actor_rs) the
+    network on the GPU is the bottleneck: vast.ai's DL performance score per $/h; a few cores are
+    enough (checked by min_cores)."""
+    return (o.get("dlperf") or 0) / max(0.01, o["dph_total"])
 
 
 def load_state():
@@ -114,9 +127,12 @@ def _setup_box(iid, inst, offer, files, hours):
         vast.scp_to(inst, f, "/root/")
     workers = max(2, min(40, int(offer.get("cpu_cores_effective") or 4) - 1))
     vast.ssh(inst, "mkdir -p /root/bp /root/shards && cd /root/bp && tar xzf /root/bp_bundle.tar.gz && "
-                   "cp /root/fleet_weights_fp16.pt /root/w.pt && "
-                   f"(nohup timeout {int(hours * 3600)} python -m bp.pvp.actor --weights /root/w.pt --out /root/shards "
-                   f"--workers {workers} --envs 24 > /root/actor.log 2>&1 &) ; sleep 1; echo started")
+                   "cp /root/fleet_weights_fp16.pt /root/w.pt && echo ok", timeout=300)
+    # the Rust engine (bpsim): build it on the box (toolchain + wheel, ~2-4 min)
+    vast.ssh(inst, BUILD_RUST, timeout=1200)
+    vast.ssh(inst, "cd /root/bp && "
+                   f"(nohup timeout {int(hours * 3600)} python -m bp.pvp.actor_rs --weights /root/w.pt --out /root/shards "
+                   f"--threads {workers} > /root/actor.log 2>&1 &) ; sleep 1; echo started")
     return iid, inst["_ssh"], workers
 
 
@@ -179,9 +195,11 @@ def cmd_redeploy(a):
             left = max(0.5, a.hours - (time.time() - b["started"]) / 3600)
             # kill and start in separate sessions: a pkill pattern must not match its own shell's command line
             vast.ssh(inst, "pkill -f '[b]p[.]pvp[.]actor'; sleep 3; echo killed", timeout=60, check=False)
-            vast.ssh(inst, "cd /root/bp && tar xzf /root/bp_bundle.tar.gz && "
-                           f"(nohup timeout {int(left * 3600)} python -m bp.pvp.actor --weights /root/w.pt --out /root/shards "
-                           f"--workers {b['workers']} --envs 24 > /root/actor.log 2>&1 &) ; sleep 1; echo restarted", timeout=120)
+            vast.ssh(inst, "cd /root/bp && tar xzf /root/bp_bundle.tar.gz && echo ok", timeout=120)
+            vast.ssh(inst, BUILD_RUST, timeout=1200)
+            vast.ssh(inst, "cd /root/bp && "
+                           f"(nohup timeout {int(left * 3600)} python -m bp.pvp.actor_rs --weights /root/w.pt --out /root/shards "
+                           f"--threads {b['workers']} > /root/actor.log 2>&1 &) ; sleep 1; echo restarted", timeout=120)
             print("redeployed", iid, flush=True)
         except Exception as ex:
             print("redeploy failed", iid, str(ex)[:150], flush=True)
@@ -365,7 +383,7 @@ def main():
     ap.add_argument("--every", type=int, default=180)
     ap.add_argument("--target", type=int, default=0, help="run: keep this many boxes (rents / replaces them itself)")
     ap.add_argument("--until", type=float, default=0, help="run: stop everything after this many hours")
-    ap.add_argument("--min-cores", type=int, default=12)
+    ap.add_argument("--min-cores", type=int, default=6)
     a = ap.parse_args()
     {"start": cmd_start, "run": cmd_run_safe, "status": cmd_status, "stop": cmd_stop, "redeploy": cmd_redeploy}[a.cmd](a)
 

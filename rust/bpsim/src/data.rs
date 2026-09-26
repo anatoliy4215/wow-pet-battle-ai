@@ -89,6 +89,8 @@ pub struct Ability {
     pub block_count: i64,
     pub needs_corpse: bool,
     pub writes: Vec<i64>, // states written by ops 31 / 79 / 360
+    pub d13: f32,         // abilityinfo.descriptor(aid)[13]
+    pub first_acc: Option<i64>, // Accuracy of the first main-turn effect that has one (probe.hit_chance)
 }
 
 impl Ability {
@@ -111,6 +113,7 @@ pub struct Species {
     pub name: String,
     pub family: i64,
     pub states: Vec<(i64, i64)>,
+    pub abilities: Vec<Vec<u32>>, // options per slot
 }
 
 pub struct GameData {
@@ -152,12 +155,16 @@ struct JAbility {
     turns: Vec<JTurn>,
     plan: Vec<(usize, usize, String)>,
     chain: Vec<(usize, usize)>,
+    #[serde(default)]
+    d13: f64,
 }
 #[derive(Deserialize)]
 struct JSpecies {
     name: String,
     family: i64,
     states: Vec<(i64, i64)>,
+    #[serde(default)]
+    abilities: Vec<Vec<i64>>,
 }
 #[derive(Deserialize)]
 struct JAll {
@@ -225,6 +232,7 @@ pub fn load(path: &str) -> Result<GameData, String> {
         let needs_corpse = main.first().map(|&i| turns[i].effects.first().map(|e| e.op == 144).unwrap_or(false)).unwrap_or(false);
         let st = |sid: i64| a.states.iter().find(|(k, _)| *k == sid).map(|(_, v)| *v).unwrap_or(0);
         let is_object = st(S_OBJECT) != 0 || st(S_BOMB) != 0;
+        let first_acc = main.first().and_then(|&i| turns[i].effects.iter().find_map(|e| e.p.get(K::Accuracy)));
         let block_count = st(S_BLOCK_COUNT);
         abilities[id as usize] = Some(Ability {
             id,
@@ -238,12 +246,17 @@ pub fn load(path: &str) -> Result<GameData, String> {
             block_count,
             needs_corpse,
             writes,
+            d13: a.d13 as f32,
+            first_acc,
         });
     }
     let species = all
         .species
         .into_iter()
-        .map(|(k, s)| (k.parse::<u32>().unwrap_or(0), Species { name: s.name, family: s.family, states: s.states }))
+        .map(|(k, s)| {
+            let abilities = s.abilities.iter().map(|o| o.iter().map(|&x| x.max(0) as u32).collect()).collect();
+            (k.parse::<u32>().unwrap_or(0), Species { name: s.name, family: s.family, states: s.states, abilities })
+        })
         .collect();
     Ok(GameData { abilities, species })
 }

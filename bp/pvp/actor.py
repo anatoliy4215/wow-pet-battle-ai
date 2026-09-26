@@ -298,7 +298,7 @@ def main():
         if parts:
             obs = {k: np.concatenate([m[1][k] for m in parts]) for k in KEYS}
             mask = np.concatenate([m[2] for m in parts])
-            with torch.no_grad(), torch.autocast(device, dtype=torch.bfloat16, enabled=device == "cuda"):
+            with torch.no_grad(), torch.autocast(device, dtype=torch.float16, enabled=device == "cuda"):
                 pol_all, val_all, lo_all = [], [], []
                 for s in range(0, len(mask), 4096):
                     x = {k: torch.as_tensor(obs[k][s:s + 4096], device=device) for k in KEYS}

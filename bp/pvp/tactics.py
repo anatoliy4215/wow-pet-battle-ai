@@ -129,7 +129,7 @@ def _probs(net, pairs, device="cuda"):
     obs = [p[0] for p in pairs]
     masks = [p[1] for p in pairs]
     out = []
-    with torch.no_grad(), torch.autocast("cuda", dtype=torch.bfloat16):
+    with torch.no_grad(), torch.autocast("cuda", dtype=torch.float16):
         for i in range(0, len(obs), 1024):
             x = {k: torch.as_tensor(np.stack([o[k] for o in obs[i:i + 1024]]), device=device) for k in KEYS}
             m = torch.as_tensor(np.stack(masks[i:i + 1024]), device=device)

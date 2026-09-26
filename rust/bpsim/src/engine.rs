@@ -4,7 +4,6 @@
 
 use crate::data::{gd, Ability, Code, Effect, Params, K};
 use crate::rng::PyRandom;
-use std::collections::HashMap;
 
 // ------------------------------------------------------------------------------------ constants
 pub const HUMANOID: i64 = 0;
@@ -231,7 +230,7 @@ pub struct Battle {
     actors: Option<[PetRef; 2]>,
     fire_depth: u32,
     // bp.pvp.probe support
-    pub probe_counts: Option<HashMap<(u8, usize), i64>>,
+    pub probe_counts: Option<Vec<(u8, usize, i64)>>,
     pub probe_expect: bool,
     hit_scale: Option<f64>,
 }
@@ -456,7 +455,10 @@ impl Battle {
     }
     fn probe_count(&mut self, kind: u8, r: PetRef) {
         if let Some(c) = self.probe_counts.as_mut() {
-            *c.entry((kind, r.side)).or_insert(0) += 1;
+            match c.iter_mut().find(|(k, s, _)| *k == kind && *s == r.side) {
+                Some(x) => x.2 += 1,
+                None => c.push((kind, r.side, 1)),
+            }
         }
     }
 
@@ -1170,7 +1172,10 @@ impl Battle {
             self.hit_scale = Some(s);
             if s < 1.0 {
                 if let Some(c) = self.probe_counts.as_mut() {
-                    c.insert((PROBE_ROLLED, target.side), 1);
+                    match c.iter_mut().find(|(k, s, _)| *k == PROBE_ROLLED && *s == target.side) {
+                        Some(x) => x.2 = 1,
+                        None => c.push((PROBE_ROLLED, target.side, 1)),
+                    }
                 }
             }
             return true;

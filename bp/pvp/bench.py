@@ -76,7 +76,7 @@ def play(net, opponent, pairs, seed=0, record=0, device="cuda"):
                     acts.setdefault(i, {})[s] = bot.act(e.battle, s, e.phase, rng)
                 continue
             obs, masks = zip(*[e.observe(s) for _, e, s in mine])
-            with torch.no_grad(), torch.autocast("cuda", dtype=torch.bfloat16):
+            with torch.no_grad(), torch.autocast("cuda", dtype=torch.float16):
                 x = {k: torch.as_tensor(np.stack([o[k] for o in obs]), device=device) for k in KEYS}
                 logits, v, _, _ = pl(x)
                 a = torch.distributions.Categorical(

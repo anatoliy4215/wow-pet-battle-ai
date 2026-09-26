@@ -69,7 +69,7 @@ class Searcher:
         self.net, self.device = net, device
 
     def _run(self, obs, masks):
-        with torch.no_grad(), torch.autocast("cuda", dtype=torch.bfloat16):
+        with torch.no_grad(), torch.autocast("cuda", dtype=torch.float16):
             x = {k: torch.as_tensor(np.stack([o[k] for o in obs]), device=self.device) for k in KEYS}
             logits, v, opp, lo = self.net(x)
             p = torch.softmax(masked(logits, torch.as_tensor(np.stack(masks), device=self.device)), -1)
@@ -155,3 +155,33 @@ def _apply(b, phase, acts):
             a = legal[0] if b.needs_replacement(s) else C.A_PASS
         full.append(a)
     b.step(full[0], full[1])
+
+
+class RustSearcher(Searcher):
+    """The same look-ahead on the Rust engine (bpsim.Search). NOTE the depth: here depth = rounds played
+    in the look-ahead (1 = only the round of the move), while Searcher's depth counts the extra rounds
+    after it (Searcher depth=1 == RustSearcher depth=2)."""
+
+    def _net(self, obs, mask):
+        with torch.no_grad(), torch.autocast("cuda", dtype=torch.float16):
+            x = {k_: torch.from_numpy(obs[k_]).to(self.device) for k_ in KEYS}
+            logits, v, _, lo = self.net(x)
+            p = torch.softmax(masked(logits, torch.from_numpy(mask).to(self.device)), -1)
+        return p.float().cpu().numpy(), v.float().cpu().numpy(), torch.sigmoid(lo.float()).cpu().numpy()
+
+    def evaluate(self, battle, side, phase=PHASE_ROUND, k=16, depth=2, seed=0, max_rounds=100, lo=None):
+        from ..sim.rust import module, to_rust
+        rb = to_rust(battle, seed)
+        if lo is None:  # hidden enemy abilities sampled from the network's current guess
+            o = rb.encode(side, phase)
+            _, _, lo_ = self._net({k_: v[None] for k_, v in o.items()}, rb.action_mask(side, phase)[None])
+            lo = [float(x) for x in lo_[0]]
+        s = module().Search(rb, side, phase, k, depth, 0.2, seed, lo)
+        while not s.done:
+            obs, mask = s.requests()
+            s.reply(*self._net(obs, mask))
+        r = s.result()
+        value = float(r["value"])
+        return {"prior": np.array(r["prior"], dtype=np.float32), "value": value,
+                "q": {int(a): ((float(m), float(se), int(n)) if n else (value, 0.0, 0)) for a, (m, se, n) in r["q"].items()},
+                "loadout": np.array(r["lo"], dtype=np.float32)}

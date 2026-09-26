@@ -75,7 +75,7 @@ class Scorer:
                 b = Battle(t, o, seed=0)
                 obs.append(encode(b, 0, PHASE_LEAD, hide=True))
         vals = []
-        with torch.no_grad(), torch.autocast("cuda", dtype=torch.bfloat16):
+        with torch.no_grad(), torch.autocast("cuda", dtype=torch.float16):
             for i in range(0, len(obs), batch):
                 chunk = obs[i:i + batch]
                 x = {k: torch.as_tensor(np.stack([c[k] for c in chunk]), device=self.device) for k in KEYS}
@@ -142,7 +142,7 @@ def battle_winrate(net, team, opponents, battles=200, device="cuda", seed=0):
         if not live:
             break
         obs, masks = zip(*[e.observe(s) for e, s in live])
-        with torch.no_grad(), torch.autocast("cuda", dtype=torch.bfloat16):
+        with torch.no_grad(), torch.autocast("cuda", dtype=torch.float16):
             x = {k: torch.as_tensor(np.stack([o[k] for o in obs]), device=device) for k in KEYS}
             logits = net(x)[0]
             a = torch.distributions.Categorical(logits=masked(logits, torch.as_tensor(np.stack(masks), device=device))).sample()

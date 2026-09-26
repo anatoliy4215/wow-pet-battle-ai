@@ -68,6 +68,8 @@ def load_shard(path):
         d[k] = d[k].astype(np.float32)
     d["z"] = d["z"].astype(np.float32)
     d["zd"] = d["zd"].astype(np.float32) if "zd" in d else d["z"]
+    # playout-cap randomisation (actor_rs): only deeply searched decisions train the policy
+    d["pw"] = d["pw"].astype(np.float32) if "pw" in d else np.ones(len(d["z"]), np.float32)
     d["opp_act"] = d["opp_act"].astype(np.int64)
     return d
 
@@ -172,7 +174,8 @@ def main():
             with torch.autocast("cuda", dtype=torch.bfloat16):
                 logits, v, opp, lo = net(o)
             logp = torch.log_softmax(masked(logits, m), -1)
-            choice = (m.sum(1) > 1).float()  # a real decision was searched
+            pw = torch.as_tensor(batch["pw"][sl], device=device)
+            choice = (m.sum(1) > 1).float() * pw  # a real decision, searched deep enough to teach the policy
             pl = -((pi_t * logp).sum(1) * choice).sum() / choice.sum().clamp(min=1)
             ent = -(logp.exp() * logp).sum(1).mean()
             vl = F.mse_loss(v.float(), z)

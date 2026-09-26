@@ -145,3 +145,93 @@ def sweep_abilities(games_each=3, seed=7):
                 bad.append((aid, gd.abilities[aid]["name"], err))
                 break
     return bad
+
+
+def export_state(b):
+    """Python battle -> the state tuple of bpsim.Battle.from_state."""
+    snap = snapshot(b)
+    pets = [[row + (p.family,) for row, p in zip(rows, t.pets)] for rows, t in zip(snap[5], b.teams)]
+    return snap[:5] + (pets, getattr(b, "first_side", None))
+
+
+def to_rust(b, seed=0):
+    """A Rust copy of a Python battle in its current state (fresh dice from `seed`)."""
+    rs = module().Battle.from_state([spec_tuple(p.spec) for p in b.teams[0].pets],
+                                    [spec_tuple(p.spec) for p in b.teams[1].pets], export_state(b), seed)
+    return rs
+
+
+def positions(n, seed=1, practice=0.2):
+    """Python battles in all phases (lead pick, rounds, replacements), from games of greedy / random
+    moves, some started from practice positions."""
+    from ..pvp.bots import GreedyBot
+    from ..pvp.env import PvPEnv
+    from ..pvp.pool import TeamSampler
+    from ..pvp.scenarios import start
+    from .clone import fast_clone
+    rng = random.Random(seed)
+    env = PvPEnv(TeamSampler(seed=seed, meta_pet_frac=0.3, meta_team_frac=0.1), seed=seed + 1)
+    bot = GreedyBot()
+    out = []
+    while len(out) < n:
+        if rng.random() < practice:
+            start(env, env.sampler, rng)
+        else:
+            env.reset()
+            out.append((fast_clone(env.battle, 1), env.phase))
+        while not env.done and len(out) < n:
+            acts = {}
+            for s in env.pending():
+                legal = [a for a in range(7) if env.observe(s)[1][a] > 0]
+                acts[s] = rng.choice(legal) if rng.random() < 0.4 else bot.act(env.battle, s, env.phase, rng)
+            env.act(acts)
+            if not env.done:
+                out.append((fast_clone(env.battle, 1), env.phase))
+    return out
+
+
+def compare_encode(n=2000, seed=1):
+    """encode / action_mask of Python vs Rust on the same positions, both sides. -> list of errors."""
+    import numpy as np
+    from ..pvp.features import KEYS, action_mask, encode
+    errs = []
+    for i, (b, phase) in enumerate(positions(n, seed)):
+        rs = to_rust(b)
+        for side in (0, 1):
+            po, ro = encode(b, side, phase), rs.encode(side, phase)
+            for k in KEYS:
+                if po[k].shape != ro[k].shape or not np.array_equal(po[k].astype(ro[k].dtype), ro[k]):
+                    diff = np.argwhere(po[k].astype(ro[k].dtype) != ro[k]) if po[k].shape == ro[k].shape else "shape"
+                    errs.append((i, side, phase, k, diff[:4].tolist() if not isinstance(diff, str) else diff,
+                                 po[k][tuple(diff[0])] if not isinstance(diff, str) and len(diff) else None,
+                                 ro[k][tuple(diff[0])] if not isinstance(diff, str) and len(diff) else None))
+                    break
+            if not np.array_equal(action_mask(b, side, phase), rs.action_mask(side, phase)):
+                errs.append((i, side, phase, "mask"))
+    return errs
+
+
+def compare_continue(n=1000, seed=3, steps=30):
+    """A Python battle moved to Rust mid-game must go on identically (same seed, same moves)."""
+    from .clone import fast_clone
+    errs = []
+    for i, (b, _) in enumerate(positions(n, seed)):
+        py = fast_clone(b, 1000 + i)
+        py.logging, py.log = True, []
+        rs = to_rust(b, 1000 + i)
+        rs.logging = True
+        pick = random.Random(i)
+        for s in range(steps):
+            if py.over:
+                break
+            la, lb = py.legal_actions(0), py.legal_actions(1)
+            if (la, lb) != (list(rs.legal_actions(0)), list(rs.legal_actions(1))):
+                errs.append((i, s, "legal"))
+                break
+            acts = (pick.choice(la), pick.choice(lb))
+            py.step(*acts)
+            rs.step(*acts)
+            if py.log != list(rs.log) or _norm(snapshot(py)) != _norm(rs.snapshot()):
+                errs.append((i, s, "state/log"))
+                break
+    return errs

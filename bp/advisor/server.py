@@ -23,7 +23,7 @@ import torch
 from ..pvp.features import KEYS, PHASE_LEAD, PHASE_REPLACE, action_mask, encode
 from ..pvp.model import masked
 from ..pvp.probe import probe
-from ..pvp.search import Searcher
+from ..pvp.search import RustSearcher
 from ..pvp.teambuilder import load_net
 from ..sim import constants as C
 from ..sim.data import game_data
@@ -80,7 +80,7 @@ class Advisor:
         m = self.ckpt.stat().st_mtime
         if m != self.mtime:
             self.net = load_net(self.ckpt)
-            self.search = Searcher(self.net)
+            self.search = RustSearcher(self.net)
             self.update = torch.load(self.ckpt, map_location="cpu", weights_only=False).get("update")
             self.mtime = m
 
@@ -107,7 +107,8 @@ class Advisor:
             return {"wait": "Ждём, пока соперник выберет питомца"}
         with self.lock:
             self.load()
-            res = self.search.evaluate(b, 0, phase, k=24, depth=1, seed=int(t0))
+            # 64 sampled worlds, 3 rounds ahead (Rust engine, ~0.15 s)
+            res = self.search.evaluate(b, 0, phase, k=64, depth=3, seed=int(t0))
             o, m = encode(b, 0, phase), action_mask(b, 0, phase)
             with torch.no_grad():
                 x = {k: torch.as_tensor(o[k][None], device="cuda") for k in KEYS}

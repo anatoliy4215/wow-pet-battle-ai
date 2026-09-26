@@ -12,6 +12,11 @@ import json
 from .data import PROCESSED, game_data
 from .targets import chain_rows, plan
 
+
+def descriptor(aid):
+    from ..pvp.abilityinfo import descriptor as d
+    return d(aid)
+
 OUT = PROCESSED / "sim_rust.json"
 
 
@@ -29,6 +34,7 @@ def export(path=OUT):
                                    for e in t["effects"]]} for t in a["turns"]],
             "plan": [[ti, ei, code] for (ti, ei), code in sorted(plan(aid, 0).items())],
             "chain": sorted([ti, ei] for (x, ti, ei) in chains if x == aid),
+            "d13": float(descriptor(aid)[13]),  # direct damage points / 50 (float32), for the features
         }
     species = {}
     for sid, s in gd.species.items():

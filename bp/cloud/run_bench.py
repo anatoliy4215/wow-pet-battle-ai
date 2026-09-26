@@ -36,7 +36,9 @@ def bundle():
     with tarfile.open(fileobj=buf, mode="w:gz") as tar:
         for p in (ROOT / "bp").rglob("*.py"):
             tar.add(p, arcname=str(p.relative_to(ROOT)))
-        for pattern in ("data/processed/*.json", "data/raw/petsim/*.json", "data/pvp/*.json"):
+        for pattern in ("data/processed/*.json", "data/raw/petsim/*.json", "data/pvp/*.json",
+                        "rust/bpsim/Cargo.toml", "rust/bpsim/Cargo.lock", "rust/bpsim/pyproject.toml",
+                        "rust/bpsim/src/*.rs"):
             for p in ROOT.glob(pattern):
                 tar.add(p, arcname=str(p.relative_to(ROOT)))
     path = ROOT / "logs" / "bp_bundle.tar.gz"
