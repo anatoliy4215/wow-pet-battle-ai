@@ -36,6 +36,7 @@ def main():
     ap.add_argument("--shard", type=int, default=4096)
     ap.add_argument("--hours", type=float, default=0)
     ap.add_argument("--seed", type=int, default=0)
+    ap.add_argument("--duty", type=float, default=1.0, help="share of time the GPU evaluates (lower = quieter PC)")
     args = ap.parse_args()
     os.environ["RAYON_NUM_THREADS"] = str(args.threads)
 
@@ -96,6 +97,7 @@ def main():
         p.add_starts(new_starts(args.envs * 2))
         futs.append(ex.submit(p.kick))
     shard_n = 0
+    dstats = [(0, 0), (0, 0)]
     buf = []
     n_games = n_samples = n_evals = 0
     t0 = last_log = last_check = time.time()
@@ -134,11 +136,15 @@ def main():
                 buf.append(s)
             n_games += len(p.take_games())
             obs, mask = p.requests()
+            dstats[i] = p.dedup_stats()  # only touch a pool while no thread works on it
             if len(mask) == 0:
                 futs[i] = ex.submit(p.kick)
                 continue
             n_evals += len(mask)
+            t_gpu = time.time()
             pol, val, lo = evaluate(obs, mask)  # the other pool keeps working meanwhile
+            if args.duty < 1:
+                time.sleep((time.time() - t_gpu) * (1 - args.duty) / args.duty)
             futs[i] = ex.submit(p.reply, pol, val, lo)
         flush()
         now = time.time()
@@ -151,7 +157,7 @@ def main():
         if now - last_log > 60:
             last_log = now
             m = (now - t0) / 60
-            req, uniq = [sum(x) for x in zip(*(p.dedup_stats() for p in pools))]
+            req, uniq = [sum(x) for x in zip(*dstats)]
             print(f"{m:.0f} min: {n_games} games, {n_samples} samples, {n_evals / (now - t0):,.0f} evals/s, "
                   f"{uniq / max(1, n_samples):.1f} evals/decision ({1 - uniq / max(1, req):.0%} merged), "
                   f"{len(list(out.glob('*.npz')))} shards waiting", flush=True)
