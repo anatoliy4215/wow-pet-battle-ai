@@ -81,7 +81,10 @@ class PvPNet(nn.Module):
         abil = self._abil(ai[..., 0]) + self.pet_slot(ai[..., 1]) + self.ab_slot(ai[..., 2]) + self.ab_float(o["ab_float"][..., :self.n_abf]) + t[2]
         # aura slots are filled from the front: drop the ones no position in the batch uses
         # (masked keys do not change anything; exact)
-        n_au = int(o["aura_mask"].sum(1).max().item()) if o["aura_mask"].shape[0] else 0
+        if torch.compiler.is_compiling() or not o["aura_mask"].shape[0]:
+            n_au = o["aura_mask"].shape[1]  # compiled (infer passes trimmed arrays): no sync inside the graph
+        else:
+            n_au = int(o["aura_mask"].sum(1).max().item())
         ui = o["aura_int"][:, :n_au]
         aura = self._abil(ui[..., 0]) + self.holder(ui[..., 1]) + self.aura_float(o["aura_float"][:, :n_au]) + t[3]
         x = torch.cat([g, pets, abil, aura], 1)
@@ -136,23 +139,43 @@ def masked(logits, mask):
 assert MAX_AURAS > 0
 
 
-def infer(net, obs, mask, device="cuda", chunk=4096):
+AURA_BUCKETS = (1, 2, 4, 8, 20)
+
+
+def infer(net, obs, mask, device="cuda", chunk=4096, fixed=False):
     """Batch evaluation for the actors / advisor: numpy in, numpy out (policy, value, loadout).
     Positions are sorted by how many aura slots they use, so each chunk only carries the aura
-    tokens it needs (the model drops the unused tail); fp16 autocast."""
+    tokens it needs (unused slots are masked anyway: exact); fp16 autocast.
+    fixed=True (a torch.compile'd net): every chunk is padded to `chunk` rows and the aura slots to
+    one of AURA_BUCKETS, so the compiler sees only a handful of shapes."""
     from .features import KEYS
     n = len(mask)
-    order = np.argsort(obs["aura_mask"].sum(1), kind="stable")
+    n_au_all = obs["aura_mask"].sum(1)
+    order = np.argsort(n_au_all, kind="stable")
     pols = np.empty((n, 7), np.float32)
     vals = np.empty(n, np.float32)
     los = np.empty((n, 9), np.float32)
     with torch.no_grad(), torch.autocast(device, dtype=torch.float16, enabled=device == "cuda"):
         for s in range(0, n, chunk):
             idx = order[s:s + chunk]
-            x = {k: torch.from_numpy(np.ascontiguousarray(obs[k][idx])).to(device, non_blocking=True) for k in KEYS}
-            m = torch.from_numpy(np.ascontiguousarray(mask[idx])).to(device, non_blocking=True)
+            b = len(idx)
+            na = int(n_au_all[idx].max()) if b else 0
+            rows = idx
+            if fixed:
+                na = next(x for x in AURA_BUCKETS if x >= na)
+                if b < chunk:
+                    rows = np.concatenate([idx, np.full(chunk - b, idx[0])])
+            else:
+                na = max(na, 0)
+            x = {}
+            for k in KEYS:
+                a = obs[k][rows]
+                if k.startswith("aura"):
+                    a = a[:, :na]
+                x[k] = torch.from_numpy(np.ascontiguousarray(a)).to(device, non_blocking=True)
+            m = torch.from_numpy(np.ascontiguousarray(mask[rows])).to(device, non_blocking=True)
             logits, v, _, lo = net(x)
-            pols[idx] = torch.softmax(masked(logits, m), -1).float().cpu().numpy()
-            vals[idx] = v.float().cpu().numpy()
-            los[idx] = torch.sigmoid(lo.float()).cpu().numpy()
+            pols[idx] = torch.softmax(masked(logits, m), -1).float().cpu().numpy()[:b]
+            vals[idx] = v.float().cpu().numpy()[:b]
+            los[idx] = torch.sigmoid(lo.float()).cpu().numpy()[:b]
     return pols, vals, los
