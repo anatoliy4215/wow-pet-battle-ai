@@ -1,0 +1,20 @@
+[package]
+name = "bpsim"
+version = "0.1.0"
+edition = "2021"
+description = "WoW pet battle simulator (Rust port of bp/sim), used from Python via PyO3"
+
+[lib]
+name = "bpsim"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.23", features = ["extension-module"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "unwind"

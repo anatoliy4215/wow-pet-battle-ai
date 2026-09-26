@@ -1,0 +1,8 @@
+## Interface: 120100
+## Title: BPLogger
+## Notes: Records pet battles (full state every round) for simulator validation. Read-only, no automation.
+## Author: BP project
+## Version: 0.1
+## SavedVariables: BPLoggerDB
+
+BPLogger.lua

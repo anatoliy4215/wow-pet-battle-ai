@@ -1,0 +1,1082 @@
+{
+"22": [
+"Points",
+"MorePoints",
+"EvenMorePoints",
+"",
+"",
+""
+],
+"23": [
+"Points",
+"Accuracy",
+"Variance",
+"",
+"",
+""
+],
+"24": [
+"Points",
+"Accuracy",
+"IsPeriodic",
+"OverrideIndex",
+"",
+""
+],
+"25": [
+"BaseChanceToSucceed",
+"IncreasePerToss",
+"",
+"",
+"",
+""
+],
+"26": [
+"Unused",
+"Accuracy",
+"Duration",
+"TickDownFirstRound",
+"",
+""
+],
+"27": [
+"Points",
+"Accuracy",
+"PointsIncreasePerUse",
+"PointsMax",
+"StateToTriggerMaxPoints",
+""
+],
+"29": [
+"Points",
+"Accuracy",
+"RequiredCasterState",
+"RequiredTargetState",
+"IsPeriodic",
+""
+],
+"31": [
+"State",
+"StateValue",
+"",
+"",
+"",
+""
+],
+"32": [
+"Points",
+"Accuracy",
+"ChainFailure",
+"",
+"",
+""
+],
+"33": [
+"Points",
+"Accuracy",
+"IsPeriodic",
+"",
+"",
+""
+],
+"43": [
+"",
+"",
+"",
+"",
+"",
+""
+],
+"44": [
+"Points",
+"Accuracy",
+"",
+"",
+"",
+""
+],
+"45": [
+"Points",
+"Accuracy",
+"Boost",
+"",
+"",
+""
+],
+"49": [
+"Chance",
+"unused",
+"",
+"",
+"",
+""
+],
+"50": [
+"ChainFailure",
+"Accuracy",
+"Duration",
+"MaxAllowed",
+"CasterState",
+"TargetState"
+],
+"52": [
+"ChainFailure",
+"Accuracy",
+"Duration",
+"",
+"",
+""
+],
+"53": [
+"Percentage",
+"Accuracy",
+"",
+"",
+"",
+""
+],
+"54": [
+"ChainFailure",
+"Accuracy",
+"Duration",
+"MaxAllowed",
+"",
+""
+],
+"61": [
+"Points",
+"Accuracy",
+"RequiredCasterState",
+"RequiredTargetState",
+"Variance",
+""
+],
+"63": [
+"Unused",
+"Accuracy",
+"Duration",
+"",
+"",
+""
+],
+"65": [
+"Points",
+"Accuracy",
+"BonusPoints",
+"BonusState",
+"IsPeriodic",
+"OverrideIndex"
+],
+"67": [
+"Accuracy",
+"",
+"",
+"",
+"",
+""
+],
+"72": [
+"Points",
+"Accuracy",
+"Duration",
+"",
+"",
+""
+],
+"73": [
+"StatePoints",
+"CasterState",
+"Duration",
+"TargetState",
+"ChainFailure",
+"ReportFailsAsImmune"
+],
+"75": [
+"Points",
+"Accuracy",
+"",
+"",
+"",
+""
+],
+"78": [
+"Points",
+"State",
+"MaxPoints",
+"StateToMultiplyAgainst",
+"",
+""
+],
+"79": [
+"State",
+"StateChange",
+"StateMin",
+"StateMax",
+"",
+""
+],
+"80": [
+"Points",
+"Accuracy",
+"Duration",
+"ChainFailure",
+"",
+""
+],
+"85": [
+"State",
+"",
+"",
+"",
+"",
+""
+],
+"86": [
+"Points",
+"Accuracy",
+"Duration",
+"AuraID",
+"Duration2",
+""
+],
+"96": [
+"Points",
+"Accuracy",
+"CasterState",
+"TargetState",
+"IsPeriodic",
+""
+],
+"99": [
+"Points",
+"Accuracy",
+"HealthPercentThreshold",
+"IsPeriodic",
+"",
+""
+],
+"100": [
+"Points",
+"Accuracy",
+"RequiredCasterPetType",
+"RequiredTargetPetType",
+"Variance",
+""
+],
+"103": [
+"Points",
+"Accuracy",
+"",
+"",
+"",
+""
+],
+"108": [
+"AuraAbilityID",
+"TurnsToAdvance",
+"",
+"",
+"",
+""
+],
+"111": [
+"Percentage",
+"Unused",
+"Unused",
+"Unused",
+"",
+""
+],
+"112": [
+"Percentage",
+"Unused",
+"RequiredCasterState",
+"RequiredTargetState",
+"",
+""
+],
+"117": [
+"Index",
+"LockDuration",
+"",
+"",
+"",
+""
+],
+"121": [
+"HealthPercentage",
+"",
+"",
+"",
+"",
+""
+],
+"128": [
+"Percentage",
+"",
+"",
+"",
+"",
+""
+],
+"129": [
+"LockDuration",
+"",
+"",
+"",
+"",
+""
+],
+"133": [
+"none",
+"",
+"",
+"",
+"",
+""
+],
+"135": [
+"Accuracy",
+"CasterImmuneState",
+"TargetImmuneState",
+"enableReverse",
+"BypassPetPassives",
+""
+],
+"136": [
+"DontMiss",
+"",
+"",
+"",
+"",
+""
+],
+"137": [
+"CasterState",
+"CasterStateValue",
+"Duration",
+"TargetState",
+"TargetStateValue",
+"ChainFailure"
+],
+"138": [
+"State",
+"StateChange",
+"StateMin",
+"StateMax",
+"TargetTestState",
+"TargetTestStateValue"
+],
+"140": [
+"NewDuration",
+"",
+"",
+"",
+"",
+""
+],
+"141": [
+"Points",
+"Accuracy",
+"BonusState",
+"BonusPoints",
+"",
+""
+],
+"150": [
+"ChainFailure",
+"Accuracy",
+"",
+"",
+"",
+""
+],
+"156": [
+"State",
+"StatePoints",
+"unused",
+"unused",
+"",
+""
+],
+"158": [
+"Chance",
+"",
+"",
+"",
+"",
+""
+],
+"165": [
+"Accuracy",
+"CasterImmuneState",
+"TargetImmuneState",
+"",
+"",
+""
+],
+"170": [
+"Points",
+"Accuracy",
+"weatherState",
+"Unused",
+"IsPeriodic",
+""
+],
+"172": [
+"StatePoints",
+"CasterState",
+"Duration",
+"TargetState",
+"ChainFailure",
+"Accuracy"
+],
+"178": [
+"StatePoints",
+"Accuracy",
+"Duration",
+"TargetState",
+"ChainFailure",
+"ReportFailsAsImmune"
+],
+"197": [
+"Power",
+"Accuracy",
+"",
+"",
+"",
+""
+],
+"222": [
+"Points",
+"Accuracy",
+"Variance",
+"OverrideIndex",
+"",
+""
+],
+"223": [
+"Unused",
+"Accuracy",
+"Duration",
+"RequiredPetType",
+"",
+""
+],
+"229": [
+"ChainFailure",
+"Accuracy",
+"Duration",
+"Unused",
+"CasterState",
+"TargetState"
+],
+"243": [
+"ability 1",
+"int 1",
+"ability 2",
+"sdf",
+"sdf",
+"asdf"
+],
+"245": [
+"CooldownModification",
+"",
+"",
+"",
+"",
+""
+],
+"246": [
+"Index",
+"CooldownModification",
+"",
+"",
+"",
+""
+],
+"247": [
+"Index",
+"CooldownModification",
+"RequiredCasterState",
+"RequiredTargetState",
+"",
+""
+],
+"248": [
+"Unused",
+"Accuracy",
+"Duration",
+"TickDownFirstRound",
+"RequiredCasterState",
+""
+],
+"249": [
+"Slot",
+"Ability",
+"",
+"",
+"",
+""
+],
+"254": [
+"Points",
+"Accuracy",
+"Threshold",
+"Modifier",
+"Variance",
+""
+],
+"358": [
+"Points",
+"Accuracy",
+"PointsIncreasePerUse",
+"PointsMax",
+"StateToTriggerMaxPoints",
+"Variance"
+],
+"359": [
+"Unused",
+"Accuracy",
+"Duration",
+"TickDownFirstRound",
+"HealthPercentThreshold",
+""
+],
+"362": [
+"Points",
+"Accuracy",
+"Boost",
+"Variance",
+"",
+""
+],
+"370": [
+"Points",
+"Accuracy",
+"BonusDamage",
+"",
+"",
+""
+],
+"371": [
+"HealthThreshold",
+"unused",
+"unused",
+"unused",
+"",
+""
+],
+"372": [
+"HealthThreshold",
+"",
+"unused",
+"unused",
+"",
+""
+],
+"374": [
+"",
+"",
+"",
+"",
+"",
+""
+],
+"378": [
+"State",
+"ChangeValue",
+"",
+"",
+"",
+""
+],
+"179": [
+"Points",
+"Accuracy",
+"IsPeriodic",
+"OverrideIndex",
+"",
+""
+],
+"201": [
+"Points",
+"Accuracy",
+"IsPeriodic",
+"OverrideIndex",
+"",
+""
+],
+"204": [
+"Points",
+"Accuracy",
+"IsPeriodic",
+"OverrideIndex",
+"",
+""
+],
+"28": [
+"Unused",
+"Accuracy",
+"Duration",
+"TickDownFirstRound",
+"",
+""
+],
+"169": [
+"Points",
+"Accuracy",
+"RequiredCasterState",
+"RequiredTargetState",
+"IsPeriodic",
+""
+],
+"382": [
+"Points",
+"Accuracy",
+"RequiredCasterState",
+"RequiredTargetState",
+"IsPeriodic",
+""
+],
+"360": [
+"State",
+"StateValue",
+"",
+"",
+"",
+""
+],
+"59": [
+"Points",
+"Accuracy",
+"IsPeriodic",
+"",
+"",
+""
+],
+"62": [
+"Points",
+"Accuracy",
+"IsPeriodic",
+"",
+"",
+""
+],
+"68": [
+"Points",
+"Accuracy",
+"IsPeriodic",
+"",
+"",
+""
+],
+"149": [
+"Points",
+"Accuracy",
+"IsPeriodic",
+"",
+"",
+""
+],
+"164": [
+"Points",
+"Accuracy",
+"IsPeriodic",
+"",
+"",
+""
+],
+"363": [
+"Points",
+"Accuracy",
+"IsPeriodic",
+"",
+"",
+""
+],
+"55": [
+"",
+"",
+"",
+"",
+"",
+""
+],
+"56": [
+"",
+"",
+"",
+"",
+"",
+""
+],
+"57": [
+"",
+"",
+"",
+"",
+"",
+""
+],
+"58": [
+"",
+"",
+"",
+"",
+"",
+""
+],
+"74": [
+"",
+"",
+"",
+"",
+"",
+""
+],
+"116": [
+"",
+"",
+"",
+"",
+"",
+""
+],
+"122": [
+"",
+"",
+"",
+"",
+"",
+""
+],
+"123": [
+"",
+"",
+"",
+"",
+"",
+""
+],
+"124": [
+"",
+"",
+"",
+"",
+"",
+""
+],
+"125": [
+"",
+"",
+"",
+"",
+"",
+""
+],
+"132": [
+"",
+"",
+"",
+"",
+"",
+""
+],
+"134": [
+"",
+"",
+"",
+"",
+"",
+""
+],
+"142": [
+"",
+"",
+"",
+"",
+"",
+""
+],
+"143": [
+"",
+"",
+"",
+"",
+"",
+""
+],
+"144": [
+"",
+"",
+"",
+"",
+"",
+""
+],
+"147": [
+"",
+"",
+"",
+"",
+"",
+""
+],
+"159": [
+"",
+"",
+"",
+"",
+"",
+""
+],
+"194": [
+"",
+"",
+"",
+"",
+"",
+""
+],
+"375": [
+"",
+"",
+"",
+"",
+"",
+""
+],
+"66": [
+"Points",
+"Accuracy",
+"Boost",
+"",
+"",
+""
+],
+"97": [
+"Points",
+"Accuracy",
+"Boost",
+"",
+"",
+""
+],
+"168": [
+"ChainFailure",
+"Accuracy",
+"Duration",
+"MaxAllowed",
+"CasterState",
+"TargetState"
+],
+"230": [
+"ChainFailure",
+"Accuracy",
+"Duration",
+"MaxAllowed",
+"CasterState",
+"TargetState"
+],
+"131": [
+"ChainFailure",
+"Accuracy",
+"Duration",
+"",
+"",
+""
+],
+"104": [
+"Points",
+"Accuracy",
+"RequiredCasterState",
+"RequiredTargetState",
+"Variance",
+""
+],
+"171": [
+"Points",
+"Accuracy",
+"RequiredCasterState",
+"RequiredTargetState",
+"Variance",
+""
+],
+"226": [
+"Points",
+"Accuracy",
+"BonusPoints",
+"BonusState",
+"IsPeriodic",
+"OverrideIndex"
+],
+"107": [
+"Accuracy",
+"",
+"",
+"",
+"",
+""
+],
+"139": [
+"Accuracy",
+"",
+"",
+"",
+"",
+""
+],
+"145": [
+"Accuracy",
+"",
+"",
+"",
+"",
+""
+],
+"77": [
+"Points",
+"Accuracy",
+"Duration",
+"",
+"",
+""
+],
+"76": [
+"Points",
+"Accuracy",
+"",
+"",
+"",
+""
+],
+"256": [
+"Points",
+"Accuracy",
+"Duration",
+"ChainFailure",
+"",
+""
+],
+"380": [
+"State",
+"",
+"",
+"",
+"",
+""
+],
+"381": [
+"State",
+"",
+"",
+"",
+"",
+""
+],
+"160": [
+"Points",
+"Accuracy",
+"",
+"",
+"",
+""
+],
+"233": [
+"Points",
+"Accuracy",
+"",
+"",
+"",
+""
+],
+"234": [
+"Points",
+"Accuracy",
+"",
+"",
+"",
+""
+],
+"384": [
+"Points",
+"Accuracy",
+"",
+"",
+"",
+""
+],
+"385": [
+"Points",
+"Accuracy",
+"",
+"",
+"",
+""
+],
+"157": [
+"State",
+"StatePoints",
+"unused",
+"unused",
+"",
+""
+],
+"177": [
+"State",
+"StatePoints",
+"unused",
+"unused",
+"",
+""
+],
+"193": [
+"Chance",
+"",
+"",
+"",
+"",
+""
+],
+"255": [
+"Power",
+"Accuracy",
+"",
+"",
+"",
+""
+],
+"257": [
+"Points",
+"Accuracy",
+"Variance",
+"OverrideIndex",
+"",
+""
+],
+"373": [
+"Slot",
+"Ability",
+"",
+"",
+"",
+""
+],
+"376": [
+"",
+"",
+"",
+"",
+"",
+""
+],
+"379": [
+"State",
+"ChangeValue",
+"",
+"",
+"",
+""
+]
+}

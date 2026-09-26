@@ -1,0 +1,17 @@
+# secrets
+.env
+# environments / caches / builds
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+rust/bpsim/target/
+# trained models and training output (large, regenerated)
+checkpoints/
+logs/
+data/pvp/shards/
+# the user's own battle logs (SavedVariables copies)
+data/logs/
+*.tar
+*.tar.gz
+*.pt

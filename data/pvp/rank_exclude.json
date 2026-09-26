@@ -1,0 +1,44 @@
+{
+ "items": [
+  {
+   "species": 513,
+   "name": "Qiraji Guardling",
+   "breed": "H/P"
+  },
+  {
+   "species": 513,
+   "name": "Qiraji Guardling",
+   "breed": "P/P"
+  },
+  {
+   "species": 513,
+   "name": "Qiraji Guardling",
+   "breed": "S/S"
+  },
+  {
+   "species": 513,
+   "name": "Qiraji Guardling",
+   "breed": "H/H"
+  },
+  {
+   "species": 513,
+   "name": "Qiraji Guardling",
+   "breed": "H/B"
+  },
+  {
+   "species": 513,
+   "name": "Qiraji Guardling",
+   "breed": "P/B"
+  },
+  {
+   "species": 513,
+   "name": "Qiraji Guardling",
+   "breed": "H/S"
+  },
+  {
+   "species": 513,
+   "name": "Qiraji Guardling",
+   "breed": "P/S"
+  }
+ ]
+}

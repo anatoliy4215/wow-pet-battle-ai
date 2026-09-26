@@ -1,0 +1,199 @@
+[
+ {
+  "wr": 0.9833333333333333,
+  "team": [
+   {
+    "species": 1320,
+    "breed": 5,
+    "choices": "111",
+    "name": "Lil' Bling",
+    "abilities": [
+     "SMCKTHAT.EXE",
+     "Blingtron Gift Package",
+     "Make it Rain"
+    ],
+    "ability_ids": [
+     983,
+     989,
+     985
+    ],
+    "new_ops": [
+     159,
+     194
+    ]
+   },
+   {
+    "species": 2717,
+    "breed": 7,
+    "choices": "211",
+    "name": "Microbot XD",
+    "abilities": [
+     "Lock-On",
+     "Interrupting Jolt",
+     "Warning!"
+    ],
+    "ability_ids": [
+     301,
+     938,
+     1583
+    ],
+    "new_ops": [
+     77,
+     131,
+     145
+    ]
+   },
+   {
+    "species": 3118,
+    "breed": 9,
+    "choices": "211",
+    "name": "Scurrying Mawrat",
+    "abilities": [
+     "Rabid Strike",
+     "Corpse Explosion",
+     "Haunt"
+    ],
+    "ability_ids": [
+     666,
+     663,
+     652
+    ],
+    "new_ops": [
+     68,
+     156,
+     165,
+     230
+    ]
+   }
+  ]
+ },
+ {
+  "wr": 1.0,
+  "team": [
+   {
+    "species": 1229,
+    "breed": 10,
+    "choices": "222",
+    "name": "Fiendish Imp",
+    "abilities": [
+     "Sear Magic",
+     "Flamethrower",
+     "Nether Gate"
+    ],
+    "ability_ids": [
+     763,
+     503,
+     466
+    ],
+    "new_ops": [
+     107,
+     136
+    ]
+   },
+   {
+    "species": 1579,
+    "breed": 4,
+    "choices": "112",
+    "name": "Ironclaw Scuttler",
+    "abilities": [
+     "Rip",
+     "Spiny Carapace",
+     "Blood in the Water"
+    ],
+    "ability_ids": [
+     803,
+     1073,
+     423
+    ],
+    "new_ops": [
+     96,
+     137
+    ]
+   },
+   {
+    "species": 1161,
+    "breed": 10,
+    "choices": "211",
+    "name": "Infinite Whelpling",
+    "abilities": [
+     "Sleeping Gas",
+     "Healing Flame",
+     "Early Advantage"
+    ],
+    "ability_ids": [
+     594,
+     168,
+     405
+    ],
+    "new_ops": [
+     44,
+     59
+    ]
+   }
+  ]
+ },
+ {
+  "wr": 1.0,
+  "team": [
+   {
+    "species": 3008,
+    "breed": 5,
+    "choices": "121",
+    "name": "Lost Quill",
+    "abilities": [
+     "Plot Twist",
+     "Spectral Spine",
+     "Nevermore"
+    ],
+    "ability_ids": [
+     1022,
+     913,
+     522
+    ],
+    "new_ops": [
+     129,
+     168
+    ]
+   },
+   {
+    "species": 3119,
+    "breed": 10,
+    "choices": "111",
+    "name": "Lost Limb",
+    "abilities": [
+     "Empowering Strikes",
+     "Sludge Claw",
+     "Death Grip"
+    ],
+    "ability_ids": [
+     1958,
+     2352,
+     780
+    ],
+    "new_ops": [
+     139,
+     226
+    ]
+   },
+   {
+    "species": 3236,
+    "breed": 10,
+    "choices": "121",
+    "name": "Gnomelia Gearheart",
+    "abilities": [
+     "Arm Cannon Blast",
+     "Launch Rocket",
+     "Build Turret"
+    ],
+    "ability_ids": [
+     2462,
+     293,
+     710
+    ],
+    "new_ops": [
+     75
+    ]
+   }
+  ]
+ }
+]

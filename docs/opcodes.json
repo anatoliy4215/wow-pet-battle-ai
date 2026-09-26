@@ -1,0 +1,608 @@
+{
+ "24": {
+  "name": "damage",
+  "target": "target",
+  "confidence": "high",
+  "summary": "Deal Points damage (x(1+0.05*Power), type/state mods). Accuracy roll. IsPeriodic=DoT (not direct). OverrideIndex=follow-up hit of a volley."
+ },
+ "26": {
+  "name": "aura_positive",
+  "target": "caster",
+  "confidence": "high",
+  "summary": "Apply aura to caster. Duration rounds (0=current round only, -1=infinite). Accuracy (200=cannot miss)."
+ },
+ "50": {
+  "name": "aura_negative",
+  "target": "target",
+  "confidence": "high",
+  "summary": "Apply aura to target. ChainFailure skips if previous effect failed; MaxAllowed=stack cap (0 => treat as 1/refresh); CasterState=required caster state."
+ },
+ "23": {
+  "name": "heal",
+  "target": "caster",
+  "confidence": "high",
+  "summary": "Heal Points (x(1+0.05*Power), healing mods 65/66). Variance=total spread % (+-V/2)."
+ },
+ "49": {
+  "name": "aura_remove",
+  "target": "caster",
+  "confidence": "high",
+  "summary": "Remove aura `aura` from holder with Chance% (0 and >=100 => always). Fires the aura's ev5 (ON_AURA_REMOVED)."
+ },
+ "222": {
+  "name": "damage_variance",
+  "target": "target",
+  "confidence": "high",
+  "summary": "Damage like op24 with random +-Variance/2 %."
+ },
+ "31": {
+  "name": "set_state",
+  "target": "caster",
+  "confidence": "high",
+  "summary": "Set State to StateValue (absent=0)."
+ },
+ "54": {
+  "name": "aura_periodic",
+  "target": "target",
+  "confidence": "high",
+  "summary": "Apply periodic/DoT or object aura to target (or pad). ChainFailure, Duration, MaxAllowed stack cap."
+ },
+ "158": {
+  "name": "gate_stop_if_prev_missed",
+  "target": "none",
+  "confidence": "high",
+  "summary": "Stop remaining effects of the turn if the previous effect missed/failed."
+ },
+ "22": {
+  "name": "noop_data",
+  "target": "none",
+  "confidence": "high",
+  "summary": "No-op placeholder turn / numeric data holder for tooltips (Points, MorePoints, EvenMorePoints)."
+ },
+ "116": {
+  "name": "recalc_stats",
+  "target": "caster",
+  "confidence": "medium",
+  "summary": "Recalculate derived stats/turn order (max HP, speed) after state changes; one row per affected pet."
+ },
+ "52": {
+  "name": "aura_control",
+  "target": "target",
+  "confidence": "medium",
+  "summary": "Apply control aura (stun/root/flee-lock) to target; Accuracy is the proc chance; ChainFailure."
+ },
+ "177": {
+  "name": "gate_immune_if_state",
+  "target": "target",
+  "confidence": "medium",
+  "summary": "If target has State (149 resilient) the following effects fail as Immune."
+ },
+ "85": {
+  "name": "remove_auras_with_state",
+  "target": "target",
+  "confidence": "medium",
+  "summary": "Remove all auras on target (pet/pad) that carry State X (e.g. 69 objects, 71 flat DR, 124 type override)."
+ },
+ "28": {
+  "name": "aura_caster_until_removed",
+  "target": "caster",
+  "confidence": "medium",
+  "summary": "Apply aura to caster; Duration 0 = until explicitly removed/consumed (round-scoped dodge/priority auras, block-next-attack shields)."
+ },
+ "178": {
+  "name": "aura_unless_state",
+  "target": "target",
+  "confidence": "high",
+  "summary": "Apply aura unless target.State[TargetState]==StatePoints (then Immune if ReportFailsAsImmune). Used for stun/sleep vs resilient."
+ },
+ "79": {
+  "name": "modify_state",
+  "target": "caster",
+  "confidence": "high",
+  "summary": "State += StateChange, clamped to [StateMin,StateMax]."
+ },
+ "80": {
+  "name": "set_weather",
+  "target": "battle",
+  "confidence": "high",
+  "summary": "Apply weather aura globally, replacing current weather; Duration; Accuracy 200."
+ },
+ "29": {
+  "name": "damage_if_state",
+  "target": "target",
+  "confidence": "high",
+  "summary": "Bonus damage only if caster has RequiredCasterState / target has RequiredTargetState."
+ },
+ "384": {
+  "name": "damage_if_first",
+  "target": "target",
+  "confidence": "high",
+  "summary": "Extra damage only if caster acted first this round."
+ },
+ "141": {
+  "name": "damage_split_team",
+  "target": "target_team",
+  "confidence": "high",
+  "summary": "Damage split evenly across living enemies; +BonusPoints if BonusState (weather) active."
+ },
+ "27": {
+  "name": "damage_ramping",
+  "target": "target",
+  "confidence": "high",
+  "summary": "Ramping damage: Points + PointsIncreasePerUse*uses, capped at PointsMax; resets when another ramping ability is used (states 26/27)."
+ },
+ "32": {
+  "name": "heal_pct_last_dealt",
+  "target": "caster",
+  "confidence": "high",
+  "summary": "Heal caster Points% of Last_HitDealt (state 32); ChainFailure."
+ },
+ "135": {
+  "name": "instakill",
+  "target": "caster",
+  "confidence": "medium",
+  "summary": "Kill self/aura holder unless CasterImmuneState/TargetImmuneState present; enableReverse=reversible death (Haunt)."
+ },
+ "145": {
+  "name": "swap_highest_health",
+  "target": "target_or_caster",
+  "confidence": "high",
+  "summary": "Swap to highest-health pet; side (forced enemy swap vs self swap) not encoded."
+ },
+ "62": {
+  "name": "damage_pct_max_hp",
+  "target": "target",
+  "confidence": "high",
+  "summary": "Damage = Points% of victim's max health (victim varies: target, self, attacker)."
+ },
+ "139": {
+  "name": "swap_lowest_health",
+  "target": "target_or_caster",
+  "confidence": "high",
+  "summary": "Swap to lowest-health pet; side not encoded."
+ },
+ "136": {
+  "name": "dispel_all",
+  "target": "varies",
+  "confidence": "medium",
+  "summary": "Remove all auras from target (wrapped in state 141 IsCleansing). Target side not encoded."
+ },
+ "179": {
+  "name": "thorns",
+  "target": "attacker",
+  "confidence": "high",
+  "summary": "On ev1 (damage taken): deal Points damage to the attacker."
+ },
+ "104": {
+  "name": "heal_if_state",
+  "target": "caster",
+  "confidence": "high",
+  "summary": "Heal caster if caster/target required states are met (e.g. target dead = killed it)."
+ },
+ "159": {
+  "name": "reset_chain",
+  "target": "none",
+  "confidence": "low",
+  "summary": "Unknown; between repeated team aura applies and after op194. Probably clears previous-effect result / advances target."
+ },
+ "131": {
+  "name": "aura_if_first",
+  "target": "target",
+  "confidence": "medium",
+  "summary": "Apply aura (interrupt stun) only if caster acted before target this round."
+ },
+ "157": {
+  "name": "gate_require_state",
+  "target": "target",
+  "confidence": "medium",
+  "summary": "Continue only if target.State[State]==StatePoints."
+ },
+ "107": {
+  "name": "swap_random",
+  "target": "target_or_caster",
+  "confidence": "high",
+  "summary": "Swap to a random pet; side not encoded."
+ },
+ "150": {
+  "name": "team_shield_object",
+  "target": "caster_pad",
+  "confidence": "medium",
+  "summary": "Create a team-pad shield object aura that blocks N attacks."
+ },
+ "68": {
+  "name": "damage_pct_caster_max_hp",
+  "target": "target",
+  "confidence": "high",
+  "summary": "Damage = Points% of caster's max health (Explode)."
+ },
+ "156": {
+  "name": "gate_stop_if_state",
+  "target": "target",
+  "confidence": "medium",
+  "summary": "Stop remaining effects if target has State (non-zero)."
+ },
+ "76": {
+  "name": "two_stage_caster",
+  "target": "target",
+  "confidence": "high",
+  "summary": "1st use: apply aura on caster; 2nd use: consume it and deal Points damage."
+ },
+ "96": {
+  "name": "damage_autohit_if_state",
+  "target": "target",
+  "confidence": "high",
+  "summary": "Damage; skips hit roll (always hits) if caster has CasterState or target has TargetState."
+ },
+ "229": {
+  "name": "aura_type_override",
+  "target": "previous_target",
+  "confidence": "medium",
+  "summary": "Apply type-override aura (state 124), replacing existing one; target follows previous effect."
+ },
+ "363": {
+  "name": "damage_pct_current_hp",
+  "target": "target",
+  "confidence": "high",
+  "summary": "Damage = Points% of target's current health."
+ },
+ "170": {
+  "name": "damage_if_weather",
+  "target": "target",
+  "confidence": "high",
+  "summary": "Bonus damage if weatherState active."
+ },
+ "100": {
+  "name": "heal_if_pet_type",
+  "target": "ally",
+  "confidence": "high",
+  "summary": "Heal only if caster/target pet type matches (1-based type ids)."
+ },
+ "226": {
+  "name": "damage_bonus_if_state",
+  "target": "target",
+  "confidence": "high",
+  "summary": "Damage + BonusPoints if target has BonusState."
+ },
+ "246": {
+  "name": "cooldown_modify_slot",
+  "target": "trigger_pet",
+  "confidence": "high",
+  "summary": "Modify cooldown of ability slot Index by CooldownModification (0 = reset)."
+ },
+ "53": {
+  "name": "heal_pct_max_hp",
+  "target": "caster",
+  "confidence": "high",
+  "summary": "Heal Percentage% of max health."
+ },
+ "373": {
+  "name": "replace_ability_slot",
+  "target": "caster",
+  "confidence": "high",
+  "summary": "Temporarily replace ability in Slot with Ability."
+ },
+ "112": {
+  "name": "resurrect_allies",
+  "target": "ally_team",
+  "confidence": "high",
+  "summary": "Resurrect other dead allies (RequiredTargetState=1) at Percentage% health."
+ },
+ "44": {
+  "name": "heal_pct_last_taken",
+  "target": "caster",
+  "confidence": "high",
+  "summary": "Heal Points% of Last_HitTaken (state 31)."
+ },
+ "63": {
+  "name": "aura_positive_periodic",
+  "target": "caster_or_pad",
+  "confidence": "high",
+  "summary": "Apply positive periodic aura (heal-over-time, Wish) to caster/own pad."
+ },
+ "169": {
+  "name": "damage_state_req",
+  "target": "varies",
+  "confidence": "medium",
+  "summary": "Damage with caster/target state requirements; weather ticks (both heads) and on-damage procs."
+ },
+ "172": {
+  "name": "aura_chance_or_state",
+  "target": "target",
+  "confidence": "high",
+  "summary": "Apply aura with Accuracy% chance; guaranteed if caster has CasterState or target has TargetState."
+ },
+ "385": {
+  "name": "damage_if_last",
+  "target": "target",
+  "confidence": "high",
+  "summary": "Extra damage only if caster acted last this round."
+ },
+ "59": {
+  "name": "damage_if_lower_hp",
+  "target": "target",
+  "confidence": "high",
+  "summary": "Bonus damage if caster's health is lower than target's."
+ },
+ "66": {
+  "name": "damage_execute",
+  "target": "target",
+  "confidence": "high",
+  "summary": "Damage +Boost% if target below 25% health."
+ },
+ "248": {
+  "name": "aura_positive_if_state",
+  "target": "caster",
+  "confidence": "high",
+  "summary": "Apply positive aura only if caster has RequiredCasterState."
+ },
+ "138": {
+  "name": "modify_state_if_target_state",
+  "target": "caster",
+  "confidence": "medium",
+  "summary": "Modify caster State by StateChange if target has TargetTestState(=Value)."
+ },
+ "111": {
+  "name": "resurrect_self",
+  "target": "caster",
+  "confidence": "high",
+  "summary": "Resurrect self at Percentage% health (Failsafe, Damned, Dark Rebirth)."
+ },
+ "223": {
+  "name": "aura_allies_of_type",
+  "target": "ally_team",
+  "confidence": "high",
+  "summary": "Apply aura to allies whose pet type == RequiredPetType (1-based)."
+ },
+ "128": {
+  "name": "set_health_pct",
+  "target": "target",
+  "confidence": "high",
+  "summary": "Set health to Percentage% of max."
+ },
+ "360": {
+  "name": "clear_state",
+  "target": "caster",
+  "confidence": "low",
+  "summary": "Probably reset State to 0."
+ },
+ "230": {
+  "name": "aura_haunt",
+  "target": "target",
+  "confidence": "medium",
+  "summary": "Apply aura to target with caster/target state exclusions (Haunt)."
+ },
+ "197": {
+  "name": "damage_pct_last_taken",
+  "target": "target",
+  "confidence": "high",
+  "summary": "Damage = Power% of caster's last hit taken."
+ },
+ "149": {
+  "name": "damage_nonlethal",
+  "target": "target",
+  "confidence": "high",
+  "summary": "Damage that cannot reduce target below 1 HP."
+ },
+ "194": {
+  "name": "gate_continue_if_prev_missed",
+  "target": "none",
+  "confidence": "medium",
+  "summary": "Continue only if previous effect missed."
+ },
+ "254": {
+  "name": "heal_low_hp_bonus",
+  "target": "caster",
+  "confidence": "high",
+  "summary": "Heal; +Modifier% if caster health below Threshold%."
+ },
+ "117": {
+  "name": "lock_ability_slot",
+  "target": "target",
+  "confidence": "high",
+  "summary": "Lock ability slot Index for LockDuration rounds."
+ },
+ "358": {
+  "name": "damage_ramping_variance",
+  "target": "target",
+  "confidence": "high",
+  "summary": "Ramping damage (op27) with Variance."
+ },
+ "77": {
+  "name": "two_stage_target",
+  "target": "target",
+  "confidence": "medium",
+  "summary": "1st use: apply aura on target (Duration); 2nd use: consume and deal Points damage."
+ },
+ "204": {
+  "name": "reflect_damage",
+  "target": "attacker",
+  "confidence": "high",
+  "summary": "On damage taken: deal Points% of the damage back to attacker."
+ },
+ "137": {
+  "name": "aura_if_state",
+  "target": "caster",
+  "confidence": "medium",
+  "summary": "Apply aura for Duration if caster has CasterState==CasterStateValue (or target TargetState)."
+ },
+ "0": {
+  "name": "test",
+  "target": "none",
+  "confidence": "low",
+  "summary": "Test opcode (Stun Aura Test)."
+ },
+ "45": {
+  "name": "damage_if_slower",
+  "target": "target",
+  "confidence": "high",
+  "summary": "Damage +Boost% if caster slower than target."
+ },
+ "97": {
+  "name": "damage_if_faster",
+  "target": "target",
+  "confidence": "high",
+  "summary": "Damage +Boost% if caster faster than target."
+ },
+ "86": {
+  "name": "damage_repeat_aura",
+  "target": "target",
+  "confidence": "medium",
+  "summary": "Damage; if target already has marker aura from previous use, apply AuraID for Duration2 (Gravity)."
+ },
+ "75": {
+  "name": "two_stage_caster_pad",
+  "target": "target",
+  "confidence": "medium",
+  "summary": "1st use: aura on caster pad; 2nd use: consume and deal damage (Launch Rocket)."
+ },
+ "249": {
+  "name": "replace_ability_slot_alt",
+  "target": "caster",
+  "confidence": "high",
+  "summary": "Replace ability in Slot with Ability (variant of op373)."
+ },
+ "370": {
+  "name": "damage_per_same_species",
+  "target": "target",
+  "confidence": "high",
+  "summary": "Damage + BonusDamage per additional ally of the same species."
+ },
+ "140": {
+  "name": "refresh_aura_duration",
+  "target": "target",
+  "confidence": "high",
+  "summary": "Set remaining duration of existing instances of `aura` to NewDuration."
+ },
+ "256": {
+  "name": "unknown_aura_apply",
+  "target": "unknown",
+  "confidence": "low",
+  "summary": "Only in DATA ERROR 615 (Accuracy, Duration=9, no aura)."
+ },
+ "67": {
+  "name": "equalize_health",
+  "target": "target",
+  "confidence": "high",
+  "summary": "Equalize health between caster and target (gain capped at caster max)."
+ },
+ "165": {
+  "name": "revive_aura_caster",
+  "target": "aura_caster",
+  "confidence": "medium",
+  "summary": "On aura removal: revive the caster that died reversibly via op135 enableReverse (Haunt)."
+ },
+ "78": {
+  "name": "plant_toggle_heal",
+  "target": "caster",
+  "confidence": "medium",
+  "summary": "Toggle planted aura; on deactivate heal Points x State counter (max MaxPoints)."
+ },
+ "129": {
+  "name": "lock_used_ability",
+  "target": "trigger_pet",
+  "confidence": "high",
+  "summary": "On ev9: put the ability just used by the holder on LockDuration cooldown."
+ },
+ "65": {
+  "name": "damage_periodic_weather_bonus",
+  "target": "target",
+  "confidence": "high",
+  "summary": "Periodic damage + BonusPoints if BonusState (weather) active."
+ },
+ "171": {
+  "name": "heal_if_state",
+  "target": "caster",
+  "confidence": "high",
+  "summary": "Heal if caster/target required state present (e.g. Sunlight bonus)."
+ },
+ "168": {
+  "name": "aura_negative_alt",
+  "target": "target",
+  "confidence": "medium",
+  "summary": "Apply negative aura (Nevermore) like op50."
+ },
+ "144": {
+  "name": "select_corpse",
+  "target": "ally",
+  "confidence": "low",
+  "summary": "Select an unused dead ally corpse as target (Consume Corpse)."
+ },
+ "61": {
+  "name": "heal_pct_state_req",
+  "target": "caster",
+  "confidence": "medium",
+  "summary": "Heal Points% of max health if required states met."
+ },
+ "events": {
+  "0": {
+   "name": "ON_APPLY",
+   "confidence": "high",
+   "summary": "Aura applied."
+  },
+  "1": {
+   "name": "ON_DAMAGE_TAKEN",
+   "confidence": "high",
+   "summary": "Holder (or ability user this round) takes damage; thorns, break-on-damage, 'was struck' flags."
+  },
+  "2": {
+   "name": "ON_DAMAGE_DEALT",
+   "confidence": "high",
+   "summary": "Holder deals damage; next-attack buffs consumed, lifesteal, Brittle Webbing."
+  },
+  "3": {
+   "name": "ON_HEAL_TAKEN",
+   "confidence": "high",
+   "summary": "Name from Blizzard tooltip env; unused in data."
+  },
+  "4": {
+   "name": "ON_HEAL_DEALT",
+   "confidence": "high",
+   "summary": "Name from Blizzard tooltip env; unused in data."
+  },
+  "5": {
+   "name": "ON_AURA_REMOVED",
+   "confidence": "high",
+   "summary": "Aura expired/removed/consumed; bombs detonate, post-stun Resilient, Undead death."
+  },
+  "6": {
+   "name": "ON_ROUND_START",
+   "confidence": "high",
+   "summary": "Before abilities resolve (priority/dodge auras, state resets)."
+  },
+  "7": {
+   "name": "ON_ROUND_END",
+   "confidence": "high",
+   "summary": "After both abilities, before aura ticks (undo priority, end-of-round swaps)."
+  },
+  "8": {
+   "name": "ON_TURN",
+   "confidence": "medium",
+   "summary": "Only in unreachable test aura 84."
+  },
+  "9": {
+   "name": "ON_ABILITY",
+   "confidence": "high",
+   "summary": "Holder uses an ability (traps, Nevermore)."
+  },
+  "10": {
+   "name": "ON_SWAP_IN",
+   "confidence": "high",
+   "summary": "A pet enters the battlefield (Minefield, Mudslide, Bend Time)."
+  },
+  "11": {
+   "name": "ON_SWAP_OUT",
+   "confidence": "high",
+   "summary": "Holder swaps out (Frostbite removal)."
+  },
+  "12": {
+   "name": "ON_POST_AURA_TICK",
+   "confidence": "medium",
+   "summary": "After aura processing phase (Feign Death/Warning!/Return to Rest swap). Not in Blizzard's PROC list; petsim 'postAuraTick'."
+  },
+  "255": {
+   "name": "NONE",
+   "confidence": "high",
+   "summary": "TurnType 0 (normal ordered turn / aura tick)."
+  }
+ }
+}

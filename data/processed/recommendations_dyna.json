@@ -1,0 +1,572 @@
+[
+ {
+  "family": 0,
+  "tamer": 524,
+  "winrate": 0.95,
+  "team": [
+   {
+    "species": 1384,
+    "name": "Hogs",
+    "abilities": [
+     "Bite",
+     "Stampede",
+     "Headbutt"
+    ],
+    "ability_ids": [
+     110,
+     163,
+     376
+    ],
+    "choices": "211",
+    "breed": 7
+   },
+   {
+    "species": 1343,
+    "name": "Bonkers",
+    "abilities": [
+     "Bite",
+     "Dodge",
+     "Tornado Punch"
+    ],
+    "ability_ids": [
+     110,
+     312,
+     1052
+    ],
+    "choices": "222",
+    "breed": 9
+   },
+   {
+    "species": 1935,
+    "name": "Squirky",
+    "abilities": [
+     "Punch",
+     "Clobber",
+     "Bubble"
+    ],
+    "ability_ids": [
+     111,
+     350,
+     934
+    ],
+    "choices": "112",
+    "breed": 3
+   }
+  ],
+  "winrate200": 0.805,
+  "rounds": 20.515
+ },
+ {
+  "family": 1,
+  "tamer": 524,
+  "winrate": 0.8166666666666667,
+  "team": [
+   {
+    "species": 3382,
+    "name": "Stormie",
+    "abilities": [
+     "Claw",
+     "Mana Surge",
+     "Arcane Storm"
+    ],
+    "ability_ids": [
+     429,
+     489,
+     589
+    ],
+    "choices": "122",
+    "breed": 7
+   },
+   {
+    "species": 557,
+    "name": "Nether Faerie Dragon",
+    "abilities": [
+     "Arcane Blast",
+     "Life Exchange",
+     "Moonfire"
+    ],
+    "ability_ids": [
+     421,
+     277,
+     595
+    ],
+    "choices": "221",
+    "breed": 5
+   },
+   {
+    "species": 2081,
+    "name": "Twilight Clutch-Sister",
+    "abilities": [
+     "Tail Sweep",
+     "Prismatic Barrier",
+     "Twilight Meteorite"
+    ],
+    "ability_ids": [
+     122,
+     444,
+     1960
+    ],
+    "choices": "122",
+    "breed": 10
+   }
+  ],
+  "winrate200": 0.72,
+  "rounds": 15.805
+ },
+ {
+  "family": 2,
+  "tamer": 524,
+  "winrate": 0.5666666666666667,
+  "team": [
+   {
+    "species": 1713,
+    "name": "Long-Eared Owl",
+    "abilities": [
+     "Quills",
+     "Call Darkness",
+     "Nocturnal Strike"
+    ],
+    "ability_ids": [
+     184,
+     256,
+     517
+    ],
+    "choices": "211",
+    "breed": 3
+   },
+   {
+    "species": 2586,
+    "name": "Amberglow Stinger",
+    "abilities": [
+     "Barbed Stinger",
+     "Lift-Off",
+     "Predatory Strike"
+    ],
+    "ability_ids": [
+     1369,
+     170,
+     518
+    ],
+    "choices": "122",
+    "breed": 6
+   },
+   {
+    "species": 747,
+    "name": "Effervescent Glowfly",
+    "abilities": [
+     "Slicing Wind",
+     "Cocoon Strike",
+     "Glowing Toxin"
+    ],
+    "ability_ids": [
+     420,
+     506,
+     270
+    ],
+    "choices": "222",
+    "breed": 9
+   }
+  ],
+  "winrate200": 0.605,
+  "rounds": 18.94
+ },
+ {
+  "family": 3,
+  "tamer": 524,
+  "winrate": 0.85,
+  "team": [
+   {
+    "species": 1238,
+    "name": "Unborn Val'kyr",
+    "abilities": [
+     "Shadow Shock",
+     "Siphon Life",
+     "Unholy Ascension"
+    ],
+    "ability_ids": [
+     422,
+     212,
+     321
+    ],
+    "choices": "212",
+    "breed": 6
+   },
+   {
+    "species": 2546,
+    "name": "Detective Ray",
+    "abilities": [
+     "Jab",
+     "Curse of Doom",
+     "Flame Jet"
+    ],
+    "ability_ids": [
+     219,
+     218,
+     1041
+    ],
+    "choices": "222",
+    "breed": 11
+   },
+   {
+    "species": 463,
+    "name": "Spirit Crab",
+    "abilities": [
+     "Amplify Magic",
+     "Whirlpool",
+     "Rot"
+    ],
+    "ability_ids": [
+     488,
+     513,
+     476
+    ],
+    "choices": "222",
+    "breed": 9
+   }
+  ],
+  "winrate200": 0.85,
+  "rounds": 18.16
+ },
+ {
+  "family": 4,
+  "tamer": 524,
+  "winrate": 0.9,
+  "team": [
+   {
+    "species": 743,
+    "name": "Rapana Whelk",
+    "abilities": [
+     "Ooze Touch",
+     "Acidic Goo",
+     "Headbutt"
+    ],
+    "ability_ids": [
+     445,
+     369,
+     376
+    ],
+    "choices": "112",
+    "breed": 3
+   },
+   {
+    "species": 3134,
+    "name": "Anxious Nibbler",
+    "abilities": [
+     "Scrabble",
+     "Primal Cry",
+     "Dust Cloud"
+    ],
+    "ability_ids": [
+     2430,
+     920,
+     2059
+    ],
+    "choices": "221",
+    "breed": 8
+   },
+   {
+    "species": 2383,
+    "name": "Giant Woodworm",
+    "abilities": [
+     "Blitz",
+     "Barkskin",
+     "Super Sticky Goo"
+    ],
+    "ability_ids": [
+     1840,
+     1045,
+     631
+    ],
+    "choices": "222",
+    "breed": 11
+   }
+  ],
+  "winrate200": 0.885,
+  "rounds": 19.88
+ },
+ {
+  "family": 5,
+  "tamer": 524,
+  "winrate": 0.95,
+  "team": [
+   {
+    "species": 1524,
+    "name": "Netherspawn, Spawn of Netherspawn",
+    "abilities": [
+     "Nether Blast",
+     "Expunge",
+     "Poison Spit"
+    ],
+    "ability_ids": [
+     608,
+     450,
+     380
+    ],
+    "choices": "121",
+    "breed": 7
+   },
+   {
+    "species": 2961,
+    "name": "Sludge Feeler",
+    "abilities": [
+     "Crush",
+     "Toxic Spray",
+     "Squeeze"
+    ],
+    "ability_ids": [
+     406,
+     2232,
+     1572
+    ],
+    "choices": "211",
+    "breed": 8
+   },
+   {
+    "species": 3008,
+    "name": "Lost Quill",
+    "abilities": [
+     "Arcane Slash",
+     "Deep Research",
+     "Stay a While and Listen"
+    ],
+    "ability_ids": [
+     1353,
+     2382,
+     2380
+    ],
+    "choices": "212",
+    "breed": 5
+   }
+  ],
+  "winrate200": 0.87,
+  "rounds": 21.97
+ },
+ {
+  "family": 6,
+  "tamer": 524,
+  "winrate": 0.9833333333333333,
+  "team": [
+   {
+    "species": 291,
+    "name": "Singing Sunflower",
+    "abilities": [
+     "Lash",
+     "Photosynthesis",
+     "Sunlight"
+    ],
+    "ability_ids": [
+     394,
+     268,
+     404
+    ],
+    "choices": "112",
+    "breed": 12
+   },
+   {
+    "species": 509,
+    "name": "Tiny Bog Beast",
+    "abilities": [
+     "Crush",
+     "Leap",
+     "Poison Lash"
+    ],
+    "ability_ids": [
+     406,
+     364,
+     398
+    ],
+    "choices": "121",
+    "breed": 6
+   },
+   {
+    "species": 838,
+    "name": "Amethyst Shale Hatchling",
+    "abilities": [
+     "Burn",
+     "Sticky Web",
+     "Stoneskin"
+    ],
+    "ability_ids": [
+     113,
+     339,
+     436
+    ],
+    "choices": "112",
+    "breed": 11
+   }
+  ],
+  "winrate200": 0.955,
+  "rounds": 33.595
+ },
+ {
+  "family": 7,
+  "tamer": 524,
+  "winrate": 0.65,
+  "team": [
+   {
+    "species": 1211,
+    "name": "Zandalari Anklerender",
+    "abilities": [
+     "Bite",
+     "Primal Cry",
+     "Devour"
+    ],
+    "ability_ids": [
+     110,
+     920,
+     538
+    ],
+    "choices": "121",
+    "breed": 8
+   },
+   {
+    "species": 1200,
+    "name": "Pygmy Direhorn",
+    "abilities": [
+     "Trample",
+     "Horn Attack",
+     "Primal Cry"
+    ],
+    "ability_ids": [
+     377,
+     571,
+     920
+    ],
+    "choices": "211",
+    "breed": 8
+   },
+   {
+    "species": 319,
+    "name": "Feline Familiar",
+    "abilities": [
+     "Onyx Bite",
+     "Call Darkness",
+     "Prowl"
+    ],
+    "ability_ids": [
+     437,
+     256,
+     536
+    ],
+    "choices": "122",
+    "breed": 10
+   }
+  ],
+  "winrate200": 0.685,
+  "rounds": 14.045
+ },
+ {
+  "family": 8,
+  "tamer": 524,
+  "winrate": 0.9333333333333333,
+  "team": [
+   {
+    "species": 2398,
+    "name": "Boghopper",
+    "abilities": [
+     "Steam Vent",
+     "Croak",
+     "Pump"
+    ],
+    "ability_ids": [
+     1060,
+     932,
+     297
+    ],
+    "choices": "122",
+    "breed": 5
+   },
+   {
+    "species": 2389,
+    "name": "Elusive Skimmer",
+    "abilities": [
+     "Water Jet",
+     "Cleansing Rain",
+     "Whirlpool"
+    ],
+    "ability_ids": [
+     118,
+     230,
+     513
+    ],
+    "choices": "211",
+    "breed": 5
+   },
+   {
+    "species": 2403,
+    "name": "Abyssal Eel",
+    "abilities": [
+     "Water Jet",
+     "Squeeze",
+     "Pump"
+    ],
+    "ability_ids": [
+     118,
+     1572,
+     297
+    ],
+    "choices": "212",
+    "breed": 3
+   }
+  ],
+  "winrate200": 0.865,
+  "rounds": 14.045
+ },
+ {
+  "family": 9,
+  "tamer": 524,
+  "winrate": 0.55,
+  "team": [
+   {
+    "species": 338,
+    "name": "Darkmoon Tonk",
+    "abilities": [
+     "Charge",
+     "Shock and Awe",
+     "Lock-On"
+    ],
+    "ability_ids": [
+     778,
+     646,
+     301
+    ],
+    "choices": "211",
+    "breed": 7
+   },
+   {
+    "species": 2078,
+    "name": "Tinytron",
+    "abilities": [
+     "Arcane Blast",
+     "Lightning Shield",
+     "Poison Protocol"
+    ],
+    "ability_ids": [
+     421,
+     906,
+     1954
+    ],
+    "choices": "111",
+    "breed": 6
+   },
+   {
+    "species": 1957,
+    "name": "Runeforged Servitor",
+    "abilities": [
+     "Jolt",
+     "Supercharge",
+     "Call Lightning"
+    ],
+    "ability_ids": [
+     908,
+     208,
+     204
+    ],
+    "choices": "122",
+    "breed": 3
+   }
+  ],
+  "winrate200": 0.635,
+  "rounds": 19.3
+ }
+]

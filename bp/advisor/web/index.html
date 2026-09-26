@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Подсказчик боя</title>
+<script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js"></script>
+<style>
+:root { --bg:#f6f6f4; --card:#fff; --fg:#1b1b1d; --muted:#6e6e73; --line:#e3e3df; --accent:#3478f6; --good:#2e9d63; --warn:#d0842a; }
+@media (prefers-color-scheme: dark) { :root { --bg:#111214; --card:#1c1d20; --fg:#eeeeee; --muted:#9a9aa2; --line:#2c2d31; } }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.4 -apple-system,system-ui,sans-serif;
+       padding:max(12px, env(safe-area-inset-top)) 14px 24px; }
+.cam { position:relative; border-radius:14px; overflow:hidden; background:#000; aspect-ratio: 16/9; }
+video { width:100%; height:100%; object-fit:cover; display:block; }
+.status { position:absolute; left:10px; bottom:10px; background:rgba(0,0,0,.6); color:#fff; font-size:13px;
+          padding:4px 9px; border-radius:8px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:14px; margin-top:12px; }
+.best { font-size:26px; font-weight:700; line-height:1.2; }
+.muted { color:var(--muted); font-size:13px; }
+.row { display:flex; align-items:center; gap:10px; margin:8px 0; }
+.row .l { flex:1; }
+.row .p { width:52px; text-align:right; font-variant-numeric:tabular-nums; font-weight:600; }
+.bar { height:6px; background:var(--line); border-radius:3px; overflow:hidden; margin-top:4px; }
+.bar i { display:block; height:100%; background:var(--accent); }
+.row.top .bar i { background:var(--good); }
+h2 { font-size:14px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); margin:0 0 6px; }
+.fresh { float:right; font-size:12px; color:#fff; background:var(--good); border-radius:8px; padding:2px 8px; }
+.fresh.old { background:var(--warn); }
+button { font:inherit; padding:10px 14px; border-radius:10px; border:1px solid var(--line); background:var(--card); color:var(--fg); }
+</style>
+</head>
+<body>
+<div class="cam"><video id="v" playsinline muted></video><div class="status" id="st">Запускаю камеру…</div></div>
+<div id="start" class="card" style="display:none"><button id="go">Включить камеру</button></div>
+<div id="out"></div>
+<canvas id="c" style="display:none"></canvas>
+<script>
+const params = new URLSearchParams(location.search);
+if (params.get('k')) localStorage.setItem('bpa_k', params.get('k'));
+const KEY = localStorage.getItem('bpa_k') || '';
+const v = document.getElementById('v'), cv = document.getElementById('c'), cx = cv.getContext('2d', {willReadFrequently: true});
+const st = document.getElementById('st'), out = document.getElementById('out');
+let last = '', busy = false, lastSeen = 0, shownAt = 0;
+setInterval(() => { const f = document.getElementById('fresh'); if (!f || !shownAt) return;
+  const s = Math.round((Date.now() - shownAt) / 1000); f.textContent = s < 2 ? 'только что' : `${s} с назад`; f.className = s > 20 ? 'fresh old' : 'fresh'; }, 1000);
+
+function esc(s) { return String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+function pct(x) { return Math.round(x * 100) + '%'; }
+
+function render(r) {
+  if (r.error) { out.innerHTML = `<div class=card>Ошибка: ${esc(r.error)}</div>`; return; }
+  if (r.wait) { out.innerHTML = `<div class=card>${esc(r.wait)}</div>`; return; }
+  const best = r.actions[0];
+  let h = `<div class=card><div class=fresh id=fresh>только что</div><div class=muted>${esc(r.phase)} · шанс победы ~${pct(r.value)}</div>
+    <div class=best>${esc(best.label)}</div>
+    <div class=muted>${esc(r.me)} против ${esc(r.enemy)}</div>${r.note ? `<div class=muted style="margin-top:6px;color:var(--warn)">${esc(r.note)}</div>` : ''}</div>`;
+  h += `<div class=card><h2>Все варианты</h2>` + r.actions.map((a, i) =>
+    `<div class="row ${i === 0 ? 'top' : ''}"><div class=l>${esc(a.label)}<div class=bar><i style="width:${pct(a.win)}"></i></div></div><div class=p>${pct(a.win)}</div></div>`).join('') +
+    `<div class=muted>Шанс победы, если сделать этот ход (просчёт на раунд вперёд)</div></div>`;
+  if (r.opp && r.opp.length) h += `<div class=card><h2>Соперник, вероятно</h2>` + r.opp.map(o =>
+    `<div class=row><div class=l>${esc(o.label)}</div><div class=p>${pct(o.p)}</div></div>`).join('') + `</div>`;
+  if (r.hidden && r.hidden.length) h += `<div class=card><h2>Скрытые способности соперника</h2>` + r.hidden.map(x => {
+    const pb = x.pb, guess = pb > 0.5 ? x.b : x.a, p = pb > 0.5 ? pb : 1 - pb;
+    return `<div class=row><div class=l>${esc(x.pet)}, ячейка ${x.slot}: <b>${esc(guess)}</b><div class=muted>${esc(x.a)} / ${esc(x.b)}</div></div><div class=p>${pct(p)}</div></div>`;
+  }).join('') + `</div>`;
+  h += `<div class=muted style="margin-top:10px">модель: шаг ${r.model} · ${r.ms} мс</div>`;
+  out.innerHTML = h;
+}
+
+async function ask(bytes) {
+  busy = true; st.textContent = 'Считаю ход…'; const tq = Date.now();
+  let bin = ''; bytes.forEach(b => bin += String.fromCharCode(b));
+  try {
+    const resp = await fetch('/api/advise', {method: 'POST', headers: {'Content-Type': 'application/json', 'X-Token': KEY},
+                                             body: JSON.stringify({qr: btoa(bin)})});
+    render(await resp.json()); shownAt = Date.now();
+    st.textContent = `Готово за ${((Date.now() - tq) / 1000).toFixed(1)} с · жду следующий ход`;
+  } catch (e) { st.textContent = 'Нет связи с ПК'; }
+  busy = false;
+}
+
+function scan() {
+  if (v.readyState >= 2) {
+    const w = Math.min(1280, v.videoWidth), h = Math.round(v.videoHeight * w / v.videoWidth);
+    cv.width = w; cv.height = h;
+    cx.drawImage(v, 0, 0, w, h);
+    const code = jsQR(cx.getImageData(0, 0, w, h).data, w, h, {inversionAttempts: 'dontInvert'});
+    if (code && code.binaryData && code.binaryData[0] === 66) {
+      lastSeen = Date.now();
+      const key = code.binaryData.join(',');
+      if (key !== last && !busy) { last = key; ask(code.binaryData); }
+    } else if (!busy && Date.now() - lastSeen > 3000) {
+      st.textContent = 'Наведите камеру на код в углу экрана';
+    }
+  }
+  setTimeout(scan, 150);
+}
+
+async function start() {
+  try {
+    const s = await navigator.mediaDevices.getUserMedia({video: {facingMode: 'environment', width: {ideal: 1920}, height: {ideal: 1080}}, audio: false});
+    v.srcObject = s; await v.play();
+    document.getElementById('start').style.display = 'none';
+    st.textContent = 'Наведите камеру на код в углу экрана';
+    if (navigator.wakeLock) try { await navigator.wakeLock.request('screen'); } catch (e) {}
+    scan();
+  } catch (e) {
+    st.textContent = 'Нет доступа к камере';
+    document.getElementById('start').style.display = 'block';
+  }
+}
+document.getElementById('go').onclick = start;
+if (!KEY) out.innerHTML = '<div class=card>Откройте ссылку с ключом (…/?k=…), она есть на ПК.</div>';
+start();
+</script>
+</body>
+</html>

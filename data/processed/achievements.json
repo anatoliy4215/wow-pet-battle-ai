@@ -1,0 +1,8712 @@
+[
+ {
+  "achievement_id": 6592,
+  "name_en": "Legendary Pet Battler",
+  "name_ru": "Легендарный укротитель",
+  "description_en": "Win 5000 pet battles.",
+  "kind": "other",
+  "required_family": null,
+  "tamers": [],
+  "notes": "Win 5000 pet battles (any: wild, NPC or PvP)."
+ },
+ {
+  "achievement_id": 6597,
+  "name_en": "Master Pet Brawler",
+  "name_ru": "Мастер-зверовод",
+  "description_en": "Win 250 PvP pet battles.",
+  "kind": "other",
+  "required_family": null,
+  "tamers": [],
+  "notes": "Win 250 PvP pet battles."
+ },
+ {
+  "achievement_id": 6620,
+  "name_en": "No Time To Heal",
+  "name_ru": "Некогда зализывать раны",
+  "description_en": "Win 5 consecutive PvP pet battles without letting a pet die.",
+  "kind": "other",
+  "required_family": null,
+  "tamers": [],
+  "notes": "Win 5 consecutive PvP pet battles without any of your pets dying."
+ },
+ {
+  "achievement_id": 6621,
+  "name_en": "Big City Pet Brawlin' - Horde",
+  "name_ru": "Бои питомцев в большом городе – Орда",
+  "description_en": "Win a pet battle in each of the Horde cities listed below.",
+  "kind": "other",
+  "required_family": null,
+  "tamers": [],
+  "notes": "Win any pet battle (wild pets count) in Orgrimmar, Thunder Bluff, Undercity and Silvermoon."
+ },
+ {
+  "achievement_id": 6622,
+  "name_en": "Big City Pet Brawler",
+  "name_ru": "Бои питомцев в большом городе",
+  "description_en": "Complete each of the Big City Pet Brawlin' achievements listed below.",
+  "kind": "meta",
+  "required_family": null,
+  "tamers": [],
+  "notes": "",
+  "children": [
+   6621,
+   6584
+  ]
+ },
+ {
+  "achievement_id": 7499,
+  "name_en": "Taming the World",
+  "name_ru": "Завоевание мира",
+  "description_en": "Defeat 40 master pet tamers on Eastern Kingdoms, Kalimdor, Outland, Northrend, or Pandaria.",
+  "kind": "tamer_list",
+  "required_family": null,
+  "tamers": [
+   {
+    "npc_id": 64330,
+    "name": "Julia Stevens",
+    "tamer_id": "64330"
+   },
+   {
+    "npc_id": 65648,
+    "name": "Old MacDonald",
+    "tamer_id": "65648"
+   },
+   {
+    "npc_id": 65651,
+    "name": "Lindsay",
+    "tamer_id": "65651"
+   },
+   {
+    "npc_id": 65655,
+    "name": "Eric Davidson",
+    "tamer_id": "65655"
+   },
+   {
+    "npc_id": 63194,
+    "name": "Steven Lisbane",
+    "tamer_id": "63194"
+   },
+   {
+    "npc_id": 65656,
+    "name": "Bill Buckler",
+    "tamer_id": "65656"
+   },
+   {
+    "npc_id": 66126,
+    "name": "Zunta",
+    "tamer_id": "66126"
+   },
+   {
+    "npc_id": 66135,
+    "name": "Dagra the Fierce",
+    "tamer_id": "66135"
+   },
+   {
+    "npc_id": 66136,
+    "name": "Analynn",
+    "tamer_id": "66136"
+   },
+   {
+    "npc_id": 66137,
+    "name": "Zonya the Sadist",
+    "tamer_id": "66137"
+   },
+   {
+    "npc_id": 66372,
+    "name": "Merda Stronghoof",
+    "tamer_id": "66372"
+   },
+   {
+    "npc_id": 66352,
+    "name": "Traitor Gluk",
+    "tamer_id": "66352"
+   },
+   {
+    "npc_id": 66412,
+    "name": "Elena Flutterfly",
+    "tamer_id": "66412"
+   },
+   {
+    "npc_id": 66422,
+    "name": "Cassandra Kaboom",
+    "tamer_id": "66422"
+   },
+   {
+    "npc_id": 66436,
+    "name": "Grazzle the Great",
+    "tamer_id": "66436"
+   },
+   {
+    "npc_id": 66442,
+    "name": "Zoltan",
+    "tamer_id": "66442"
+   },
+   {
+    "npc_id": 66452,
+    "name": "Kela Grimtotem",
+    "tamer_id": "66452"
+   },
+   {
+    "npc_id": 66466,
+    "name": "Stone Cold Trixxy",
+    "tamer_id": "129"
+   },
+   {
+    "npc_id": 66478,
+    "name": "David Kosse",
+    "tamer_id": "66478"
+   },
+   {
+    "npc_id": 66512,
+    "name": "Deiza Plaguehorn",
+    "tamer_id": "66512"
+   },
+   {
+    "npc_id": 66515,
+    "name": "Kortas Darkhammer",
+    "tamer_id": "66515"
+   },
+   {
+    "npc_id": 66518,
+    "name": "Everessa",
+    "tamer_id": "66518"
+   },
+   {
+    "npc_id": 66520,
+    "name": "Durin Darkhammer",
+    "tamer_id": "66520"
+   },
+   {
+    "npc_id": 66522,
+    "name": "Lydia Accoste",
+    "tamer_id": "133"
+   },
+   {
+    "npc_id": 66550,
+    "name": "Nicki Tinytech",
+    "tamer_id": "124"
+   },
+   {
+    "npc_id": 66551,
+    "name": "Ras'an",
+    "tamer_id": "123"
+   },
+   {
+    "npc_id": 66552,
+    "name": "Narrok",
+    "tamer_id": "122"
+   },
+   {
+    "npc_id": 66553,
+    "name": "Morulu the Elder",
+    "tamer_id": "121"
+   },
+   {
+    "npc_id": 66557,
+    "name": "Bloodknight Antari",
+    "tamer_id": "125"
+   },
+   {
+    "npc_id": 66635,
+    "name": "Beegle Blastfuse",
+    "tamer_id": "117"
+   },
+   {
+    "npc_id": 66636,
+    "name": "Nearly Headless Jacob",
+    "tamer_id": "115"
+   },
+   {
+    "npc_id": 66638,
+    "name": "Okrut Dragonwaste",
+    "tamer_id": "116"
+   },
+   {
+    "npc_id": 66639,
+    "name": "Gutretch",
+    "tamer_id": "118"
+   },
+   {
+    "npc_id": 66675,
+    "name": "Major Payne",
+    "tamer_id": "119"
+   },
+   {
+    "npc_id": 66819,
+    "name": "Brok",
+    "tamer_id": "130"
+   },
+   {
+    "npc_id": 66815,
+    "name": "Bordin Steadyfist",
+    "tamer_id": "127"
+   },
+   {
+    "npc_id": 66822,
+    "name": "Goz Banefury",
+    "tamer_id": "134"
+   },
+   {
+    "npc_id": 66824,
+    "name": "Obalis",
+    "tamer_id": "131"
+   },
+   {
+    "npc_id": 66730,
+    "name": "Hyuna of the Shrines",
+    "tamer_id": "36"
+   },
+   {
+    "npc_id": 66734,
+    "name": "Farmer Nishi",
+    "tamer_id": "31"
+   },
+   {
+    "npc_id": 66738,
+    "name": "Courageous Yon",
+    "tamer_id": "32"
+   },
+   {
+    "npc_id": 66739,
+    "name": "Wastewalker Shu",
+    "tamer_id": "34"
+   },
+   {
+    "npc_id": 66741,
+    "name": "Aki the Chosen",
+    "tamer_id": "33"
+   },
+   {
+    "npc_id": 66918,
+    "name": "Seeker Zusshi",
+    "tamer_id": "35"
+   },
+   {
+    "npc_id": 66733,
+    "name": "Mo'ruk",
+    "tamer_id": "68"
+   }
+  ],
+  "notes": "Defeat any 40 of 45 listed.",
+  "required_count": 40
+ },
+ {
+  "achievement_id": 8300,
+  "name_en": "Brutal Pet Brawler",
+  "name_ru": "Жестокий зверовод",
+  "description_en": "Win 250 PvP pet battles through Find Battle with a full team of level 25 pets.",
+  "kind": "other",
+  "required_family": null,
+  "tamers": [],
+  "notes": "Win 250 PvP pet battles via Find Battle with a full team of level 25 pets."
+ },
+ {
+  "achievement_id": 9069,
+  "name_en": "An Awfully Big Adventure",
+  "name_ru": "Ужасно большое приключение",
+  "description_en": "Defeat the following trainers with an Elekk Plushie on your team.",
+  "kind": "tamer_list",
+  "required_family": null,
+  "tamers": [
+   {
+    "npc_id": 66741,
+    "name": "Aki the Chosen",
+    "tamer_id": "33"
+   },
+   {
+    "npc_id": 87124,
+    "name": "Ashlei",
+    "tamer_id": "17"
+   },
+   {
+    "npc_id": 66635,
+    "name": "Beegle Blastfuse",
+    "tamer_id": "117"
+   },
+   {
+    "npc_id": 71933,
+    "name": "Blingtron 4000",
+    "tamer_id": "42"
+   },
+   {
+    "npc_id": 66557,
+    "name": "Bloodknight Antari",
+    "tamer_id": "125"
+   },
+   {
+    "npc_id": 66815,
+    "name": "Bordin Steadyfist",
+    "tamer_id": "127"
+   },
+   {
+    "npc_id": 66819,
+    "name": "Brok",
+    "tamer_id": "130"
+   },
+   {
+    "npc_id": 68463,
+    "name": "Burning Pandaren Spirit",
+    "tamer_id": "27"
+   },
+   {
+    "npc_id": 71927,
+    "name": "Chen Stormstout",
+    "tamer_id": "39"
+   },
+   {
+    "npc_id": 85519,
+    "name": "Christoph VonFeasel",
+    "tamer_id": "30"
+   },
+   {
+    "npc_id": 66738,
+    "name": "Courageous Yon",
+    "tamer_id": "32"
+   },
+   {
+    "npc_id": 83837,
+    "name": "Cymre Brightblade",
+    "tamer_id": "18"
+   },
+   {
+    "npc_id": 71934,
+    "name": "Dr. Ion Goldbloom",
+    "tamer_id": "46"
+   },
+   {
+    "npc_id": 66734,
+    "name": "Farmer Nishi",
+    "tamer_id": "31"
+   },
+   {
+    "npc_id": 68462,
+    "name": "Flowing Pandaren Spirit",
+    "tamer_id": "28"
+   },
+   {
+    "npc_id": 87122,
+    "name": "Gargra",
+    "tamer_id": "19"
+   },
+   {
+    "npc_id": 66822,
+    "name": "Goz Banefury",
+    "tamer_id": "134"
+   },
+   {
+    "npc_id": 66639,
+    "name": "Gutretch",
+    "tamer_id": "118"
+   },
+   {
+    "npc_id": 66730,
+    "name": "Hyuna of the Shrines",
+    "tamer_id": "36"
+   },
+   {
+    "npc_id": 67370,
+    "name": "Jeremy Feasel",
+    "tamer_id": "8"
+   },
+   {
+    "npc_id": 71926,
+    "name": "Lorewalker Cho",
+    "tamer_id": "47"
+   },
+   {
+    "npc_id": 66522,
+    "name": "Lydia Accoste",
+    "tamer_id": "133"
+   },
+   {
+    "npc_id": 66675,
+    "name": "Major Payne",
+    "tamer_id": "119"
+   },
+   {
+    "npc_id": 66733,
+    "name": "Mo'ruk",
+    "tamer_id": "68"
+   },
+   {
+    "npc_id": 66553,
+    "name": "Morulu the Elder",
+    "tamer_id": "121"
+   },
+   {
+    "npc_id": 66552,
+    "name": "Narrok",
+    "tamer_id": "122"
+   },
+   {
+    "npc_id": 66636,
+    "name": "Nearly Headless Jacob",
+    "tamer_id": "115"
+   },
+   {
+    "npc_id": 66550,
+    "name": "Nicki Tinytech",
+    "tamer_id": "124"
+   },
+   {
+    "npc_id": 66824,
+    "name": "Obalis",
+    "tamer_id": "131"
+   },
+   {
+    "npc_id": 66638,
+    "name": "Okrut Dragonwaste",
+    "tamer_id": "116"
+   },
+   {
+    "npc_id": 66551,
+    "name": "Ras'an",
+    "tamer_id": "123"
+   },
+   {
+    "npc_id": 66918,
+    "name": "Seeker Zusshi",
+    "tamer_id": "35"
+   },
+   {
+    "npc_id": 71930,
+    "name": "Shademaster Kiryn",
+    "tamer_id": "43"
+   },
+   {
+    "npc_id": 66466,
+    "name": "Stone Cold Trixxy",
+    "tamer_id": "129"
+   },
+   {
+    "npc_id": 71929,
+    "name": "Sully \"The Pickle\" McLeary",
+    "tamer_id": "45"
+   },
+   {
+    "npc_id": 87125,
+    "name": "Taralune",
+    "tamer_id": "20"
+   },
+   {
+    "npc_id": 71931,
+    "name": "Taran Zhu",
+    "tamer_id": "37"
+   },
+   {
+    "npc_id": 87110,
+    "name": "Tarr the Terrible",
+    "tamer_id": "21"
+   },
+   {
+    "npc_id": 68465,
+    "name": "Thundering Pandaren Spirit",
+    "tamer_id": "25"
+   },
+   {
+    "npc_id": 87123,
+    "name": "Vesharr",
+    "tamer_id": "22"
+   },
+   {
+    "npc_id": 66739,
+    "name": "Wastewalker Shu",
+    "tamer_id": "34"
+   },
+   {
+    "npc_id": 68464,
+    "name": "Whispering Pandaren Spirit",
+    "tamer_id": "26"
+   },
+   {
+    "npc_id": 71932,
+    "name": "Wise Mari",
+    "tamer_id": "41"
+   },
+   {
+    "npc_id": 71924,
+    "name": "Wrathion",
+    "tamer_id": "38"
+   }
+  ],
+  "notes": "Defeat all 44. Team must include species 1426.",
+  "required_count": 44
+ },
+ {
+  "achievement_id": 9686,
+  "name_en": "Aquatic Acquiescence",
+  "name_ru": "Плавали – знаем",
+  "description_en": "Defeat 12 Master Tamers in Broken Isles with all Aquatic pets.",
+  "kind": "family_tamer",
+  "required_family": 8,
+  "tamers": [
+   {
+    "npc_id": 106552,
+    "name": "Nightwatcher Merayl",
+    "tamer_id": "150"
+   },
+   {
+    "npc_id": 99210,
+    "name": "Bodhi Sunwayver",
+    "tamer_id": "141"
+   },
+   {
+    "npc_id": 97804,
+    "name": "Tiffany Nelson",
+    "tamer_id": "146"
+   },
+   {
+    "npc_id": 107489,
+    "name": "Amalia",
+    "tamer_id": "140"
+   },
+   {
+    "npc_id": 99182,
+    "name": "Sir Galveston",
+    "tamer_id": "143"
+   },
+   {
+    "npc_id": 99077,
+    "name": "Bredda Tenderhide",
+    "tamer_id": "161"
+   },
+   {
+    "npc_id": 99150,
+    "name": "Grixis Tinypop",
+    "tamer_id": "162"
+   },
+   {
+    "npc_id": 104553,
+    "name": "Odrogg",
+    "tamer_id": "165"
+   },
+   {
+    "npc_id": 98270,
+    "name": "Robert Craig",
+    "tamer_id": "171"
+   },
+   {
+    "npc_id": 105455,
+    "name": "Trapper Jarrun",
+    "tamer_id": "169"
+   },
+   {
+    "npc_id": 105250,
+    "name": "Aulier",
+    "tamer_id": "175"
+   },
+   {
+    "npc_id": 97709,
+    "name": "Master Tamer Flummox",
+    "tamer_id": "178"
+   },
+   {
+    "npc_id": 105674,
+    "name": "Varenne",
+    "tamer_id": "177"
+   },
+   {
+    "npc_id": 99035,
+    "name": "Durian Strongfruit",
+    "tamer_id": "154"
+   },
+   {
+    "npc_id": 104970,
+    "name": "Xorvasc",
+    "tamer_id": "159"
+   }
+  ],
+  "notes": "Defeat any 12 of 15 listed. Whole team must be Aquatic.",
+  "required_count": 12
+ },
+ {
+  "achievement_id": 9687,
+  "name_en": "Best of the Beasts",
+  "name_ru": "Лучший зверовод",
+  "description_en": "Defeat 12 Master Tamers in Broken Isles with all Beast pets.",
+  "kind": "family_tamer",
+  "required_family": 7,
+  "tamers": [
+   {
+    "npc_id": 106552,
+    "name": "Nightwatcher Merayl",
+    "tamer_id": "150"
+   },
+   {
+    "npc_id": 99210,
+    "name": "Bodhi Sunwayver",
+    "tamer_id": "141"
+   },
+   {
+    "npc_id": 97804,
+    "name": "Tiffany Nelson",
+    "tamer_id": "146"
+   },
+   {
+    "npc_id": 107489,
+    "name": "Amalia",
+    "tamer_id": "140"
+   },
+   {
+    "npc_id": 99182,
+    "name": "Sir Galveston",
+    "tamer_id": "143"
+   },
+   {
+    "npc_id": 99077,
+    "name": "Bredda Tenderhide",
+    "tamer_id": "161"
+   },
+   {
+    "npc_id": 99150,
+    "name": "Grixis Tinypop",
+    "tamer_id": "162"
+   },
+   {
+    "npc_id": 104553,
+    "name": "Odrogg",
+    "tamer_id": "165"
+   },
+   {
+    "npc_id": 98270,
+    "name": "Robert Craig",
+    "tamer_id": "171"
+   },
+   {
+    "npc_id": 105455,
+    "name": "Trapper Jarrun",
+    "tamer_id": "169"
+   },
+   {
+    "npc_id": 105250,
+    "name": "Aulier",
+    "tamer_id": "175"
+   },
+   {
+    "npc_id": 97709,
+    "name": "Master Tamer Flummox",
+    "tamer_id": "178"
+   },
+   {
+    "npc_id": 105674,
+    "name": "Varenne",
+    "tamer_id": "177"
+   },
+   {
+    "npc_id": 99035,
+    "name": "Durian Strongfruit",
+    "tamer_id": "154"
+   },
+   {
+    "npc_id": 104970,
+    "name": "Xorvasc",
+    "tamer_id": "159"
+   }
+  ],
+  "notes": "Defeat any 12 of 15 listed. Whole team must be Beast.",
+  "required_count": 12
+ },
+ {
+  "achievement_id": 9688,
+  "name_en": "Mousing Around",
+  "name_ru": "Кошки-мышки",
+  "description_en": "Defeat 12 Master Tamers in Broken Isles with all Critter pets.",
+  "kind": "family_tamer",
+  "required_family": 4,
+  "tamers": [
+   {
+    "npc_id": 106552,
+    "name": "Nightwatcher Merayl",
+    "tamer_id": "150"
+   },
+   {
+    "npc_id": 99210,
+    "name": "Bodhi Sunwayver",
+    "tamer_id": "141"
+   },
+   {
+    "npc_id": 97804,
+    "name": "Tiffany Nelson",
+    "tamer_id": "146"
+   },
+   {
+    "npc_id": 107489,
+    "name": "Amalia",
+    "tamer_id": "140"
+   },
+   {
+    "npc_id": 99182,
+    "name": "Sir Galveston",
+    "tamer_id": "143"
+   },
+   {
+    "npc_id": 99077,
+    "name": "Bredda Tenderhide",
+    "tamer_id": "161"
+   },
+   {
+    "npc_id": 99150,
+    "name": "Grixis Tinypop",
+    "tamer_id": "162"
+   },
+   {
+    "npc_id": 104553,
+    "name": "Odrogg",
+    "tamer_id": "165"
+   },
+   {
+    "npc_id": 98270,
+    "name": "Robert Craig",
+    "tamer_id": "171"
+   },
+   {
+    "npc_id": 105455,
+    "name": "Trapper Jarrun",
+    "tamer_id": "169"
+   },
+   {
+    "npc_id": 105250,
+    "name": "Aulier",
+    "tamer_id": "175"
+   },
+   {
+    "npc_id": 97709,
+    "name": "Master Tamer Flummox",
+    "tamer_id": "178"
+   },
+   {
+    "npc_id": 105674,
+    "name": "Varenne",
+    "tamer_id": "177"
+   },
+   {
+    "npc_id": 99035,
+    "name": "Durian Strongfruit",
+    "tamer_id": "154"
+   },
+   {
+    "npc_id": 104970,
+    "name": "Xorvasc",
+    "tamer_id": "159"
+   }
+  ],
+  "notes": "Defeat any 12 of 15 listed. Whole team must be Critter.",
+  "required_count": 12
+ },
+ {
+  "achievement_id": 9690,
+  "name_en": "Ragnaros, Watch and Learn",
+  "name_ru": "Рагнарос, смотри и учись",
+  "description_en": "Defeat 12 Master Tamers in Broken Isles with all Elemental pets.",
+  "kind": "family_tamer",
+  "required_family": 6,
+  "tamers": [
+   {
+    "npc_id": 106552,
+    "name": "Nightwatcher Merayl",
+    "tamer_id": "150"
+   },
+   {
+    "npc_id": 99210,
+    "name": "Bodhi Sunwayver",
+    "tamer_id": "141"
+   },
+   {
+    "npc_id": 97804,
+    "name": "Tiffany Nelson",
+    "tamer_id": "146"
+   },
+   {
+    "npc_id": 107489,
+    "name": "Amalia",
+    "tamer_id": "140"
+   },
+   {
+    "npc_id": 99182,
+    "name": "Sir Galveston",
+    "tamer_id": "143"
+   },
+   {
+    "npc_id": 99077,
+    "name": "Bredda Tenderhide",
+    "tamer_id": "161"
+   },
+   {
+    "npc_id": 99150,
+    "name": "Grixis Tinypop",
+    "tamer_id": "162"
+   },
+   {
+    "npc_id": 104553,
+    "name": "Odrogg",
+    "tamer_id": "165"
+   },
+   {
+    "npc_id": 98270,
+    "name": "Robert Craig",
+    "tamer_id": "171"
+   },
+   {
+    "npc_id": 105455,
+    "name": "Trapper Jarrun",
+    "tamer_id": "169"
+   },
+   {
+    "npc_id": 105250,
+    "name": "Aulier",
+    "tamer_id": "175"
+   },
+   {
+    "npc_id": 97709,
+    "name": "Master Tamer Flummox",
+    "tamer_id": "178"
+   },
+   {
+    "npc_id": 105674,
+    "name": "Varenne",
+    "tamer_id": "177"
+   },
+   {
+    "npc_id": 99035,
+    "name": "Durian Strongfruit",
+    "tamer_id": "154"
+   },
+   {
+    "npc_id": 104970,
+    "name": "Xorvasc",
+    "tamer_id": "159"
+   }
+  ],
+  "notes": "Defeat any 12 of 15 listed. Whole team must be Elemental.",
+  "required_count": 12
+ },
+ {
+  "achievement_id": 9691,
+  "name_en": "Flock Together",
+  "name_ru": "Птицы собираются по окрасу",
+  "description_en": "Defeat 12 Master Tamers in Broken Isles with all Flying pets.",
+  "kind": "family_tamer",
+  "required_family": 2,
+  "tamers": [
+   {
+    "npc_id": 106552,
+    "name": "Nightwatcher Merayl",
+    "tamer_id": "150"
+   },
+   {
+    "npc_id": 99210,
+    "name": "Bodhi Sunwayver",
+    "tamer_id": "141"
+   },
+   {
+    "npc_id": 97804,
+    "name": "Tiffany Nelson",
+    "tamer_id": "146"
+   },
+   {
+    "npc_id": 107489,
+    "name": "Amalia",
+    "tamer_id": "140"
+   },
+   {
+    "npc_id": 99182,
+    "name": "Sir Galveston",
+    "tamer_id": "143"
+   },
+   {
+    "npc_id": 99077,
+    "name": "Bredda Tenderhide",
+    "tamer_id": "161"
+   },
+   {
+    "npc_id": 99150,
+    "name": "Grixis Tinypop",
+    "tamer_id": "162"
+   },
+   {
+    "npc_id": 104553,
+    "name": "Odrogg",
+    "tamer_id": "165"
+   },
+   {
+    "npc_id": 98270,
+    "name": "Robert Craig",
+    "tamer_id": "171"
+   },
+   {
+    "npc_id": 105455,
+    "name": "Trapper Jarrun",
+    "tamer_id": "169"
+   },
+   {
+    "npc_id": 105250,
+    "name": "Aulier",
+    "tamer_id": "175"
+   },
+   {
+    "npc_id": 97709,
+    "name": "Master Tamer Flummox",
+    "tamer_id": "178"
+   },
+   {
+    "npc_id": 105674,
+    "name": "Varenne",
+    "tamer_id": "177"
+   },
+   {
+    "npc_id": 99035,
+    "name": "Durian Strongfruit",
+    "tamer_id": "154"
+   },
+   {
+    "npc_id": 104970,
+    "name": "Xorvasc",
+    "tamer_id": "159"
+   }
+  ],
+  "notes": "Defeat any 12 of 15 listed. Whole team must be Flying.",
+  "required_count": 12
+ },
+ {
+  "achievement_id": 9692,
+  "name_en": "Murlocs, Harpies, and Wolvar, Oh My!",
+  "name_ru": "Мурлоки, гарпии и волчеры – ничего себе!",
+  "description_en": "Defeat 12 Master Tamers in Broken Isles with all Humanoid pets.",
+  "kind": "family_tamer",
+  "required_family": 0,
+  "tamers": [
+   {
+    "npc_id": 106552,
+    "name": "Nightwatcher Merayl",
+    "tamer_id": "150"
+   },
+   {
+    "npc_id": 99210,
+    "name": "Bodhi Sunwayver",
+    "tamer_id": "141"
+   },
+   {
+    "npc_id": 97804,
+    "name": "Tiffany Nelson",
+    "tamer_id": "146"
+   },
+   {
+    "npc_id": 107489,
+    "name": "Amalia",
+    "tamer_id": "140"
+   },
+   {
+    "npc_id": 99182,
+    "name": "Sir Galveston",
+    "tamer_id": "143"
+   },
+   {
+    "npc_id": 99077,
+    "name": "Bredda Tenderhide",
+    "tamer_id": "161"
+   },
+   {
+    "npc_id": 99150,
+    "name": "Grixis Tinypop",
+    "tamer_id": "162"
+   },
+   {
+    "npc_id": 104553,
+    "name": "Odrogg",
+    "tamer_id": "165"
+   },
+   {
+    "npc_id": 98270,
+    "name": "Robert Craig",
+    "tamer_id": "171"
+   },
+   {
+    "npc_id": 105455,
+    "name": "Trapper Jarrun",
+    "tamer_id": "169"
+   },
+   {
+    "npc_id": 105250,
+    "name": "Aulier",
+    "tamer_id": "175"
+   },
+   {
+    "npc_id": 97709,
+    "name": "Master Tamer Flummox",
+    "tamer_id": "178"
+   },
+   {
+    "npc_id": 105674,
+    "name": "Varenne",
+    "tamer_id": "177"
+   },
+   {
+    "npc_id": 99035,
+    "name": "Durian Strongfruit",
+    "tamer_id": "154"
+   },
+   {
+    "npc_id": 104970,
+    "name": "Xorvasc",
+    "tamer_id": "159"
+   }
+  ],
+  "notes": "Defeat any 12 of 15 listed. Whole team must be Humanoid.",
+  "required_count": 12
+ },
+ {
+  "achievement_id": 9693,
+  "name_en": "Master of Magic",
+  "name_ru": "Мастер магии",
+  "description_en": "Defeat 12 Master Tamers in Broken Isles with all Magic pets.",
+  "kind": "family_tamer",
+  "required_family": 5,
+  "tamers": [
+   {
+    "npc_id": 106552,
+    "name": "Nightwatcher Merayl",
+    "tamer_id": "150"
+   },
+   {
+    "npc_id": 99210,
+    "name": "Bodhi Sunwayver",
+    "tamer_id": "141"
+   },
+   {
+    "npc_id": 97804,
+    "name": "Tiffany Nelson",
+    "tamer_id": "146"
+   },
+   {
+    "npc_id": 107489,
+    "name": "Amalia",
+    "tamer_id": "140"
+   },
+   {
+    "npc_id": 99182,
+    "name": "Sir Galveston",
+    "tamer_id": "143"
+   },
+   {
+    "npc_id": 99077,
+    "name": "Bredda Tenderhide",
+    "tamer_id": "161"
+   },
+   {
+    "npc_id": 99150,
+    "name": "Grixis Tinypop",
+    "tamer_id": "162"
+   },
+   {
+    "npc_id": 104553,
+    "name": "Odrogg",
+    "tamer_id": "165"
+   },
+   {
+    "npc_id": 98270,
+    "name": "Robert Craig",
+    "tamer_id": "171"
+   },
+   {
+    "npc_id": 105455,
+    "name": "Trapper Jarrun",
+    "tamer_id": "169"
+   },
+   {
+    "npc_id": 105250,
+    "name": "Aulier",
+    "tamer_id": "175"
+   },
+   {
+    "npc_id": 97709,
+    "name": "Master Tamer Flummox",
+    "tamer_id": "178"
+   },
+   {
+    "npc_id": 105674,
+    "name": "Varenne",
+    "tamer_id": "177"
+   },
+   {
+    "npc_id": 99035,
+    "name": "Durian Strongfruit",
+    "tamer_id": "154"
+   },
+   {
+    "npc_id": 104970,
+    "name": "Xorvasc",
+    "tamer_id": "159"
+   }
+  ],
+  "notes": "Defeat any 12 of 15 listed. Whole team must be Magic.",
+  "required_count": 12
+ },
+ {
+  "achievement_id": 9694,
+  "name_en": "Roboteer",
+  "name_ru": "Роботехник",
+  "description_en": "Defeat 12 Master Tamers in Broken Isles with all Mechanical pets.",
+  "kind": "family_tamer",
+  "required_family": 9,
+  "tamers": [
+   {
+    "npc_id": 106552,
+    "name": "Nightwatcher Merayl",
+    "tamer_id": "150"
+   },
+   {
+    "npc_id": 99210,
+    "name": "Bodhi Sunwayver",
+    "tamer_id": "141"
+   },
+   {
+    "npc_id": 97804,
+    "name": "Tiffany Nelson",
+    "tamer_id": "146"
+   },
+   {
+    "npc_id": 107489,
+    "name": "Amalia",
+    "tamer_id": "140"
+   },
+   {
+    "npc_id": 99182,
+    "name": "Sir Galveston",
+    "tamer_id": "143"
+   },
+   {
+    "npc_id": 99077,
+    "name": "Bredda Tenderhide",
+    "tamer_id": "161"
+   },
+   {
+    "npc_id": 99150,
+    "name": "Grixis Tinypop",
+    "tamer_id": "162"
+   },
+   {
+    "npc_id": 104553,
+    "name": "Odrogg",
+    "tamer_id": "165"
+   },
+   {
+    "npc_id": 98270,
+    "name": "Robert Craig",
+    "tamer_id": "171"
+   },
+   {
+    "npc_id": 105455,
+    "name": "Trapper Jarrun",
+    "tamer_id": "169"
+   },
+   {
+    "npc_id": 105250,
+    "name": "Aulier",
+    "tamer_id": "175"
+   },
+   {
+    "npc_id": 97709,
+    "name": "Master Tamer Flummox",
+    "tamer_id": "178"
+   },
+   {
+    "npc_id": 105674,
+    "name": "Varenne",
+    "tamer_id": "177"
+   },
+   {
+    "npc_id": 99035,
+    "name": "Durian Strongfruit",
+    "tamer_id": "154"
+   },
+   {
+    "npc_id": 104970,
+    "name": "Xorvasc",
+    "tamer_id": "159"
+   }
+  ],
+  "notes": "Defeat any 12 of 15 listed. Whole team must be Mechanical.",
+  "required_count": 12
+ },
+ {
+  "achievement_id": 9695,
+  "name_en": "The Lil' Necromancer",
+  "name_ru": "Начинающий некромант",
+  "description_en": "Defeat 12 Master Tamers in Broken Isles with all Undead pets.",
+  "kind": "family_tamer",
+  "required_family": 3,
+  "tamers": [
+   {
+    "npc_id": 106552,
+    "name": "Nightwatcher Merayl",
+    "tamer_id": "150"
+   },
+   {
+    "npc_id": 99210,
+    "name": "Bodhi Sunwayver",
+    "tamer_id": "141"
+   },
+   {
+    "npc_id": 97804,
+    "name": "Tiffany Nelson",
+    "tamer_id": "146"
+   },
+   {
+    "npc_id": 107489,
+    "name": "Amalia",
+    "tamer_id": "140"
+   },
+   {
+    "npc_id": 99182,
+    "name": "Sir Galveston",
+    "tamer_id": "143"
+   },
+   {
+    "npc_id": 99077,
+    "name": "Bredda Tenderhide",
+    "tamer_id": "161"
+   },
+   {
+    "npc_id": 99150,
+    "name": "Grixis Tinypop",
+    "tamer_id": "162"
+   },
+   {
+    "npc_id": 104553,
+    "name": "Odrogg",
+    "tamer_id": "165"
+   },
+   {
+    "npc_id": 98270,
+    "name": "Robert Craig",
+    "tamer_id": "171"
+   },
+   {
+    "npc_id": 105455,
+    "name": "Trapper Jarrun",
+    "tamer_id": "169"
+   },
+   {
+    "npc_id": 105250,
+    "name": "Aulier",
+    "tamer_id": "175"
+   },
+   {
+    "npc_id": 97709,
+    "name": "Master Tamer Flummox",
+    "tamer_id": "178"
+   },
+   {
+    "npc_id": 105674,
+    "name": "Varenne",
+    "tamer_id": "177"
+   },
+   {
+    "npc_id": 99035,
+    "name": "Durian Strongfruit",
+    "tamer_id": "154"
+   },
+   {
+    "npc_id": 104970,
+    "name": "Xorvasc",
+    "tamer_id": "159"
+   }
+  ],
+  "notes": "Defeat any 12 of 15 listed. Whole team must be Undead.",
+  "required_count": 12
+ },
+ {
+  "achievement_id": 9696,
+  "name_en": "Family Familiar",
+  "name_ru": "Знакомые все лица",
+  "description_en": "Complete the following achievements.",
+  "kind": "meta",
+  "required_family": null,
+  "tamers": [],
+  "notes": "",
+  "children": [
+   9686,
+   9687,
+   9688,
+   9689,
+   9690,
+   9691,
+   9692,
+   9693,
+   9694,
+   9695
+  ]
+ },
+ {
+  "achievement_id": 12088,
+  "name_en": "Anomalous Animals of Argus",
+  "name_ru": "Аномальные животные Аргуса",
+  "description_en": "Defeat the following corrupted pets on Argus.",
+  "kind": "tamer_list",
+  "required_family": null,
+  "tamers": [
+   {
+    "npc_id": 128007,
+    "name": "Ruinhoof",
+    "species_id": 2095,
+    "tamer_id": "282"
+   },
+   {
+    "npc_id": 128008,
+    "name": "Foulclaw",
+    "species_id": 2096,
+    "tamer_id": "280"
+   },
+   {
+    "npc_id": 128009,
+    "name": "Baneglow",
+    "species_id": 2097,
+    "tamer_id": "278"
+   },
+   {
+    "npc_id": 128010,
+    "name": "Retch",
+    "species_id": 2098,
+    "tamer_id": "277"
+   },
+   {
+    "npc_id": 128011,
+    "name": "Deathscreech",
+    "species_id": 2099,
+    "tamer_id": "279"
+   },
+   {
+    "npc_id": 128012,
+    "name": "Gnasher",
+    "species_id": 2100,
+    "tamer_id": "281"
+   },
+   {
+    "npc_id": 128013,
+    "name": "Bucky",
+    "species_id": 2101,
+    "tamer_id": "284"
+   },
+   {
+    "npc_id": 128014,
+    "name": "Snozz",
+    "species_id": 2102,
+    "tamer_id": "289"
+   },
+   {
+    "npc_id": 128015,
+    "name": "Gloamwing",
+    "species_id": 2103,
+    "tamer_id": "286"
+   },
+   {
+    "npc_id": 128016,
+    "name": "Shadeflicker",
+    "species_id": 2104,
+    "tamer_id": "288"
+   },
+   {
+    "npc_id": 128017,
+    "name": "Corrupted Blood of Argus",
+    "species_id": 2105,
+    "tamer_id": "285"
+   },
+   {
+    "npc_id": 128018,
+    "name": "Mar'cuus",
+    "species_id": 2106,
+    "tamer_id": "287"
+   },
+   {
+    "npc_id": 128019,
+    "name": "Watcher",
+    "species_id": 2107,
+    "tamer_id": "274"
+   },
+   {
+    "npc_id": 128020,
+    "name": "Bloat",
+    "species_id": 2108,
+    "tamer_id": "272"
+   },
+   {
+    "npc_id": 128021,
+    "name": "Earseeker",
+    "species_id": 2109,
+    "tamer_id": "275"
+   },
+   {
+    "npc_id": 128022,
+    "name": "Pilfer",
+    "species_id": 2112,
+    "tamer_id": "271"
+   },
+   {
+    "npc_id": 128023,
+    "name": "Minixis",
+    "species_id": 2111,
+    "tamer_id": "270"
+   },
+   {
+    "npc_id": 128024,
+    "name": "One-of-Many",
+    "species_id": 2110,
+    "tamer_id": "273"
+   }
+  ],
+  "notes": "Defeat all 18.",
+  "required_count": 18
+ },
+ {
+  "achievement_id": 12089,
+  "name_en": "Aquatic Assault",
+  "name_ru": "Нашествие водных",
+  "description_en": "Defeat the corrupted pets of Argus with all Aquatic pets.",
+  "kind": "family_tamer",
+  "required_family": 8,
+  "tamers": [
+   {
+    "npc_id": 128007,
+    "name": "Ruinhoof",
+    "species_id": 2095,
+    "tamer_id": "282"
+   },
+   {
+    "npc_id": 128008,
+    "name": "Foulclaw",
+    "species_id": 2096,
+    "tamer_id": "280"
+   },
+   {
+    "npc_id": 128009,
+    "name": "Baneglow",
+    "species_id": 2097,
+    "tamer_id": "278"
+   },
+   {
+    "npc_id": 128010,
+    "name": "Retch",
+    "species_id": 2098,
+    "tamer_id": "277"
+   },
+   {
+    "npc_id": 128011,
+    "name": "Deathscreech",
+    "species_id": 2099,
+    "tamer_id": "279"
+   },
+   {
+    "npc_id": 128012,
+    "name": "Gnasher",
+    "species_id": 2100,
+    "tamer_id": "281"
+   },
+   {
+    "npc_id": 128013,
+    "name": "Bucky",
+    "species_id": 2101,
+    "tamer_id": "284"
+   },
+   {
+    "npc_id": 128014,
+    "name": "Snozz",
+    "species_id": 2102,
+    "tamer_id": "289"
+   },
+   {
+    "npc_id": 128015,
+    "name": "Gloamwing",
+    "species_id": 2103,
+    "tamer_id": "286"
+   },
+   {
+    "npc_id": 128016,
+    "name": "Shadeflicker",
+    "species_id": 2104,
+    "tamer_id": "288"
+   },
+   {
+    "npc_id": 128017,
+    "name": "Corrupted Blood of Argus",
+    "species_id": 2105,
+    "tamer_id": "285"
+   },
+   {
+    "npc_id": 128018,
+    "name": "Mar'cuus",
+    "species_id": 2106,
+    "tamer_id": "287"
+   },
+   {
+    "npc_id": 128019,
+    "name": "Watcher",
+    "species_id": 2107,
+    "tamer_id": "274"
+   },
+   {
+    "npc_id": 128020,
+    "name": "Bloat",
+    "species_id": 2108,
+    "tamer_id": "272"
+   },
+   {
+    "npc_id": 128021,
+    "name": "Earseeker",
+    "species_id": 2109,
+    "tamer_id": "275"
+   },
+   {
+    "npc_id": 128022,
+    "name": "Pilfer",
+    "species_id": 2112,
+    "tamer_id": "271"
+   },
+   {
+    "npc_id": 128023,
+    "name": "Minixis",
+    "species_id": 2111,
+    "tamer_id": "270"
+   },
+   {
+    "npc_id": 128024,
+    "name": "One-of-Many",
+    "species_id": 2110,
+    "tamer_id": "273"
+   }
+  ],
+  "notes": "Defeat all 18. Whole team must be Aquatic.",
+  "required_count": 18
+ },
+ {
+  "achievement_id": 12091,
+  "name_en": "Beast Blitz",
+  "name_ru": "Зверобойня",
+  "description_en": "Defeat the corrupted pets of Argus with all Beast pets.",
+  "kind": "family_tamer",
+  "required_family": 7,
+  "tamers": [
+   {
+    "npc_id": 128007,
+    "name": "Ruinhoof",
+    "species_id": 2095,
+    "tamer_id": "282"
+   },
+   {
+    "npc_id": 128008,
+    "name": "Foulclaw",
+    "species_id": 2096,
+    "tamer_id": "280"
+   },
+   {
+    "npc_id": 128009,
+    "name": "Baneglow",
+    "species_id": 2097,
+    "tamer_id": "278"
+   },
+   {
+    "npc_id": 128010,
+    "name": "Retch",
+    "species_id": 2098,
+    "tamer_id": "277"
+   },
+   {
+    "npc_id": 128011,
+    "name": "Deathscreech",
+    "species_id": 2099,
+    "tamer_id": "279"
+   },
+   {
+    "npc_id": 128012,
+    "name": "Gnasher",
+    "species_id": 2100,
+    "tamer_id": "281"
+   },
+   {
+    "npc_id": 128013,
+    "name": "Bucky",
+    "species_id": 2101,
+    "tamer_id": "284"
+   },
+   {
+    "npc_id": 128014,
+    "name": "Snozz",
+    "species_id": 2102,
+    "tamer_id": "289"
+   },
+   {
+    "npc_id": 128015,
+    "name": "Gloamwing",
+    "species_id": 2103,
+    "tamer_id": "286"
+   },
+   {
+    "npc_id": 128016,
+    "name": "Shadeflicker",
+    "species_id": 2104,
+    "tamer_id": "288"
+   },
+   {
+    "npc_id": 128017,
+    "name": "Corrupted Blood of Argus",
+    "species_id": 2105,
+    "tamer_id": "285"
+   },
+   {
+    "npc_id": 128018,
+    "name": "Mar'cuus",
+    "species_id": 2106,
+    "tamer_id": "287"
+   },
+   {
+    "npc_id": 128019,
+    "name": "Watcher",
+    "species_id": 2107,
+    "tamer_id": "274"
+   },
+   {
+    "npc_id": 128020,
+    "name": "Bloat",
+    "species_id": 2108,
+    "tamer_id": "272"
+   },
+   {
+    "npc_id": 128021,
+    "name": "Earseeker",
+    "species_id": 2109,
+    "tamer_id": "275"
+   },
+   {
+    "npc_id": 128022,
+    "name": "Pilfer",
+    "species_id": 2112,
+    "tamer_id": "271"
+   },
+   {
+    "npc_id": 128023,
+    "name": "Minixis",
+    "species_id": 2111,
+    "tamer_id": "270"
+   },
+   {
+    "npc_id": 128024,
+    "name": "One-of-Many",
+    "species_id": 2110,
+    "tamer_id": "273"
+   }
+  ],
+  "notes": "Defeat all 18. Whole team must be Beast.",
+  "required_count": 18
+ },
+ {
+  "achievement_id": 12092,
+  "name_en": "Critical Critters",
+  "name_ru": "Свирепая мелочь",
+  "description_en": "Defeat the corrupted pets of Argus with all Critter pets.",
+  "kind": "family_tamer",
+  "required_family": 4,
+  "tamers": [
+   {
+    "npc_id": 128007,
+    "name": "Ruinhoof",
+    "species_id": 2095,
+    "tamer_id": "282"
+   },
+   {
+    "npc_id": 128008,
+    "name": "Foulclaw",
+    "species_id": 2096,
+    "tamer_id": "280"
+   },
+   {
+    "npc_id": 128009,
+    "name": "Baneglow",
+    "species_id": 2097,
+    "tamer_id": "278"
+   },
+   {
+    "npc_id": 128010,
+    "name": "Retch",
+    "species_id": 2098,
+    "tamer_id": "277"
+   },
+   {
+    "npc_id": 128011,
+    "name": "Deathscreech",
+    "species_id": 2099,
+    "tamer_id": "279"
+   },
+   {
+    "npc_id": 128012,
+    "name": "Gnasher",
+    "species_id": 2100,
+    "tamer_id": "281"
+   },
+   {
+    "npc_id": 128013,
+    "name": "Bucky",
+    "species_id": 2101,
+    "tamer_id": "284"
+   },
+   {
+    "npc_id": 128014,
+    "name": "Snozz",
+    "species_id": 2102,
+    "tamer_id": "289"
+   },
+   {
+    "npc_id": 128015,
+    "name": "Gloamwing",
+    "species_id": 2103,
+    "tamer_id": "286"
+   },
+   {
+    "npc_id": 128016,
+    "name": "Shadeflicker",
+    "species_id": 2104,
+    "tamer_id": "288"
+   },
+   {
+    "npc_id": 128017,
+    "name": "Corrupted Blood of Argus",
+    "species_id": 2105,
+    "tamer_id": "285"
+   },
+   {
+    "npc_id": 128018,
+    "name": "Mar'cuus",
+    "species_id": 2106,
+    "tamer_id": "287"
+   },
+   {
+    "npc_id": 128019,
+    "name": "Watcher",
+    "species_id": 2107,
+    "tamer_id": "274"
+   },
+   {
+    "npc_id": 128020,
+    "name": "Bloat",
+    "species_id": 2108,
+    "tamer_id": "272"
+   },
+   {
+    "npc_id": 128021,
+    "name": "Earseeker",
+    "species_id": 2109,
+    "tamer_id": "275"
+   },
+   {
+    "npc_id": 128022,
+    "name": "Pilfer",
+    "species_id": 2112,
+    "tamer_id": "271"
+   },
+   {
+    "npc_id": 128023,
+    "name": "Minixis",
+    "species_id": 2111,
+    "tamer_id": "270"
+   },
+   {
+    "npc_id": 128024,
+    "name": "One-of-Many",
+    "species_id": 2110,
+    "tamer_id": "273"
+   }
+  ],
+  "notes": "Defeat all 18. Whole team must be Critter.",
+  "required_count": 18
+ },
+ {
+  "achievement_id": 12093,
+  "name_en": "Draconic Destruction",
+  "name_ru": "Драконы-разрушители",
+  "description_en": "Defeat the corrupted pets of Argus with all Dragonkin pets.",
+  "kind": "family_tamer",
+  "required_family": 1,
+  "tamers": [
+   {
+    "npc_id": 128007,
+    "name": "Ruinhoof",
+    "species_id": 2095,
+    "tamer_id": "282"
+   },
+   {
+    "npc_id": 128008,
+    "name": "Foulclaw",
+    "species_id": 2096,
+    "tamer_id": "280"
+   },
+   {
+    "npc_id": 128009,
+    "name": "Baneglow",
+    "species_id": 2097,
+    "tamer_id": "278"
+   },
+   {
+    "npc_id": 128010,
+    "name": "Retch",
+    "species_id": 2098,
+    "tamer_id": "277"
+   },
+   {
+    "npc_id": 128011,
+    "name": "Deathscreech",
+    "species_id": 2099,
+    "tamer_id": "279"
+   },
+   {
+    "npc_id": 128012,
+    "name": "Gnasher",
+    "species_id": 2100,
+    "tamer_id": "281"
+   },
+   {
+    "npc_id": 128013,
+    "name": "Bucky",
+    "species_id": 2101,
+    "tamer_id": "284"
+   },
+   {
+    "npc_id": 128014,
+    "name": "Snozz",
+    "species_id": 2102,
+    "tamer_id": "289"
+   },
+   {
+    "npc_id": 128015,
+    "name": "Gloamwing",
+    "species_id": 2103,
+    "tamer_id": "286"
+   },
+   {
+    "npc_id": 128016,
+    "name": "Shadeflicker",
+    "species_id": 2104,
+    "tamer_id": "288"
+   },
+   {
+    "npc_id": 128017,
+    "name": "Corrupted Blood of Argus",
+    "species_id": 2105,
+    "tamer_id": "285"
+   },
+   {
+    "npc_id": 128018,
+    "name": "Mar'cuus",
+    "species_id": 2106,
+    "tamer_id": "287"
+   },
+   {
+    "npc_id": 128019,
+    "name": "Watcher",
+    "species_id": 2107,
+    "tamer_id": "274"
+   },
+   {
+    "npc_id": 128020,
+    "name": "Bloat",
+    "species_id": 2108,
+    "tamer_id": "272"
+   },
+   {
+    "npc_id": 128021,
+    "name": "Earseeker",
+    "species_id": 2109,
+    "tamer_id": "275"
+   },
+   {
+    "npc_id": 128022,
+    "name": "Pilfer",
+    "species_id": 2112,
+    "tamer_id": "271"
+   },
+   {
+    "npc_id": 128023,
+    "name": "Minixis",
+    "species_id": 2111,
+    "tamer_id": "270"
+   },
+   {
+    "npc_id": 128024,
+    "name": "One-of-Many",
+    "species_id": 2110,
+    "tamer_id": "273"
+   }
+  ],
+  "notes": "Defeat all 18. Whole team must be Dragonkin.",
+  "required_count": 18
+ },
+ {
+  "achievement_id": 12094,
+  "name_en": "Elemental Escalation",
+  "name_ru": "Торжество стихий",
+  "description_en": "Defeat the corrupted pets of Argus with all Elemental pets.",
+  "kind": "family_tamer",
+  "required_family": 6,
+  "tamers": [
+   {
+    "npc_id": 128007,
+    "name": "Ruinhoof",
+    "species_id": 2095,
+    "tamer_id": "282"
+   },
+   {
+    "npc_id": 128008,
+    "name": "Foulclaw",
+    "species_id": 2096,
+    "tamer_id": "280"
+   },
+   {
+    "npc_id": 128009,
+    "name": "Baneglow",
+    "species_id": 2097,
+    "tamer_id": "278"
+   },
+   {
+    "npc_id": 128010,
+    "name": "Retch",
+    "species_id": 2098,
+    "tamer_id": "277"
+   },
+   {
+    "npc_id": 128011,
+    "name": "Deathscreech",
+    "species_id": 2099,
+    "tamer_id": "279"
+   },
+   {
+    "npc_id": 128012,
+    "name": "Gnasher",
+    "species_id": 2100,
+    "tamer_id": "281"
+   },
+   {
+    "npc_id": 128013,
+    "name": "Bucky",
+    "species_id": 2101,
+    "tamer_id": "284"
+   },
+   {
+    "npc_id": 128014,
+    "name": "Snozz",
+    "species_id": 2102,
+    "tamer_id": "289"
+   },
+   {
+    "npc_id": 128015,
+    "name": "Gloamwing",
+    "species_id": 2103,
+    "tamer_id": "286"
+   },
+   {
+    "npc_id": 128016,
+    "name": "Shadeflicker",
+    "species_id": 2104,
+    "tamer_id": "288"
+   },
+   {
+    "npc_id": 128017,
+    "name": "Corrupted Blood of Argus",
+    "species_id": 2105,
+    "tamer_id": "285"
+   },
+   {
+    "npc_id": 128018,
+    "name": "Mar'cuus",
+    "species_id": 2106,
+    "tamer_id": "287"
+   },
+   {
+    "npc_id": 128019,
+    "name": "Watcher",
+    "species_id": 2107,
+    "tamer_id": "274"
+   },
+   {
+    "npc_id": 128020,
+    "name": "Bloat",
+    "species_id": 2108,
+    "tamer_id": "272"
+   },
+   {
+    "npc_id": 128021,
+    "name": "Earseeker",
+    "species_id": 2109,
+    "tamer_id": "275"
+   },
+   {
+    "npc_id": 128022,
+    "name": "Pilfer",
+    "species_id": 2112,
+    "tamer_id": "271"
+   },
+   {
+    "npc_id": 128023,
+    "name": "Minixis",
+    "species_id": 2111,
+    "tamer_id": "270"
+   },
+   {
+    "npc_id": 128024,
+    "name": "One-of-Many",
+    "species_id": 2110,
+    "tamer_id": "273"
+   }
+  ],
+  "notes": "Defeat all 18. Whole team must be Elemental.",
+  "required_count": 18
+ },
+ {
+  "achievement_id": 12095,
+  "name_en": "Fierce Fliers",
+  "name_ru": "Крылатые мстители",
+  "description_en": "Defeat the corrupted pets of Argus with all Flying pets.",
+  "kind": "family_tamer",
+  "required_family": 2,
+  "tamers": [
+   {
+    "npc_id": 128007,
+    "name": "Ruinhoof",
+    "species_id": 2095,
+    "tamer_id": "282"
+   },
+   {
+    "npc_id": 128008,
+    "name": "Foulclaw",
+    "species_id": 2096,
+    "tamer_id": "280"
+   },
+   {
+    "npc_id": 128009,
+    "name": "Baneglow",
+    "species_id": 2097,
+    "tamer_id": "278"
+   },
+   {
+    "npc_id": 128010,
+    "name": "Retch",
+    "species_id": 2098,
+    "tamer_id": "277"
+   },
+   {
+    "npc_id": 128011,
+    "name": "Deathscreech",
+    "species_id": 2099,
+    "tamer_id": "279"
+   },
+   {
+    "npc_id": 128012,
+    "name": "Gnasher",
+    "species_id": 2100,
+    "tamer_id": "281"
+   },
+   {
+    "npc_id": 128013,
+    "name": "Bucky",
+    "species_id": 2101,
+    "tamer_id": "284"
+   },
+   {
+    "npc_id": 128014,
+    "name": "Snozz",
+    "species_id": 2102,
+    "tamer_id": "289"
+   },
+   {
+    "npc_id": 128015,
+    "name": "Gloamwing",
+    "species_id": 2103,
+    "tamer_id": "286"
+   },
+   {
+    "npc_id": 128016,
+    "name": "Shadeflicker",
+    "species_id": 2104,
+    "tamer_id": "288"
+   },
+   {
+    "npc_id": 128017,
+    "name": "Corrupted Blood of Argus",
+    "species_id": 2105,
+    "tamer_id": "285"
+   },
+   {
+    "npc_id": 128018,
+    "name": "Mar'cuus",
+    "species_id": 2106,
+    "tamer_id": "287"
+   },
+   {
+    "npc_id": 128019,
+    "name": "Watcher",
+    "species_id": 2107,
+    "tamer_id": "274"
+   },
+   {
+    "npc_id": 128020,
+    "name": "Bloat",
+    "species_id": 2108,
+    "tamer_id": "272"
+   },
+   {
+    "npc_id": 128021,
+    "name": "Earseeker",
+    "species_id": 2109,
+    "tamer_id": "275"
+   },
+   {
+    "npc_id": 128022,
+    "name": "Pilfer",
+    "species_id": 2112,
+    "tamer_id": "271"
+   },
+   {
+    "npc_id": 128023,
+    "name": "Minixis",
+    "species_id": 2111,
+    "tamer_id": "270"
+   },
+   {
+    "npc_id": 128024,
+    "name": "One-of-Many",
+    "species_id": 2110,
+    "tamer_id": "273"
+   }
+  ],
+  "notes": "Defeat all 18. Whole team must be Flying.",
+  "required_count": 18
+ },
+ {
+  "achievement_id": 12096,
+  "name_en": "Humanoid Havoc",
+  "name_ru": "Гуманоиды в ярости",
+  "description_en": "Defeat the corrupted pets of Argus with all Humanoid pets.",
+  "kind": "family_tamer",
+  "required_family": 0,
+  "tamers": [
+   {
+    "npc_id": 128007,
+    "name": "Ruinhoof",
+    "species_id": 2095,
+    "tamer_id": "282"
+   },
+   {
+    "npc_id": 128008,
+    "name": "Foulclaw",
+    "species_id": 2096,
+    "tamer_id": "280"
+   },
+   {
+    "npc_id": 128009,
+    "name": "Baneglow",
+    "species_id": 2097,
+    "tamer_id": "278"
+   },
+   {
+    "npc_id": 128010,
+    "name": "Retch",
+    "species_id": 2098,
+    "tamer_id": "277"
+   },
+   {
+    "npc_id": 128011,
+    "name": "Deathscreech",
+    "species_id": 2099,
+    "tamer_id": "279"
+   },
+   {
+    "npc_id": 128012,
+    "name": "Gnasher",
+    "species_id": 2100,
+    "tamer_id": "281"
+   },
+   {
+    "npc_id": 128013,
+    "name": "Bucky",
+    "species_id": 2101,
+    "tamer_id": "284"
+   },
+   {
+    "npc_id": 128014,
+    "name": "Snozz",
+    "species_id": 2102,
+    "tamer_id": "289"
+   },
+   {
+    "npc_id": 128015,
+    "name": "Gloamwing",
+    "species_id": 2103,
+    "tamer_id": "286"
+   },
+   {
+    "npc_id": 128016,
+    "name": "Shadeflicker",
+    "species_id": 2104,
+    "tamer_id": "288"
+   },
+   {
+    "npc_id": 128017,
+    "name": "Corrupted Blood of Argus",
+    "species_id": 2105,
+    "tamer_id": "285"
+   },
+   {
+    "npc_id": 128018,
+    "name": "Mar'cuus",
+    "species_id": 2106,
+    "tamer_id": "287"
+   },
+   {
+    "npc_id": 128019,
+    "name": "Watcher",
+    "species_id": 2107,
+    "tamer_id": "274"
+   },
+   {
+    "npc_id": 128020,
+    "name": "Bloat",
+    "species_id": 2108,
+    "tamer_id": "272"
+   },
+   {
+    "npc_id": 128021,
+    "name": "Earseeker",
+    "species_id": 2109,
+    "tamer_id": "275"
+   },
+   {
+    "npc_id": 128022,
+    "name": "Pilfer",
+    "species_id": 2112,
+    "tamer_id": "271"
+   },
+   {
+    "npc_id": 128023,
+    "name": "Minixis",
+    "species_id": 2111,
+    "tamer_id": "270"
+   },
+   {
+    "npc_id": 128024,
+    "name": "One-of-Many",
+    "species_id": 2110,
+    "tamer_id": "273"
+   }
+  ],
+  "notes": "Defeat all 18. Whole team must be Humanoid.",
+  "required_count": 18
+ },
+ {
+  "achievement_id": 12097,
+  "name_en": "Magical Mayhem",
+  "name_ru": "Магическая мясорубка",
+  "description_en": "Defeat the corrupted pets of Argus with all Magic pets.",
+  "kind": "family_tamer",
+  "required_family": 5,
+  "tamers": [
+   {
+    "npc_id": 128007,
+    "name": "Ruinhoof",
+    "species_id": 2095,
+    "tamer_id": "282"
+   },
+   {
+    "npc_id": 128008,
+    "name": "Foulclaw",
+    "species_id": 2096,
+    "tamer_id": "280"
+   },
+   {
+    "npc_id": 128009,
+    "name": "Baneglow",
+    "species_id": 2097,
+    "tamer_id": "278"
+   },
+   {
+    "npc_id": 128010,
+    "name": "Retch",
+    "species_id": 2098,
+    "tamer_id": "277"
+   },
+   {
+    "npc_id": 128011,
+    "name": "Deathscreech",
+    "species_id": 2099,
+    "tamer_id": "279"
+   },
+   {
+    "npc_id": 128012,
+    "name": "Gnasher",
+    "species_id": 2100,
+    "tamer_id": "281"
+   },
+   {
+    "npc_id": 128013,
+    "name": "Bucky",
+    "species_id": 2101,
+    "tamer_id": "284"
+   },
+   {
+    "npc_id": 128014,
+    "name": "Snozz",
+    "species_id": 2102,
+    "tamer_id": "289"
+   },
+   {
+    "npc_id": 128015,
+    "name": "Gloamwing",
+    "species_id": 2103,
+    "tamer_id": "286"
+   },
+   {
+    "npc_id": 128016,
+    "name": "Shadeflicker",
+    "species_id": 2104,
+    "tamer_id": "288"
+   },
+   {
+    "npc_id": 128017,
+    "name": "Corrupted Blood of Argus",
+    "species_id": 2105,
+    "tamer_id": "285"
+   },
+   {
+    "npc_id": 128018,
+    "name": "Mar'cuus",
+    "species_id": 2106,
+    "tamer_id": "287"
+   },
+   {
+    "npc_id": 128019,
+    "name": "Watcher",
+    "species_id": 2107,
+    "tamer_id": "274"
+   },
+   {
+    "npc_id": 128020,
+    "name": "Bloat",
+    "species_id": 2108,
+    "tamer_id": "272"
+   },
+   {
+    "npc_id": 128021,
+    "name": "Earseeker",
+    "species_id": 2109,
+    "tamer_id": "275"
+   },
+   {
+    "npc_id": 128022,
+    "name": "Pilfer",
+    "species_id": 2112,
+    "tamer_id": "271"
+   },
+   {
+    "npc_id": 128023,
+    "name": "Minixis",
+    "species_id": 2111,
+    "tamer_id": "270"
+   },
+   {
+    "npc_id": 128024,
+    "name": "One-of-Many",
+    "species_id": 2110,
+    "tamer_id": "273"
+   }
+  ],
+  "notes": "Defeat all 18. Whole team must be Magic.",
+  "required_count": 18
+ },
+ {
+  "achievement_id": 12098,
+  "name_en": "Mechanical Melee",
+  "name_ru": "Восстание машин",
+  "description_en": "Defeat the corrupted pets of Argus with all Mechanical pets.",
+  "kind": "family_tamer",
+  "required_family": 9,
+  "tamers": [
+   {
+    "npc_id": 128007,
+    "name": "Ruinhoof",
+    "species_id": 2095,
+    "tamer_id": "282"
+   },
+   {
+    "npc_id": 128008,
+    "name": "Foulclaw",
+    "species_id": 2096,
+    "tamer_id": "280"
+   },
+   {
+    "npc_id": 128009,
+    "name": "Baneglow",
+    "species_id": 2097,
+    "tamer_id": "278"
+   },
+   {
+    "npc_id": 128010,
+    "name": "Retch",
+    "species_id": 2098,
+    "tamer_id": "277"
+   },
+   {
+    "npc_id": 128011,
+    "name": "Deathscreech",
+    "species_id": 2099,
+    "tamer_id": "279"
+   },
+   {
+    "npc_id": 128012,
+    "name": "Gnasher",
+    "species_id": 2100,
+    "tamer_id": "281"
+   },
+   {
+    "npc_id": 128013,
+    "name": "Bucky",
+    "species_id": 2101,
+    "tamer_id": "284"
+   },
+   {
+    "npc_id": 128014,
+    "name": "Snozz",
+    "species_id": 2102,
+    "tamer_id": "289"
+   },
+   {
+    "npc_id": 128015,
+    "name": "Gloamwing",
+    "species_id": 2103,
+    "tamer_id": "286"
+   },
+   {
+    "npc_id": 128016,
+    "name": "Shadeflicker",
+    "species_id": 2104,
+    "tamer_id": "288"
+   },
+   {
+    "npc_id": 128017,
+    "name": "Corrupted Blood of Argus",
+    "species_id": 2105,
+    "tamer_id": "285"
+   },
+   {
+    "npc_id": 128018,
+    "name": "Mar'cuus",
+    "species_id": 2106,
+    "tamer_id": "287"
+   },
+   {
+    "npc_id": 128019,
+    "name": "Watcher",
+    "species_id": 2107,
+    "tamer_id": "274"
+   },
+   {
+    "npc_id": 128020,
+    "name": "Bloat",
+    "species_id": 2108,
+    "tamer_id": "272"
+   },
+   {
+    "npc_id": 128021,
+    "name": "Earseeker",
+    "species_id": 2109,
+    "tamer_id": "275"
+   },
+   {
+    "npc_id": 128022,
+    "name": "Pilfer",
+    "species_id": 2112,
+    "tamer_id": "271"
+   },
+   {
+    "npc_id": 128023,
+    "name": "Minixis",
+    "species_id": 2111,
+    "tamer_id": "270"
+   },
+   {
+    "npc_id": 128024,
+    "name": "One-of-Many",
+    "species_id": 2110,
+    "tamer_id": "273"
+   }
+  ],
+  "notes": "Defeat all 18. Whole team must be Mechanical.",
+  "required_count": 18
+ },
+ {
+  "achievement_id": 12099,
+  "name_en": "Unstoppable Undead",
+  "name_ru": "Неудержимая нежить",
+  "description_en": "Defeat the corrupted pets of Argus with all Undead pets.",
+  "kind": "family_tamer",
+  "required_family": 3,
+  "tamers": [
+   {
+    "npc_id": 128007,
+    "name": "Ruinhoof",
+    "species_id": 2095,
+    "tamer_id": "282"
+   },
+   {
+    "npc_id": 128008,
+    "name": "Foulclaw",
+    "species_id": 2096,
+    "tamer_id": "280"
+   },
+   {
+    "npc_id": 128009,
+    "name": "Baneglow",
+    "species_id": 2097,
+    "tamer_id": "278"
+   },
+   {
+    "npc_id": 128010,
+    "name": "Retch",
+    "species_id": 2098,
+    "tamer_id": "277"
+   },
+   {
+    "npc_id": 128011,
+    "name": "Deathscreech",
+    "species_id": 2099,
+    "tamer_id": "279"
+   },
+   {
+    "npc_id": 128012,
+    "name": "Gnasher",
+    "species_id": 2100,
+    "tamer_id": "281"
+   },
+   {
+    "npc_id": 128013,
+    "name": "Bucky",
+    "species_id": 2101,
+    "tamer_id": "284"
+   },
+   {
+    "npc_id": 128014,
+    "name": "Snozz",
+    "species_id": 2102,
+    "tamer_id": "289"
+   },
+   {
+    "npc_id": 128015,
+    "name": "Gloamwing",
+    "species_id": 2103,
+    "tamer_id": "286"
+   },
+   {
+    "npc_id": 128016,
+    "name": "Shadeflicker",
+    "species_id": 2104,
+    "tamer_id": "288"
+   },
+   {
+    "npc_id": 128017,
+    "name": "Corrupted Blood of Argus",
+    "species_id": 2105,
+    "tamer_id": "285"
+   },
+   {
+    "npc_id": 128018,
+    "name": "Mar'cuus",
+    "species_id": 2106,
+    "tamer_id": "287"
+   },
+   {
+    "npc_id": 128019,
+    "name": "Watcher",
+    "species_id": 2107,
+    "tamer_id": "274"
+   },
+   {
+    "npc_id": 128020,
+    "name": "Bloat",
+    "species_id": 2108,
+    "tamer_id": "272"
+   },
+   {
+    "npc_id": 128021,
+    "name": "Earseeker",
+    "species_id": 2109,
+    "tamer_id": "275"
+   },
+   {
+    "npc_id": 128022,
+    "name": "Pilfer",
+    "species_id": 2112,
+    "tamer_id": "271"
+   },
+   {
+    "npc_id": 128023,
+    "name": "Minixis",
+    "species_id": 2111,
+    "tamer_id": "270"
+   },
+   {
+    "npc_id": 128024,
+    "name": "One-of-Many",
+    "species_id": 2110,
+    "tamer_id": "273"
+   }
+  ],
+  "notes": "Defeat all 18. Whole team must be Undead.",
+  "required_count": 18
+ },
+ {
+  "achievement_id": 12100,
+  "name_en": "Family Fighter",
+  "name_ru": "Защитник семейства",
+  "description_en": "Complete the following achievements.",
+  "kind": "meta",
+  "required_family": null,
+  "tamers": [],
+  "notes": "",
+  "children": [
+   12089,
+   12091,
+   12092,
+   12093,
+   12094,
+   12095,
+   12096,
+   12097,
+   12098,
+   12099
+  ]
+ },
+ {
+  "achievement_id": 12281,
+  "name_en": "Beast Brawler",
+  "name_ru": "Наставник питомцев-животных",
+  "description_en": "Win 10 PvP pet battles through Find Battle with a full team of level 25 Beast pets.",
+  "kind": "other",
+  "required_family": 7,
+  "tamers": [],
+  "notes": "Win 10 PvP pet battles through Find Battle with a full team of level 25 Beast pets."
+ },
+ {
+  "achievement_id": 12282,
+  "name_en": "Elemental Brawler",
+  "name_ru": "Наставник питомцев-элементалей",
+  "description_en": "Win 10 PvP pet battles through Find Battle with a full team of level 25 Elemental pets.",
+  "kind": "other",
+  "required_family": 6,
+  "tamers": [],
+  "notes": "Win 10 PvP pet battles through Find Battle with a full team of level 25 Elemental pets."
+ },
+ {
+  "achievement_id": 12283,
+  "name_en": "Magic Brawler",
+  "name_ru": "Наставник магических питомцев",
+  "description_en": "Win 10 PvP pet battles through Find Battle with a full team of level 25 Magic pets.",
+  "kind": "other",
+  "required_family": 5,
+  "tamers": [],
+  "notes": "Win 10 PvP pet battles through Find Battle with a full team of level 25 Magic pets."
+ },
+ {
+  "achievement_id": 12284,
+  "name_en": "Critter Brawler",
+  "name_ru": "Наставник питомцев-зверьков",
+  "description_en": "Win 10 PvP pet battles through Find Battle with a full team of level 25 Critter pets.",
+  "kind": "other",
+  "required_family": 4,
+  "tamers": [],
+  "notes": "Win 10 PvP pet battles through Find Battle with a full team of level 25 Critter pets."
+ },
+ {
+  "achievement_id": 12285,
+  "name_en": "Undead Brawler",
+  "name_ru": "Наставник питомцев-нежити",
+  "description_en": "Win 10 PvP pet battles through Find Battle with a full team of level 25 Undead pets.",
+  "kind": "other",
+  "required_family": 3,
+  "tamers": [],
+  "notes": "Win 10 PvP pet battles through Find Battle with a full team of level 25 Undead pets."
+ },
+ {
+  "achievement_id": 12286,
+  "name_en": "Flying Brawler",
+  "name_ru": "Наставник летающих питомцев",
+  "description_en": "Win 10 PvP pet battles through Find Battle with a full team of level 25 Flying pets.",
+  "kind": "other",
+  "required_family": 2,
+  "tamers": [],
+  "notes": "Win 10 PvP pet battles through Find Battle with a full team of level 25 Flying pets."
+ },
+ {
+  "achievement_id": 12287,
+  "name_en": "Dragonkin Brawler",
+  "name_ru": "Наставник питомцев-драконов",
+  "description_en": "Win 10 PvP pet battles through Find Battle with a full team of level 25 Dragonkin pets.",
+  "kind": "other",
+  "required_family": 1,
+  "tamers": [],
+  "notes": "Win 10 PvP pet battles through Find Battle with a full team of level 25 Dragonkin pets."
+ },
+ {
+  "achievement_id": 12289,
+  "name_en": "Humanoid Brawler",
+  "name_ru": "Наставник питомцев-гуманоидов",
+  "description_en": "Win 10 PvP pet battles through Find Battle with a full team of level 25 Humanoid pets.",
+  "kind": "other",
+  "required_family": 0,
+  "tamers": [],
+  "notes": "Win 10 PvP pet battles through Find Battle with a full team of level 25 Humanoid pets."
+ },
+ {
+  "achievement_id": 12290,
+  "name_en": "Family Brawler",
+  "name_ru": "Наставник семейств",
+  "description_en": "Complete the following achievements.",
+  "kind": "meta",
+  "required_family": null,
+  "tamers": [],
+  "notes": "Children are PvP Find Battle family achievements (not NPC tamers).",
+  "children": [
+   12279,
+   12280,
+   12281,
+   12282,
+   12283,
+   12284,
+   12285,
+   12286,
+   12287,
+   12289
+  ]
+ },
+ {
+  "achievement_id": 13270,
+  "name_en": "Beast Mode",
+  "name_ru": "Зверский режим",
+  "description_en": "Defeat 15 Master Tamers on Kul Tiras or Zandalar with a team of all level 25 Beast pets.",
+  "kind": "family_tamer",
+  "required_family": 7,
+  "tamers": [
+   {
+    "npc_id": 139489,
+    "name": "Captain Hermes",
+    "tamer_id": "304"
+   },
+   {
+    "npc_id": 140315,
+    "name": "Eddie Fixit",
+    "tamer_id": "298"
+   },
+   {
+    "npc_id": 140461,
+    "name": "Dilbert McClint",
+    "tamer_id": "303"
+   },
+   {
+    "npc_id": 140813,
+    "name": "Fizzie Sparkwhistle",
+    "tamer_id": "302"
+   },
+   {
+    "npc_id": 140880,
+    "name": "Michael Skarn",
+    "tamer_id": "301"
+   },
+   {
+    "npc_id": 141002,
+    "name": "Ellie Vern",
+    "tamer_id": "297"
+   },
+   {
+    "npc_id": 141046,
+    "name": "Leana Darkwind",
+    "tamer_id": "296"
+   },
+   {
+    "npc_id": 141077,
+    "name": "Kwint",
+    "tamer_id": "293"
+   },
+   {
+    "npc_id": 141292,
+    "name": "Delia Hanako",
+    "tamer_id": "291"
+   },
+   {
+    "npc_id": 141479,
+    "name": "Burly",
+    "tamer_id": "292"
+   },
+   {
+    "npc_id": 141529,
+    "name": "Lozu",
+    "tamer_id": "312"
+   },
+   {
+    "npc_id": 141799,
+    "name": "Grady Prett",
+    "tamer_id": "314"
+   },
+   {
+    "npc_id": 141814,
+    "name": "Korval Darkbeard",
+    "tamer_id": "313"
+   },
+   {
+    "npc_id": 141879,
+    "name": "Keeyo",
+    "tamer_id": "316"
+   },
+   {
+    "npc_id": 141945,
+    "name": "Sizzik",
+    "tamer_id": "319"
+   },
+   {
+    "npc_id": 142054,
+    "name": "Kusa",
+    "tamer_id": "317"
+   },
+   {
+    "npc_id": 142096,
+    "name": "Karaga",
+    "tamer_id": "309"
+   },
+   {
+    "npc_id": 142114,
+    "name": "Talia Sparkbrow",
+    "tamer_id": "306"
+   },
+   {
+    "npc_id": 142234,
+    "name": "Zujai",
+    "tamer_id": "307"
+   }
+  ],
+  "notes": "Defeat any 15 of 19 listed. Whole team must be Beast. All pets level 25.",
+  "required_count": 15
+ },
+ {
+  "achievement_id": 13271,
+  "name_en": "Critters With Huge Teeth",
+  "name_ru": "Маленькие зверьки с большими зубами",
+  "description_en": "Defeat 15 Master Tamers on Kul Tiras or Zandalar with a team of all level 25 Critter pets.",
+  "kind": "family_tamer",
+  "required_family": 4,
+  "tamers": [
+   {
+    "npc_id": 139489,
+    "name": "Captain Hermes",
+    "tamer_id": "304"
+   },
+   {
+    "npc_id": 140315,
+    "name": "Eddie Fixit",
+    "tamer_id": "298"
+   },
+   {
+    "npc_id": 140461,
+    "name": "Dilbert McClint",
+    "tamer_id": "303"
+   },
+   {
+    "npc_id": 140813,
+    "name": "Fizzie Sparkwhistle",
+    "tamer_id": "302"
+   },
+   {
+    "npc_id": 140880,
+    "name": "Michael Skarn",
+    "tamer_id": "301"
+   },
+   {
+    "npc_id": 141002,
+    "name": "Ellie Vern",
+    "tamer_id": "297"
+   },
+   {
+    "npc_id": 141046,
+    "name": "Leana Darkwind",
+    "tamer_id": "296"
+   },
+   {
+    "npc_id": 141077,
+    "name": "Kwint",
+    "tamer_id": "293"
+   },
+   {
+    "npc_id": 141292,
+    "name": "Delia Hanako",
+    "tamer_id": "291"
+   },
+   {
+    "npc_id": 141479,
+    "name": "Burly",
+    "tamer_id": "292"
+   },
+   {
+    "npc_id": 141529,
+    "name": "Lozu",
+    "tamer_id": "312"
+   },
+   {
+    "npc_id": 141799,
+    "name": "Grady Prett",
+    "tamer_id": "314"
+   },
+   {
+    "npc_id": 141814,
+    "name": "Korval Darkbeard",
+    "tamer_id": "313"
+   },
+   {
+    "npc_id": 141879,
+    "name": "Keeyo",
+    "tamer_id": "316"
+   },
+   {
+    "npc_id": 141945,
+    "name": "Sizzik",
+    "tamer_id": "319"
+   },
+   {
+    "npc_id": 142054,
+    "name": "Kusa",
+    "tamer_id": "317"
+   },
+   {
+    "npc_id": 142096,
+    "name": "Karaga",
+    "tamer_id": "309"
+   },
+   {
+    "npc_id": 142114,
+    "name": "Talia Sparkbrow",
+    "tamer_id": "306"
+   },
+   {
+    "npc_id": 142234,
+    "name": "Zujai",
+    "tamer_id": "307"
+   }
+  ],
+  "notes": "Defeat any 15 of 19 listed. Whole team must be Critter. All pets level 25.",
+  "required_count": 15
+ },
+ {
+  "achievement_id": 13272,
+  "name_en": "Dragons Make Everything Better",
+  "name_ru": "С драконами всегда лучше",
+  "description_en": "Defeat 15 Master Tamers on Kul Tiras or Zandalar with a team of all level 25 Dragonkin pets.",
+  "kind": "family_tamer",
+  "required_family": 1,
+  "tamers": [
+   {
+    "npc_id": 139489,
+    "name": "Captain Hermes",
+    "tamer_id": "304"
+   },
+   {
+    "npc_id": 140315,
+    "name": "Eddie Fixit",
+    "tamer_id": "298"
+   },
+   {
+    "npc_id": 140461,
+    "name": "Dilbert McClint",
+    "tamer_id": "303"
+   },
+   {
+    "npc_id": 140813,
+    "name": "Fizzie Sparkwhistle",
+    "tamer_id": "302"
+   },
+   {
+    "npc_id": 140880,
+    "name": "Michael Skarn",
+    "tamer_id": "301"
+   },
+   {
+    "npc_id": 141002,
+    "name": "Ellie Vern",
+    "tamer_id": "297"
+   },
+   {
+    "npc_id": 141046,
+    "name": "Leana Darkwind",
+    "tamer_id": "296"
+   },
+   {
+    "npc_id": 141077,
+    "name": "Kwint",
+    "tamer_id": "293"
+   },
+   {
+    "npc_id": 141292,
+    "name": "Delia Hanako",
+    "tamer_id": "291"
+   },
+   {
+    "npc_id": 141479,
+    "name": "Burly",
+    "tamer_id": "292"
+   },
+   {
+    "npc_id": 141529,
+    "name": "Lozu",
+    "tamer_id": "312"
+   },
+   {
+    "npc_id": 141799,
+    "name": "Grady Prett",
+    "tamer_id": "314"
+   },
+   {
+    "npc_id": 141814,
+    "name": "Korval Darkbeard",
+    "tamer_id": "313"
+   },
+   {
+    "npc_id": 141879,
+    "name": "Keeyo",
+    "tamer_id": "316"
+   },
+   {
+    "npc_id": 141945,
+    "name": "Sizzik",
+    "tamer_id": "319"
+   },
+   {
+    "npc_id": 142054,
+    "name": "Kusa",
+    "tamer_id": "317"
+   },
+   {
+    "npc_id": 142096,
+    "name": "Karaga",
+    "tamer_id": "309"
+   },
+   {
+    "npc_id": 142114,
+    "name": "Talia Sparkbrow",
+    "tamer_id": "306"
+   },
+   {
+    "npc_id": 142234,
+    "name": "Zujai",
+    "tamer_id": "307"
+   }
+  ],
+  "notes": "Defeat any 15 of 19 listed. Whole team must be Dragonkin. All pets level 25.",
+  "required_count": 15
+ },
+ {
+  "achievement_id": 13273,
+  "name_en": "Element of Success",
+  "name_ru": "Элемент успеха",
+  "description_en": "Defeat 15 Master Tamers on Kul Tiras or Zandalar with a team of all level 25 Elemental pets.",
+  "kind": "family_tamer",
+  "required_family": 6,
+  "tamers": [
+   {
+    "npc_id": 139489,
+    "name": "Captain Hermes",
+    "tamer_id": "304"
+   },
+   {
+    "npc_id": 140315,
+    "name": "Eddie Fixit",
+    "tamer_id": "298"
+   },
+   {
+    "npc_id": 140461,
+    "name": "Dilbert McClint",
+    "tamer_id": "303"
+   },
+   {
+    "npc_id": 140813,
+    "name": "Fizzie Sparkwhistle",
+    "tamer_id": "302"
+   },
+   {
+    "npc_id": 140880,
+    "name": "Michael Skarn",
+    "tamer_id": "301"
+   },
+   {
+    "npc_id": 141002,
+    "name": "Ellie Vern",
+    "tamer_id": "297"
+   },
+   {
+    "npc_id": 141046,
+    "name": "Leana Darkwind",
+    "tamer_id": "296"
+   },
+   {
+    "npc_id": 141077,
+    "name": "Kwint",
+    "tamer_id": "293"
+   },
+   {
+    "npc_id": 141292,
+    "name": "Delia Hanako",
+    "tamer_id": "291"
+   },
+   {
+    "npc_id": 141479,
+    "name": "Burly",
+    "tamer_id": "292"
+   },
+   {
+    "npc_id": 141529,
+    "name": "Lozu",
+    "tamer_id": "312"
+   },
+   {
+    "npc_id": 141799,
+    "name": "Grady Prett",
+    "tamer_id": "314"
+   },
+   {
+    "npc_id": 141814,
+    "name": "Korval Darkbeard",
+    "tamer_id": "313"
+   },
+   {
+    "npc_id": 141879,
+    "name": "Keeyo",
+    "tamer_id": "316"
+   },
+   {
+    "npc_id": 141945,
+    "name": "Sizzik",
+    "tamer_id": "319"
+   },
+   {
+    "npc_id": 142054,
+    "name": "Kusa",
+    "tamer_id": "317"
+   },
+   {
+    "npc_id": 142096,
+    "name": "Karaga",
+    "tamer_id": "309"
+   },
+   {
+    "npc_id": 142114,
+    "name": "Talia Sparkbrow",
+    "tamer_id": "306"
+   },
+   {
+    "npc_id": 142234,
+    "name": "Zujai",
+    "tamer_id": "307"
+   }
+  ],
+  "notes": "Defeat any 15 of 19 listed. Whole team must be Elemental. All pets level 25.",
+  "required_count": 15
+ },
+ {
+  "achievement_id": 13274,
+  "name_en": "Fun With Flying",
+  "name_ru": "Летать – это весело",
+  "description_en": "Defeat 15 Master Tamers on Kul Tiras or Zandalar with a team of all level 25 Flying pets.",
+  "kind": "family_tamer",
+  "required_family": 2,
+  "tamers": [
+   {
+    "npc_id": 139489,
+    "name": "Captain Hermes",
+    "tamer_id": "304"
+   },
+   {
+    "npc_id": 140315,
+    "name": "Eddie Fixit",
+    "tamer_id": "298"
+   },
+   {
+    "npc_id": 140461,
+    "name": "Dilbert McClint",
+    "tamer_id": "303"
+   },
+   {
+    "npc_id": 140813,
+    "name": "Fizzie Sparkwhistle",
+    "tamer_id": "302"
+   },
+   {
+    "npc_id": 140880,
+    "name": "Michael Skarn",
+    "tamer_id": "301"
+   },
+   {
+    "npc_id": 141002,
+    "name": "Ellie Vern",
+    "tamer_id": "297"
+   },
+   {
+    "npc_id": 141046,
+    "name": "Leana Darkwind",
+    "tamer_id": "296"
+   },
+   {
+    "npc_id": 141077,
+    "name": "Kwint",
+    "tamer_id": "293"
+   },
+   {
+    "npc_id": 141292,
+    "name": "Delia Hanako",
+    "tamer_id": "291"
+   },
+   {
+    "npc_id": 141479,
+    "name": "Burly",
+    "tamer_id": "292"
+   },
+   {
+    "npc_id": 141529,
+    "name": "Lozu",
+    "tamer_id": "312"
+   },
+   {
+    "npc_id": 141799,
+    "name": "Grady Prett",
+    "tamer_id": "314"
+   },
+   {
+    "npc_id": 141814,
+    "name": "Korval Darkbeard",
+    "tamer_id": "313"
+   },
+   {
+    "npc_id": 141879,
+    "name": "Keeyo",
+    "tamer_id": "316"
+   },
+   {
+    "npc_id": 141945,
+    "name": "Sizzik",
+    "tamer_id": "319"
+   },
+   {
+    "npc_id": 142054,
+    "name": "Kusa",
+    "tamer_id": "317"
+   },
+   {
+    "npc_id": 142096,
+    "name": "Karaga",
+    "tamer_id": "309"
+   },
+   {
+    "npc_id": 142114,
+    "name": "Talia Sparkbrow",
+    "tamer_id": "306"
+   },
+   {
+    "npc_id": 142234,
+    "name": "Zujai",
+    "tamer_id": "307"
+   }
+  ],
+  "notes": "Defeat any 15 of 19 listed. Whole team must be Flying. All pets level 25.",
+  "required_count": 15
+ },
+ {
+  "achievement_id": 13275,
+  "name_en": "Magician's Secrets",
+  "name_ru": "Секреты мага",
+  "description_en": "Defeat 15 Master Tamers on Kul Tiras or Zandalar with a team of all level 25 Magic pets.",
+  "kind": "family_tamer",
+  "required_family": 5,
+  "tamers": [
+   {
+    "npc_id": 139489,
+    "name": "Captain Hermes",
+    "tamer_id": "304"
+   },
+   {
+    "npc_id": 140315,
+    "name": "Eddie Fixit",
+    "tamer_id": "298"
+   },
+   {
+    "npc_id": 140461,
+    "name": "Dilbert McClint",
+    "tamer_id": "303"
+   },
+   {
+    "npc_id": 140813,
+    "name": "Fizzie Sparkwhistle",
+    "tamer_id": "302"
+   },
+   {
+    "npc_id": 140880,
+    "name": "Michael Skarn",
+    "tamer_id": "301"
+   },
+   {
+    "npc_id": 141002,
+    "name": "Ellie Vern",
+    "tamer_id": "297"
+   },
+   {
+    "npc_id": 141046,
+    "name": "Leana Darkwind",
+    "tamer_id": "296"
+   },
+   {
+    "npc_id": 141077,
+    "name": "Kwint",
+    "tamer_id": "293"
+   },
+   {
+    "npc_id": 141292,
+    "name": "Delia Hanako",
+    "tamer_id": "291"
+   },
+   {
+    "npc_id": 141479,
+    "name": "Burly",
+    "tamer_id": "292"
+   },
+   {
+    "npc_id": 141529,
+    "name": "Lozu",
+    "tamer_id": "312"
+   },
+   {
+    "npc_id": 141799,
+    "name": "Grady Prett",
+    "tamer_id": "314"
+   },
+   {
+    "npc_id": 141814,
+    "name": "Korval Darkbeard",
+    "tamer_id": "313"
+   },
+   {
+    "npc_id": 141879,
+    "name": "Keeyo",
+    "tamer_id": "316"
+   },
+   {
+    "npc_id": 141945,
+    "name": "Sizzik",
+    "tamer_id": "319"
+   },
+   {
+    "npc_id": 142054,
+    "name": "Kusa",
+    "tamer_id": "317"
+   },
+   {
+    "npc_id": 142096,
+    "name": "Karaga",
+    "tamer_id": "309"
+   },
+   {
+    "npc_id": 142114,
+    "name": "Talia Sparkbrow",
+    "tamer_id": "306"
+   },
+   {
+    "npc_id": 142234,
+    "name": "Zujai",
+    "tamer_id": "307"
+   }
+  ],
+  "notes": "Defeat any 15 of 19 listed. Whole team must be Magic. All pets level 25.",
+  "required_count": 15
+ },
+ {
+  "achievement_id": 13277,
+  "name_en": "Machine Learning",
+  "name_ru": "Машинное обучение",
+  "description_en": "Defeat 15 Master Tamers on Kul Tiras or Zandalar with a team of all level 25 Mechanical pets.",
+  "kind": "family_tamer",
+  "required_family": 9,
+  "tamers": [
+   {
+    "npc_id": 139489,
+    "name": "Captain Hermes",
+    "tamer_id": "304"
+   },
+   {
+    "npc_id": 140315,
+    "name": "Eddie Fixit",
+    "tamer_id": "298"
+   },
+   {
+    "npc_id": 140461,
+    "name": "Dilbert McClint",
+    "tamer_id": "303"
+   },
+   {
+    "npc_id": 140813,
+    "name": "Fizzie Sparkwhistle",
+    "tamer_id": "302"
+   },
+   {
+    "npc_id": 140880,
+    "name": "Michael Skarn",
+    "tamer_id": "301"
+   },
+   {
+    "npc_id": 141002,
+    "name": "Ellie Vern",
+    "tamer_id": "297"
+   },
+   {
+    "npc_id": 141046,
+    "name": "Leana Darkwind",
+    "tamer_id": "296"
+   },
+   {
+    "npc_id": 141077,
+    "name": "Kwint",
+    "tamer_id": "293"
+   },
+   {
+    "npc_id": 141292,
+    "name": "Delia Hanako",
+    "tamer_id": "291"
+   },
+   {
+    "npc_id": 141479,
+    "name": "Burly",
+    "tamer_id": "292"
+   },
+   {
+    "npc_id": 141529,
+    "name": "Lozu",
+    "tamer_id": "312"
+   },
+   {
+    "npc_id": 141799,
+    "name": "Grady Prett",
+    "tamer_id": "314"
+   },
+   {
+    "npc_id": 141814,
+    "name": "Korval Darkbeard",
+    "tamer_id": "313"
+   },
+   {
+    "npc_id": 141879,
+    "name": "Keeyo",
+    "tamer_id": "316"
+   },
+   {
+    "npc_id": 141945,
+    "name": "Sizzik",
+    "tamer_id": "319"
+   },
+   {
+    "npc_id": 142054,
+    "name": "Kusa",
+    "tamer_id": "317"
+   },
+   {
+    "npc_id": 142096,
+    "name": "Karaga",
+    "tamer_id": "309"
+   },
+   {
+    "npc_id": 142114,
+    "name": "Talia Sparkbrow",
+    "tamer_id": "306"
+   },
+   {
+    "npc_id": 142234,
+    "name": "Zujai",
+    "tamer_id": "307"
+   }
+  ],
+  "notes": "Defeat any 15 of 19 listed. Whole team must be Mechanical. All pets level 25.",
+  "required_count": 15
+ },
+ {
+  "achievement_id": 13278,
+  "name_en": "Not Quite Dead Yet",
+  "name_ru": "Скорее живы, чем мертвы",
+  "description_en": "Defeat 15 Master Tamers on Kul Tiras or Zandalar with a team of all level 25 Undead pets.",
+  "kind": "family_tamer",
+  "required_family": 3,
+  "tamers": [
+   {
+    "npc_id": 139489,
+    "name": "Captain Hermes",
+    "tamer_id": "304"
+   },
+   {
+    "npc_id": 140315,
+    "name": "Eddie Fixit",
+    "tamer_id": "298"
+   },
+   {
+    "npc_id": 140461,
+    "name": "Dilbert McClint",
+    "tamer_id": "303"
+   },
+   {
+    "npc_id": 140813,
+    "name": "Fizzie Sparkwhistle",
+    "tamer_id": "302"
+   },
+   {
+    "npc_id": 140880,
+    "name": "Michael Skarn",
+    "tamer_id": "301"
+   },
+   {
+    "npc_id": 141002,
+    "name": "Ellie Vern",
+    "tamer_id": "297"
+   },
+   {
+    "npc_id": 141046,
+    "name": "Leana Darkwind",
+    "tamer_id": "296"
+   },
+   {
+    "npc_id": 141077,
+    "name": "Kwint",
+    "tamer_id": "293"
+   },
+   {
+    "npc_id": 141292,
+    "name": "Delia Hanako",
+    "tamer_id": "291"
+   },
+   {
+    "npc_id": 141479,
+    "name": "Burly",
+    "tamer_id": "292"
+   },
+   {
+    "npc_id": 141529,
+    "name": "Lozu",
+    "tamer_id": "312"
+   },
+   {
+    "npc_id": 141799,
+    "name": "Grady Prett",
+    "tamer_id": "314"
+   },
+   {
+    "npc_id": 141814,
+    "name": "Korval Darkbeard",
+    "tamer_id": "313"
+   },
+   {
+    "npc_id": 141879,
+    "name": "Keeyo",
+    "tamer_id": "316"
+   },
+   {
+    "npc_id": 141945,
+    "name": "Sizzik",
+    "tamer_id": "319"
+   },
+   {
+    "npc_id": 142054,
+    "name": "Kusa",
+    "tamer_id": "317"
+   },
+   {
+    "npc_id": 142096,
+    "name": "Karaga",
+    "tamer_id": "309"
+   },
+   {
+    "npc_id": 142114,
+    "name": "Talia Sparkbrow",
+    "tamer_id": "306"
+   },
+   {
+    "npc_id": 142234,
+    "name": "Zujai",
+    "tamer_id": "307"
+   }
+  ],
+  "notes": "Defeat any 15 of 19 listed. Whole team must be Undead. All pets level 25.",
+  "required_count": 15
+ },
+ {
+  "achievement_id": 13279,
+  "name_en": "Family Battler",
+  "name_ru": "В кругу семьи",
+  "description_en": "Complete the following achievements.",
+  "kind": "meta",
+  "required_family": null,
+  "tamers": [],
+  "notes": "",
+  "children": [
+   13280,
+   13270,
+   13271,
+   13272,
+   13273,
+   13274,
+   13281,
+   13275,
+   13277,
+   13278
+  ]
+ },
+ {
+  "achievement_id": 13280,
+  "name_en": "Hobbyist Aquarist",
+  "name_ru": "Аквариумист-любитель",
+  "description_en": "Defeat 15 Master Tamers on Kul Tiras or Zandalar with a team of all level 25 Aquatic pets.",
+  "kind": "family_tamer",
+  "required_family": 8,
+  "tamers": [
+   {
+    "npc_id": 139489,
+    "name": "Captain Hermes",
+    "tamer_id": "304"
+   },
+   {
+    "npc_id": 140315,
+    "name": "Eddie Fixit",
+    "tamer_id": "298"
+   },
+   {
+    "npc_id": 140461,
+    "name": "Dilbert McClint",
+    "tamer_id": "303"
+   },
+   {
+    "npc_id": 140813,
+    "name": "Fizzie Sparkwhistle",
+    "tamer_id": "302"
+   },
+   {
+    "npc_id": 140880,
+    "name": "Michael Skarn",
+    "tamer_id": "301"
+   },
+   {
+    "npc_id": 141002,
+    "name": "Ellie Vern",
+    "tamer_id": "297"
+   },
+   {
+    "npc_id": 141046,
+    "name": "Leana Darkwind",
+    "tamer_id": "296"
+   },
+   {
+    "npc_id": 141077,
+    "name": "Kwint",
+    "tamer_id": "293"
+   },
+   {
+    "npc_id": 141292,
+    "name": "Delia Hanako",
+    "tamer_id": "291"
+   },
+   {
+    "npc_id": 141479,
+    "name": "Burly",
+    "tamer_id": "292"
+   },
+   {
+    "npc_id": 141529,
+    "name": "Lozu",
+    "tamer_id": "312"
+   },
+   {
+    "npc_id": 141799,
+    "name": "Grady Prett",
+    "tamer_id": "314"
+   },
+   {
+    "npc_id": 141814,
+    "name": "Korval Darkbeard",
+    "tamer_id": "313"
+   },
+   {
+    "npc_id": 141879,
+    "name": "Keeyo",
+    "tamer_id": "316"
+   },
+   {
+    "npc_id": 141945,
+    "name": "Sizzik",
+    "tamer_id": "319"
+   },
+   {
+    "npc_id": 142054,
+    "name": "Kusa",
+    "tamer_id": "317"
+   },
+   {
+    "npc_id": 142096,
+    "name": "Karaga",
+    "tamer_id": "309"
+   },
+   {
+    "npc_id": 142114,
+    "name": "Talia Sparkbrow",
+    "tamer_id": "306"
+   },
+   {
+    "npc_id": 142234,
+    "name": "Zujai",
+    "tamer_id": "307"
+   }
+  ],
+  "notes": "Defeat any 15 of 19 listed. Whole team must be Aquatic. All pets level 25.",
+  "required_count": 15
+ },
+ {
+  "achievement_id": 13281,
+  "name_en": "Human Resources",
+  "name_ru": "Марш гуманоидов",
+  "description_en": "Defeat 15 Master Tamers on Kul Tiras or Zandalar with a team of all level 25 Humanoid pets.",
+  "kind": "family_tamer",
+  "required_family": 0,
+  "tamers": [
+   {
+    "npc_id": 139489,
+    "name": "Captain Hermes",
+    "tamer_id": "304"
+   },
+   {
+    "npc_id": 140315,
+    "name": "Eddie Fixit",
+    "tamer_id": "298"
+   },
+   {
+    "npc_id": 140461,
+    "name": "Dilbert McClint",
+    "tamer_id": "303"
+   },
+   {
+    "npc_id": 140813,
+    "name": "Fizzie Sparkwhistle",
+    "tamer_id": "302"
+   },
+   {
+    "npc_id": 140880,
+    "name": "Michael Skarn",
+    "tamer_id": "301"
+   },
+   {
+    "npc_id": 141002,
+    "name": "Ellie Vern",
+    "tamer_id": "297"
+   },
+   {
+    "npc_id": 141046,
+    "name": "Leana Darkwind",
+    "tamer_id": "296"
+   },
+   {
+    "npc_id": 141077,
+    "name": "Kwint",
+    "tamer_id": "293"
+   },
+   {
+    "npc_id": 141292,
+    "name": "Delia Hanako",
+    "tamer_id": "291"
+   },
+   {
+    "npc_id": 141479,
+    "name": "Burly",
+    "tamer_id": "292"
+   },
+   {
+    "npc_id": 141529,
+    "name": "Lozu",
+    "tamer_id": "312"
+   },
+   {
+    "npc_id": 141799,
+    "name": "Grady Prett",
+    "tamer_id": "314"
+   },
+   {
+    "npc_id": 141814,
+    "name": "Korval Darkbeard",
+    "tamer_id": "313"
+   },
+   {
+    "npc_id": 141879,
+    "name": "Keeyo",
+    "tamer_id": "316"
+   },
+   {
+    "npc_id": 141945,
+    "name": "Sizzik",
+    "tamer_id": "319"
+   },
+   {
+    "npc_id": 142054,
+    "name": "Kusa",
+    "tamer_id": "317"
+   },
+   {
+    "npc_id": 142096,
+    "name": "Karaga",
+    "tamer_id": "309"
+   },
+   {
+    "npc_id": 142114,
+    "name": "Talia Sparkbrow",
+    "tamer_id": "306"
+   },
+   {
+    "npc_id": 142234,
+    "name": "Zujai",
+    "tamer_id": "307"
+   }
+  ],
+  "notes": "Defeat any 15 of 19 listed. Whole team must be Humanoid. All pets level 25.",
+  "required_count": 15
+ },
+ {
+  "achievement_id": 13625,
+  "name_en": "Mighty Minions of Mechagon",
+  "name_ru": "Могучие прислужники Мехагона",
+  "description_en": "Defeat the following mechanized minions on Mechagon Island.",
+  "kind": "tamer_list",
+  "required_family": null,
+  "tamers": [
+   {
+    "npc_id": 154922,
+    "name": "Gnomefeaster",
+    "species_id": 2735,
+    "tamer_id": "384"
+   },
+   {
+    "npc_id": 154923,
+    "name": "Sputtertube",
+    "species_id": 2736,
+    "tamer_id": "388"
+   },
+   {
+    "npc_id": 154924,
+    "name": "Goldenbot XD",
+    "species_id": 2737,
+    "tamer_id": "385"
+   },
+   {
+    "npc_id": 154925,
+    "name": "Creakclank",
+    "species_id": 2738,
+    "tamer_id": "389"
+   },
+   {
+    "npc_id": 154926,
+    "name": "CK-9 Micro-Oppression Unit",
+    "species_id": 2739,
+    "tamer_id": "386"
+   },
+   {
+    "npc_id": 154927,
+    "name": "Unit 35",
+    "species_id": 2740,
+    "tamer_id": "390"
+   },
+   {
+    "npc_id": 154928,
+    "name": "Unit 6",
+    "species_id": 2741,
+    "tamer_id": "387"
+   },
+   {
+    "npc_id": 154929,
+    "name": "Unit 17",
+    "species_id": 2742,
+    "tamer_id": "403"
+   }
+  ],
+  "notes": "Defeat all 8.",
+  "required_count": 8
+ },
+ {
+  "achievement_id": 13626,
+  "name_en": "Nautical Nuisances of Nazjatar",
+  "name_ru": "Морские монстры Назжатара",
+  "description_en": "Defeat the following deep sea terrors of Nazjatar.",
+  "kind": "tamer_list",
+  "required_family": null,
+  "tamers": [
+   {
+    "npc_id": 154910,
+    "name": "Prince Wiggletail",
+    "species_id": 2723,
+    "tamer_id": "391"
+   },
+   {
+    "npc_id": 154911,
+    "name": "Chomp",
+    "species_id": 2724,
+    "tamer_id": "397"
+   },
+   {
+    "npc_id": 154912,
+    "name": "Silence",
+    "species_id": 2725,
+    "tamer_id": "392"
+   },
+   {
+    "npc_id": 154913,
+    "name": "Shadowspike Lurker",
+    "species_id": 2726,
+    "tamer_id": "398"
+   },
+   {
+    "npc_id": 154914,
+    "name": "Pearlhusk Crawler",
+    "species_id": 2727,
+    "tamer_id": "393"
+   },
+   {
+    "npc_id": 154915,
+    "name": "Elderspawn of Nalaada",
+    "species_id": 2728,
+    "tamer_id": "399"
+   },
+   {
+    "npc_id": 154916,
+    "name": "Ravenous Scalespawn",
+    "species_id": 2729,
+    "tamer_id": "394"
+   },
+   {
+    "npc_id": 154917,
+    "name": "Mindshackle",
+    "species_id": 2730,
+    "tamer_id": "400"
+   },
+   {
+    "npc_id": 154918,
+    "name": "Kelpstone",
+    "species_id": 2731,
+    "tamer_id": "395"
+   },
+   {
+    "npc_id": 154919,
+    "name": "Voltgorger",
+    "species_id": 2732,
+    "tamer_id": "401"
+   },
+   {
+    "npc_id": 154920,
+    "name": "Frenzied Knifefang",
+    "species_id": 2733,
+    "tamer_id": "396"
+   },
+   {
+    "npc_id": 154921,
+    "name": "Giant Opaline Conch",
+    "species_id": 2734,
+    "tamer_id": "402"
+   }
+  ],
+  "notes": "Defeat all 12.",
+  "required_count": 12
+ },
+ {
+  "achievement_id": 13766,
+  "name_en": "Malowned",
+  "name_ru": "Почта подождет",
+  "description_en": "Defeat Postmaster Malown in a pet battle.",
+  "kind": "tamer_list",
+  "required_family": null,
+  "tamers": [
+   {
+    "npc_id": 155413,
+    "name": "Postmaster Malown Defeated",
+    "tamer_id": "406"
+   }
+  ],
+  "notes": "Defeat all 1.",
+  "required_count": 1
+ },
+ {
+  "achievement_id": 14868,
+  "name_en": "Aquatic Apparitions",
+  "name_ru": "Водные видения",
+  "description_en": "Defeat 9 Master Tamers in the Shadowlands with a team of all level 25 Aquatic pets.",
+  "kind": "family_tamer",
+  "required_family": 8,
+  "tamers": [
+   {
+    "npc_id": 173315,
+    "name": "Sylla",
+    "tamer_id": "458"
+   },
+   {
+    "npc_id": 173324,
+    "name": "Eyegor",
+    "tamer_id": "459"
+   },
+   {
+    "npc_id": 173331,
+    "name": "Addius the Tormenter",
+    "tamer_id": "460"
+   },
+   {
+    "npc_id": 173263,
+    "name": "Rotgut",
+    "tamer_id": "453"
+   },
+   {
+    "npc_id": 173267,
+    "name": "Dundley Stickyfingers",
+    "tamer_id": "454"
+   },
+   {
+    "npc_id": 173257,
+    "name": "Caregiver Maximillian",
+    "tamer_id": "452"
+   },
+   {
+    "npc_id": 173130,
+    "name": "Zolla",
+    "tamer_id": "448"
+   },
+   {
+    "npc_id": 173129,
+    "name": "Thenia",
+    "tamer_id": "450"
+   },
+   {
+    "npc_id": 173131,
+    "name": "Stratios",
+    "tamer_id": "447"
+   },
+   {
+    "npc_id": 173372,
+    "name": "Glitterdust",
+    "tamer_id": "462"
+   },
+   {
+    "npc_id": 173377,
+    "name": "Faryl",
+    "tamer_id": "464"
+   }
+  ],
+  "notes": "Defeat any 9 of 11 listed. Whole team must be Aquatic. All pets level 25.",
+  "required_count": 9
+ },
+ {
+  "achievement_id": 14869,
+  "name_en": "Beast Busters",
+  "name_ru": "В ином мире животных",
+  "description_en": "Defeat 9 Master Tamers in the Shadowlands with a team of all level 25 Beast pets.",
+  "kind": "family_tamer",
+  "required_family": 7,
+  "tamers": [
+   {
+    "npc_id": 173315,
+    "name": "Sylla",
+    "tamer_id": "458"
+   },
+   {
+    "npc_id": 173324,
+    "name": "Eyegor",
+    "tamer_id": "459"
+   },
+   {
+    "npc_id": 173331,
+    "name": "Addius the Tormenter",
+    "tamer_id": "460"
+   },
+   {
+    "npc_id": 173263,
+    "name": "Rotgut",
+    "tamer_id": "453"
+   },
+   {
+    "npc_id": 173267,
+    "name": "Dundley Stickyfingers",
+    "tamer_id": "454"
+   },
+   {
+    "npc_id": 173257,
+    "name": "Caregiver Maximillian",
+    "tamer_id": "452"
+   },
+   {
+    "npc_id": 173130,
+    "name": "Zolla",
+    "tamer_id": "448"
+   },
+   {
+    "npc_id": 173129,
+    "name": "Thenia",
+    "tamer_id": "450"
+   },
+   {
+    "npc_id": 173131,
+    "name": "Stratios",
+    "tamer_id": "447"
+   },
+   {
+    "npc_id": 173372,
+    "name": "Glitterdust",
+    "tamer_id": "462"
+   },
+   {
+    "npc_id": 173377,
+    "name": "Faryl",
+    "tamer_id": "464"
+   }
+  ],
+  "notes": "Defeat any 9 of 11 listed. Whole team must be Beast. All pets level 25.",
+  "required_count": 9
+ },
+ {
+  "achievement_id": 14870,
+  "name_en": "Creepy Critters",
+  "name_ru": "Зов зверьков",
+  "description_en": "Defeat 9 Master Tamers in the Shadowlands with a team of all level 25 Critter pets.",
+  "kind": "family_tamer",
+  "required_family": 4,
+  "tamers": [
+   {
+    "npc_id": 173315,
+    "name": "Sylla",
+    "tamer_id": "458"
+   },
+   {
+    "npc_id": 173324,
+    "name": "Eyegor",
+    "tamer_id": "459"
+   },
+   {
+    "npc_id": 173331,
+    "name": "Addius the Tormenter",
+    "tamer_id": "460"
+   },
+   {
+    "npc_id": 173263,
+    "name": "Rotgut",
+    "tamer_id": "453"
+   },
+   {
+    "npc_id": 173267,
+    "name": "Dundley Stickyfingers",
+    "tamer_id": "454"
+   },
+   {
+    "npc_id": 173257,
+    "name": "Caregiver Maximillian",
+    "tamer_id": "452"
+   },
+   {
+    "npc_id": 173130,
+    "name": "Zolla",
+    "tamer_id": "448"
+   },
+   {
+    "npc_id": 173129,
+    "name": "Thenia",
+    "tamer_id": "450"
+   },
+   {
+    "npc_id": 173131,
+    "name": "Stratios",
+    "tamer_id": "447"
+   },
+   {
+    "npc_id": 173372,
+    "name": "Glitterdust",
+    "tamer_id": "462"
+   },
+   {
+    "npc_id": 173377,
+    "name": "Faryl",
+    "tamer_id": "464"
+   }
+  ],
+  "notes": "Defeat any 9 of 11 listed. Whole team must be Critter. All pets level 25.",
+  "required_count": 9
+ },
+ {
+  "achievement_id": 14871,
+  "name_en": "Deathly Dragonkin",
+  "name_ru": "Драчливые драконы",
+  "description_en": "Defeat 9 Master Tamers in the Shadowlands with a team of all level 25 Dragonkin pets.",
+  "kind": "family_tamer",
+  "required_family": 1,
+  "tamers": [
+   {
+    "npc_id": 173315,
+    "name": "Sylla",
+    "tamer_id": "458"
+   },
+   {
+    "npc_id": 173324,
+    "name": "Eyegor",
+    "tamer_id": "459"
+   },
+   {
+    "npc_id": 173331,
+    "name": "Addius the Tormenter",
+    "tamer_id": "460"
+   },
+   {
+    "npc_id": 173263,
+    "name": "Rotgut",
+    "tamer_id": "453"
+   },
+   {
+    "npc_id": 173267,
+    "name": "Dundley Stickyfingers",
+    "tamer_id": "454"
+   },
+   {
+    "npc_id": 173257,
+    "name": "Caregiver Maximillian",
+    "tamer_id": "452"
+   },
+   {
+    "npc_id": 173130,
+    "name": "Zolla",
+    "tamer_id": "448"
+   },
+   {
+    "npc_id": 173129,
+    "name": "Thenia",
+    "tamer_id": "450"
+   },
+   {
+    "npc_id": 173131,
+    "name": "Stratios",
+    "tamer_id": "447"
+   },
+   {
+    "npc_id": 173372,
+    "name": "Glitterdust",
+    "tamer_id": "462"
+   },
+   {
+    "npc_id": 173377,
+    "name": "Faryl",
+    "tamer_id": "464"
+   }
+  ],
+  "notes": "Defeat any 9 of 11 listed. Whole team must be Dragonkin. All pets level 25.",
+  "required_count": 9
+ },
+ {
+  "achievement_id": 14872,
+  "name_en": "Eerie Elementals",
+  "name_ru": "Эклектичные элементали",
+  "description_en": "Defeat 9 Master Tamers in the Shadowlands with a team of all level 25 Elemental pets.",
+  "kind": "family_tamer",
+  "required_family": 6,
+  "tamers": [
+   {
+    "npc_id": 173315,
+    "name": "Sylla",
+    "tamer_id": "458"
+   },
+   {
+    "npc_id": 173324,
+    "name": "Eyegor",
+    "tamer_id": "459"
+   },
+   {
+    "npc_id": 173331,
+    "name": "Addius the Tormenter",
+    "tamer_id": "460"
+   },
+   {
+    "npc_id": 173263,
+    "name": "Rotgut",
+    "tamer_id": "453"
+   },
+   {
+    "npc_id": 173267,
+    "name": "Dundley Stickyfingers",
+    "tamer_id": "454"
+   },
+   {
+    "npc_id": 173257,
+    "name": "Caregiver Maximillian",
+    "tamer_id": "452"
+   },
+   {
+    "npc_id": 173130,
+    "name": "Zolla",
+    "tamer_id": "448"
+   },
+   {
+    "npc_id": 173129,
+    "name": "Thenia",
+    "tamer_id": "450"
+   },
+   {
+    "npc_id": 173131,
+    "name": "Stratios",
+    "tamer_id": "447"
+   },
+   {
+    "npc_id": 173372,
+    "name": "Glitterdust",
+    "tamer_id": "462"
+   },
+   {
+    "npc_id": 173377,
+    "name": "Faryl",
+    "tamer_id": "464"
+   }
+  ],
+  "notes": "Defeat any 9 of 11 listed. Whole team must be Elemental. All pets level 25.",
+  "required_count": 9
+ },
+ {
+  "achievement_id": 14873,
+  "name_en": "Flickering Fliers",
+  "name_ru": "Ласковые летуны",
+  "description_en": "Defeat 9 Master Tamers in the Shadowlands with a team of all level 25 Flying pets.",
+  "kind": "family_tamer",
+  "required_family": 2,
+  "tamers": [
+   {
+    "npc_id": 173315,
+    "name": "Sylla",
+    "tamer_id": "458"
+   },
+   {
+    "npc_id": 173324,
+    "name": "Eyegor",
+    "tamer_id": "459"
+   },
+   {
+    "npc_id": 173331,
+    "name": "Addius the Tormenter",
+    "tamer_id": "460"
+   },
+   {
+    "npc_id": 173263,
+    "name": "Rotgut",
+    "tamer_id": "453"
+   },
+   {
+    "npc_id": 173267,
+    "name": "Dundley Stickyfingers",
+    "tamer_id": "454"
+   },
+   {
+    "npc_id": 173257,
+    "name": "Caregiver Maximillian",
+    "tamer_id": "452"
+   },
+   {
+    "npc_id": 173130,
+    "name": "Zolla",
+    "tamer_id": "448"
+   },
+   {
+    "npc_id": 173129,
+    "name": "Thenia",
+    "tamer_id": "450"
+   },
+   {
+    "npc_id": 173131,
+    "name": "Stratios",
+    "tamer_id": "447"
+   },
+   {
+    "npc_id": 173372,
+    "name": "Glitterdust",
+    "tamer_id": "462"
+   },
+   {
+    "npc_id": 173377,
+    "name": "Faryl",
+    "tamer_id": "464"
+   }
+  ],
+  "notes": "Defeat any 9 of 11 listed. Whole team must be Flying. All pets level 25.",
+  "required_count": 9
+ },
+ {
+  "achievement_id": 14874,
+  "name_en": "Haunted Humanoids",
+  "name_ru": "Гадкие гуманоиды",
+  "description_en": "Defeat 9 Master Tamers in the Shadowlands with a team of all level 25 Humanoid pets.",
+  "kind": "family_tamer",
+  "required_family": 0,
+  "tamers": [
+   {
+    "npc_id": 173315,
+    "name": "Sylla",
+    "tamer_id": "458"
+   },
+   {
+    "npc_id": 173324,
+    "name": "Eyegor",
+    "tamer_id": "459"
+   },
+   {
+    "npc_id": 173331,
+    "name": "Addius the Tormenter",
+    "tamer_id": "460"
+   },
+   {
+    "npc_id": 173263,
+    "name": "Rotgut",
+    "tamer_id": "453"
+   },
+   {
+    "npc_id": 173267,
+    "name": "Dundley Stickyfingers",
+    "tamer_id": "454"
+   },
+   {
+    "npc_id": 173257,
+    "name": "Caregiver Maximillian",
+    "tamer_id": "452"
+   },
+   {
+    "npc_id": 173130,
+    "name": "Zolla",
+    "tamer_id": "448"
+   },
+   {
+    "npc_id": 173129,
+    "name": "Thenia",
+    "tamer_id": "450"
+   },
+   {
+    "npc_id": 173131,
+    "name": "Stratios",
+    "tamer_id": "447"
+   },
+   {
+    "npc_id": 173372,
+    "name": "Glitterdust",
+    "tamer_id": "462"
+   },
+   {
+    "npc_id": 173377,
+    "name": "Faryl",
+    "tamer_id": "464"
+   }
+  ],
+  "notes": "Defeat any 9 of 11 listed. Whole team must be Humanoid. All pets level 25.",
+  "required_count": 9
+ },
+ {
+  "achievement_id": 14875,
+  "name_en": "Mummified Magics",
+  "name_ru": "Маленькая магия",
+  "description_en": "Defeat 9 Master Tamers in the Shadowlands with a team of all level 25 Magic pets.",
+  "kind": "family_tamer",
+  "required_family": 5,
+  "tamers": [
+   {
+    "npc_id": 173315,
+    "name": "Sylla",
+    "tamer_id": "458"
+   },
+   {
+    "npc_id": 173324,
+    "name": "Eyegor",
+    "tamer_id": "459"
+   },
+   {
+    "npc_id": 173331,
+    "name": "Addius the Tormenter",
+    "tamer_id": "460"
+   },
+   {
+    "npc_id": 173263,
+    "name": "Rotgut",
+    "tamer_id": "453"
+   },
+   {
+    "npc_id": 173267,
+    "name": "Dundley Stickyfingers",
+    "tamer_id": "454"
+   },
+   {
+    "npc_id": 173257,
+    "name": "Caregiver Maximillian",
+    "tamer_id": "452"
+   },
+   {
+    "npc_id": 173130,
+    "name": "Zolla",
+    "tamer_id": "448"
+   },
+   {
+    "npc_id": 173129,
+    "name": "Thenia",
+    "tamer_id": "450"
+   },
+   {
+    "npc_id": 173131,
+    "name": "Stratios",
+    "tamer_id": "447"
+   },
+   {
+    "npc_id": 173372,
+    "name": "Glitterdust",
+    "tamer_id": "462"
+   },
+   {
+    "npc_id": 173377,
+    "name": "Faryl",
+    "tamer_id": "464"
+   }
+  ],
+  "notes": "Defeat any 9 of 11 listed. Whole team must be Magic. All pets level 25.",
+  "required_count": 9
+ },
+ {
+  "achievement_id": 14876,
+  "name_en": "Macabre Mechanicals",
+  "name_ru": "Макабрическая механика",
+  "description_en": "Defeat 9 Master Tamers in the Shadowlands with a team of all level 25 Mechanical pets.",
+  "kind": "family_tamer",
+  "required_family": 9,
+  "tamers": [
+   {
+    "npc_id": 173315,
+    "name": "Sylla",
+    "tamer_id": "458"
+   },
+   {
+    "npc_id": 173324,
+    "name": "Eyegor",
+    "tamer_id": "459"
+   },
+   {
+    "npc_id": 173331,
+    "name": "Addius the Tormenter",
+    "tamer_id": "460"
+   },
+   {
+    "npc_id": 173263,
+    "name": "Rotgut",
+    "tamer_id": "453"
+   },
+   {
+    "npc_id": 173267,
+    "name": "Dundley Stickyfingers",
+    "tamer_id": "454"
+   },
+   {
+    "npc_id": 173257,
+    "name": "Caregiver Maximillian",
+    "tamer_id": "452"
+   },
+   {
+    "npc_id": 173130,
+    "name": "Zolla",
+    "tamer_id": "448"
+   },
+   {
+    "npc_id": 173129,
+    "name": "Thenia",
+    "tamer_id": "450"
+   },
+   {
+    "npc_id": 173131,
+    "name": "Stratios",
+    "tamer_id": "447"
+   },
+   {
+    "npc_id": 173372,
+    "name": "Glitterdust",
+    "tamer_id": "462"
+   },
+   {
+    "npc_id": 173377,
+    "name": "Faryl",
+    "tamer_id": "464"
+   }
+  ],
+  "notes": "Defeat any 9 of 11 listed. Whole team must be Mechanical. All pets level 25.",
+  "required_count": 9
+ },
+ {
+  "achievement_id": 14877,
+  "name_en": "Unholy Undead",
+  "name_ru": "Нечестивая нежить",
+  "description_en": "Defeat 9 Master Tamers in the Shadowlands with a team of all level 25 Undead pets.",
+  "kind": "family_tamer",
+  "required_family": 3,
+  "tamers": [
+   {
+    "npc_id": 173315,
+    "name": "Sylla",
+    "tamer_id": "458"
+   },
+   {
+    "npc_id": 173324,
+    "name": "Eyegor",
+    "tamer_id": "459"
+   },
+   {
+    "npc_id": 173331,
+    "name": "Addius the Tormenter",
+    "tamer_id": "460"
+   },
+   {
+    "npc_id": 173263,
+    "name": "Rotgut",
+    "tamer_id": "453"
+   },
+   {
+    "npc_id": 173267,
+    "name": "Dundley Stickyfingers",
+    "tamer_id": "454"
+   },
+   {
+    "npc_id": 173257,
+    "name": "Caregiver Maximillian",
+    "tamer_id": "452"
+   },
+   {
+    "npc_id": 173130,
+    "name": "Zolla",
+    "tamer_id": "448"
+   },
+   {
+    "npc_id": 173129,
+    "name": "Thenia",
+    "tamer_id": "450"
+   },
+   {
+    "npc_id": 173131,
+    "name": "Stratios",
+    "tamer_id": "447"
+   },
+   {
+    "npc_id": 173372,
+    "name": "Glitterdust",
+    "tamer_id": "462"
+   },
+   {
+    "npc_id": 173377,
+    "name": "Faryl",
+    "tamer_id": "464"
+   }
+  ],
+  "notes": "Defeat any 9 of 11 listed. Whole team must be Undead. All pets level 25.",
+  "required_count": 9
+ },
+ {
+  "achievement_id": 14879,
+  "name_en": "Family Exorcist",
+  "name_ru": "Семейный экзорцист",
+  "description_en": "Complete the following achievements.",
+  "kind": "meta",
+  "required_family": null,
+  "tamers": [],
+  "notes": "",
+  "children": [
+   14868,
+   14869,
+   14870,
+   14871,
+   14872,
+   14873,
+   14874,
+   14875,
+   14876,
+   14877
+  ]
+ },
+ {
+  "achievement_id": 14881,
+  "name_en": "Abhorrent Adversaries of the Afterlife",
+  "name_ru": "Плохие парни в посмертии",
+  "description_en": "Defeat the following afterlife atrocities of the Shadowlands.",
+  "kind": "tamer_list",
+  "required_family": null,
+  "tamers": [
+   {
+    "npc_id": 175777,
+    "name": "Crystalsnap",
+    "species_id": 3068,
+    "tamer_id": "466"
+   },
+   {
+    "npc_id": 175778,
+    "name": "Briarpaw",
+    "species_id": 3070,
+    "tamer_id": "473"
+   },
+   {
+    "npc_id": 175779,
+    "name": "Chittermaw",
+    "species_id": 3071,
+    "tamer_id": "474"
+   },
+   {
+    "npc_id": 175780,
+    "name": "Mistwing",
+    "species_id": 3072,
+    "tamer_id": "475"
+   },
+   {
+    "npc_id": 175781,
+    "name": "Sewer Creeper",
+    "species_id": 3073,
+    "tamer_id": "471"
+   },
+   {
+    "npc_id": 175782,
+    "name": "The Countess",
+    "species_id": 3074,
+    "tamer_id": "472"
+   },
+   {
+    "npc_id": 175783,
+    "name": "Digallo",
+    "species_id": 3075,
+    "tamer_id": "467"
+   },
+   {
+    "npc_id": 175784,
+    "name": "Gelatinous",
+    "species_id": 3076,
+    "tamer_id": "469"
+   },
+   {
+    "npc_id": 175785,
+    "name": "Kostos",
+    "species_id": 3077,
+    "tamer_id": "468"
+   },
+   {
+    "npc_id": 175786,
+    "name": "Glurp",
+    "species_id": 3078,
+    "tamer_id": "470"
+   }
+  ],
+  "notes": "Defeat all 10.",
+  "required_count": 10
+ },
+ {
+  "achievement_id": 61094,
+  "name_en": "Old World Family Battler",
+  "name_ru": "Укротитель питомцев Старого Света",
+  "description_en": "Complete the following achievements.",
+  "kind": "meta",
+  "required_family": null,
+  "tamers": [],
+  "notes": "",
+  "children": [
+   61040,
+   61051
+  ]
+ },
+ {
+  "achievement_id": 6614,
+  "name_en": "Outland Tamer",
+  "name_ru": "Укротитель питомцев Запределья",
+  "description_en": "Capture a battle pet in each of the Outland zones listed below.",
+  "kind": "other",
+  "required_family": null,
+  "tamers": [],
+  "notes": "Capture a battle pet in each Outland zone (collection, not tamers). Same ruRU name as 62460 Family Battler of Outland - probably not the one meant."
+ },
+ {
+  "achievement_id": 16512,
+  "name_en": "Family Battler of the Dragon Isles",
+  "name_ru": "Укротитель питомцев Драконьих островов",
+  "description_en": "Complete the following achievements.",
+  "kind": "meta",
+  "required_family": null,
+  "tamers": [],
+  "notes": "",
+  "children": [
+   16501,
+   16503,
+   16504,
+   16505,
+   16506,
+   16507,
+   16508,
+   16509,
+   16510,
+   16511
+  ]
+ },
+ {
+  "achievement_id": 40980,
+  "name_en": "Family Battler of Khaz Algar",
+  "name_ru": "Укротитель питомцев Каз Алгара",
+  "description_en": "Complete the following achievements.",
+  "kind": "meta",
+  "required_family": null,
+  "tamers": [],
+  "notes": "",
+  "children": [
+   40154,
+   40155,
+   40156,
+   40157,
+   40158,
+   40161,
+   40162,
+   40163,
+   40164,
+   40165
+  ]
+ },
+ {
+  "achievement_id": 41551,
+  "name_en": "Family Battler of Undermine",
+  "name_ru": "Укротитель питомцев Нижней Шахты",
+  "description_en": "Complete the following achievements.",
+  "kind": "meta",
+  "required_family": null,
+  "tamers": [],
+  "notes": "",
+  "children": [
+   41542,
+   41543,
+   41541,
+   41544,
+   41545,
+   41546,
+   41547,
+   41548,
+   41549,
+   41550
+  ]
+ },
+ {
+  "achievement_id": 60956,
+  "name_en": "Family Battler of Northrend",
+  "name_ru": "Укротитель питомцев Нордскола",
+  "description_en": "Complete the following achievements.",
+  "kind": "meta",
+  "required_family": null,
+  "tamers": [],
+  "notes": "",
+  "children": [
+   60942,
+   60951,
+   60943,
+   60944,
+   60948,
+   60949,
+   60950,
+   60952,
+   60953,
+   60954
+  ]
+ },
+ {
+  "achievement_id": 61040,
+  "name_en": "Family Battler of Eastern Kingdoms",
+  "name_ru": "Укротитель питомцев Восточных королевств",
+  "description_en": "Complete the following achievements.",
+  "kind": "meta",
+  "required_family": null,
+  "tamers": [],
+  "notes": "",
+  "children": [
+   61029,
+   61030,
+   61031,
+   61032,
+   61033,
+   61034,
+   61035,
+   61036,
+   61037,
+   61028
+  ]
+ },
+ {
+  "achievement_id": 61051,
+  "name_en": "Family Battler of Kalimdor",
+  "name_ru": "Укротитель питомцев Калимдора",
+  "description_en": "Complete the following achievements.",
+  "kind": "meta",
+  "required_family": null,
+  "tamers": [],
+  "notes": "",
+  "children": [
+   61041,
+   61042,
+   61043,
+   61044,
+   61045,
+   61046,
+   61047,
+   61048,
+   61049,
+   61050
+  ]
+ },
+ {
+  "achievement_id": 62460,
+  "name_en": "Family Battler of Outland",
+  "name_ru": "Укротитель питомцев Запределья",
+  "description_en": "Complete the following achievements.",
+  "kind": "meta",
+  "required_family": null,
+  "tamers": [],
+  "notes": "",
+  "children": [
+   62466,
+   62467,
+   62468,
+   62469,
+   62470,
+   62471,
+   62472,
+   62473,
+   62474,
+   62475
+  ]
+ },
+ {
+  "achievement_id": 62461,
+  "name_en": "Family Battler of Cataclysm",
+  "name_ru": "Укротитель питомцев Cataclysm",
+  "description_en": "Complete the following achievements.",
+  "kind": "meta",
+  "required_family": null,
+  "tamers": [],
+  "notes": "",
+  "children": [
+   62476,
+   62477,
+   62478,
+   62479,
+   62480,
+   62481,
+   62482,
+   62483,
+   62487,
+   62488
+  ]
+ },
+ {
+  "achievement_id": 16501,
+  "name_en": "Aquatic Battler of the Dragon Isles",
+  "name_ru": "Укротитель воды Драконьих островов",
+  "description_en": "Defeat the elite pets and trainers of the Dragon Isles with a team of all level 25 Aquatic pets.",
+  "kind": "family_tamer",
+  "required_family": 8,
+  "tamers": [
+   {
+    "npc_id": 197417,
+    "name": "Arcantus",
+    "species_id": 3401,
+    "tamer_id": "485"
+   },
+   {
+    "npc_id": 197102,
+    "name": "Bakhushek",
+    "tamer_id": "482"
+   },
+   {
+    "npc_id": 197336,
+    "name": "Enyobon",
+    "species_id": 3396,
+    "tamer_id": "487"
+   },
+   {
+    "npc_id": 196264,
+    "name": "Haniko",
+    "tamer_id": "481"
+   },
+   {
+    "npc_id": 196069,
+    "name": "Patchu",
+    "tamer_id": "484"
+   },
+   {
+    "npc_id": 197350,
+    "name": "Setimothes",
+    "tamer_id": "486"
+   },
+   {
+    "npc_id": 197447,
+    "name": "Stormamu",
+    "species_id": 3402,
+    "tamer_id": "483"
+   },
+   {
+    "npc_id": 189376,
+    "name": "Swog",
+    "species_id": 3268,
+    "tamer_id": "480"
+   }
+  ],
+  "notes": "Defeat all 8. Whole team must be Aquatic. All pets level 25.",
+  "required_count": 8
+ },
+ {
+  "achievement_id": 16503,
+  "name_en": "Beast Battler of the Dragon Isles",
+  "name_ru": "Укротитель животных Драконьих островов",
+  "description_en": "Defeat the elite pets and trainers of the Dragon Isles with a team of all level 25 Beast pets.",
+  "kind": "family_tamer",
+  "required_family": 7,
+  "tamers": [
+   {
+    "npc_id": 197417,
+    "name": "Arcantus",
+    "species_id": 3401,
+    "tamer_id": "485"
+   },
+   {
+    "npc_id": 197102,
+    "name": "Bakhushek",
+    "tamer_id": "482"
+   },
+   {
+    "npc_id": 197336,
+    "name": "Enyobon",
+    "species_id": 3396,
+    "tamer_id": "487"
+   },
+   {
+    "npc_id": 196264,
+    "name": "Haniko",
+    "tamer_id": "481"
+   },
+   {
+    "npc_id": 196069,
+    "name": "Patchu",
+    "tamer_id": "484"
+   },
+   {
+    "npc_id": 197350,
+    "name": "Setimothes",
+    "tamer_id": "486"
+   },
+   {
+    "npc_id": 197447,
+    "name": "Stormamu",
+    "species_id": 3402,
+    "tamer_id": "483"
+   },
+   {
+    "npc_id": 189376,
+    "name": "Swog",
+    "species_id": 3268,
+    "tamer_id": "480"
+   }
+  ],
+  "notes": "Defeat all 8. Whole team must be Beast. All pets level 25.",
+  "required_count": 8
+ },
+ {
+  "achievement_id": 16504,
+  "name_en": "Critter Battler of the Dragon Isles",
+  "name_ru": "Укротитель зверьков Драконьих островов",
+  "description_en": "Defeat the elite pets and trainers of the Dragon Isles with a team of all level 25 Critter pets.",
+  "kind": "family_tamer",
+  "required_family": 4,
+  "tamers": [
+   {
+    "npc_id": 197417,
+    "name": "Arcantus",
+    "species_id": 3401,
+    "tamer_id": "485"
+   },
+   {
+    "npc_id": 197102,
+    "name": "Bakhushek",
+    "tamer_id": "482"
+   },
+   {
+    "npc_id": 197336,
+    "name": "Enyobon",
+    "species_id": 3396,
+    "tamer_id": "487"
+   },
+   {
+    "npc_id": 196264,
+    "name": "Haniko",
+    "tamer_id": "481"
+   },
+   {
+    "npc_id": 196069,
+    "name": "Patchu",
+    "tamer_id": "484"
+   },
+   {
+    "npc_id": 197350,
+    "name": "Setimothes",
+    "tamer_id": "486"
+   },
+   {
+    "npc_id": 197447,
+    "name": "Stormamu",
+    "species_id": 3402,
+    "tamer_id": "483"
+   },
+   {
+    "npc_id": 189376,
+    "name": "Swog",
+    "species_id": 3268,
+    "tamer_id": "480"
+   }
+  ],
+  "notes": "Defeat all 8. Whole team must be Critter. All pets level 25.",
+  "required_count": 8
+ },
+ {
+  "achievement_id": 16505,
+  "name_en": "Dragonkin Battler of the Dragon Isles",
+  "name_ru": "Укротитель драконов Драконьих островов",
+  "description_en": "Defeat the elite pets and trainers of the Dragon Isles with a team of all level 25 Dragonkin pets.",
+  "kind": "family_tamer",
+  "required_family": 1,
+  "tamers": [
+   {
+    "npc_id": 197417,
+    "name": "Arcantus",
+    "species_id": 3401,
+    "tamer_id": "485"
+   },
+   {
+    "npc_id": 197102,
+    "name": "Bakhushek",
+    "tamer_id": "482"
+   },
+   {
+    "npc_id": 197336,
+    "name": "Enyobon",
+    "species_id": 3396,
+    "tamer_id": "487"
+   },
+   {
+    "npc_id": 196264,
+    "name": "Haniko",
+    "tamer_id": "481"
+   },
+   {
+    "npc_id": 196069,
+    "name": "Patchu",
+    "tamer_id": "484"
+   },
+   {
+    "npc_id": 197350,
+    "name": "Setimothes",
+    "tamer_id": "486"
+   },
+   {
+    "npc_id": 197447,
+    "name": "Stormamu",
+    "species_id": 3402,
+    "tamer_id": "483"
+   },
+   {
+    "npc_id": 189376,
+    "name": "Swog",
+    "species_id": 3268,
+    "tamer_id": "480"
+   }
+  ],
+  "notes": "Defeat all 8. Whole team must be Dragonkin. All pets level 25.",
+  "required_count": 8
+ },
+ {
+  "achievement_id": 16506,
+  "name_en": "Elemental Battler of the Dragon Isles",
+  "name_ru": "Укротитель элементалей Драконьих островов",
+  "description_en": "Defeat the elite pets and trainers of the Dragon Isles with a team of all level 25 Elemental pets.",
+  "kind": "family_tamer",
+  "required_family": 6,
+  "tamers": [
+   {
+    "npc_id": 197417,
+    "name": "Arcantus",
+    "species_id": 3401,
+    "tamer_id": "485"
+   },
+   {
+    "npc_id": 197102,
+    "name": "Bakhushek",
+    "tamer_id": "482"
+   },
+   {
+    "npc_id": 197336,
+    "name": "Enyobon",
+    "species_id": 3396,
+    "tamer_id": "487"
+   },
+   {
+    "npc_id": 196264,
+    "name": "Haniko",
+    "tamer_id": "481"
+   },
+   {
+    "npc_id": 196069,
+    "name": "Patchu",
+    "tamer_id": "484"
+   },
+   {
+    "npc_id": 197350,
+    "name": "Setimothes",
+    "tamer_id": "486"
+   },
+   {
+    "npc_id": 197447,
+    "name": "Stormamu",
+    "species_id": 3402,
+    "tamer_id": "483"
+   },
+   {
+    "npc_id": 189376,
+    "name": "Swog",
+    "species_id": 3268,
+    "tamer_id": "480"
+   }
+  ],
+  "notes": "Defeat all 8. Whole team must be Elemental. All pets level 25.",
+  "required_count": 8
+ },
+ {
+  "achievement_id": 16507,
+  "name_en": "Flying Battler of the Dragon Isles",
+  "name_ru": "Укротитель летунов Драконьих островов",
+  "description_en": "Defeat the elite pets and trainers of the Dragon Isles with a team of all level 25 Flying pets.",
+  "kind": "family_tamer",
+  "required_family": 2,
+  "tamers": [
+   {
+    "npc_id": 197417,
+    "name": "Arcantus",
+    "species_id": 3401,
+    "tamer_id": "485"
+   },
+   {
+    "npc_id": 197102,
+    "name": "Bakhushek",
+    "tamer_id": "482"
+   },
+   {
+    "npc_id": 197336,
+    "name": "Enyobon",
+    "species_id": 3396,
+    "tamer_id": "487"
+   },
+   {
+    "npc_id": 196264,
+    "name": "Haniko",
+    "tamer_id": "481"
+   },
+   {
+    "npc_id": 196069,
+    "name": "Patchu",
+    "tamer_id": "484"
+   },
+   {
+    "npc_id": 197350,
+    "name": "Setimothes",
+    "tamer_id": "486"
+   },
+   {
+    "npc_id": 197447,
+    "name": "Stormamu",
+    "species_id": 3402,
+    "tamer_id": "483"
+   },
+   {
+    "npc_id": 189376,
+    "name": "Swog",
+    "species_id": 3268,
+    "tamer_id": "480"
+   }
+  ],
+  "notes": "Defeat all 8. Whole team must be Flying. All pets level 25.",
+  "required_count": 8
+ },
+ {
+  "achievement_id": 16508,
+  "name_en": "Humanoid Battler of the Dragon Isles",
+  "name_ru": "Укротитель гуманоидов Драконьих островов",
+  "description_en": "Defeat the elite pets and trainers of the Dragon Isles with a team of all level 25 Humanoid pets.",
+  "kind": "family_tamer",
+  "required_family": 0,
+  "tamers": [
+   {
+    "npc_id": 197417,
+    "name": "Arcantus",
+    "species_id": 3401,
+    "tamer_id": "485"
+   },
+   {
+    "npc_id": 197102,
+    "name": "Bakhushek",
+    "tamer_id": "482"
+   },
+   {
+    "npc_id": 197336,
+    "name": "Enyobon",
+    "species_id": 3396,
+    "tamer_id": "487"
+   },
+   {
+    "npc_id": 196264,
+    "name": "Haniko",
+    "tamer_id": "481"
+   },
+   {
+    "npc_id": 196069,
+    "name": "Patchu",
+    "tamer_id": "484"
+   },
+   {
+    "npc_id": 197350,
+    "name": "Setimothes",
+    "tamer_id": "486"
+   },
+   {
+    "npc_id": 197447,
+    "name": "Stormamu",
+    "species_id": 3402,
+    "tamer_id": "483"
+   },
+   {
+    "npc_id": 189376,
+    "name": "Swog",
+    "species_id": 3268,
+    "tamer_id": "480"
+   }
+  ],
+  "notes": "Defeat all 8. Whole team must be Humanoid. All pets level 25.",
+  "required_count": 8
+ },
+ {
+  "achievement_id": 16509,
+  "name_en": "Magic Battler of the Dragon Isles",
+  "name_ru": "Укротитель магии Драконьих островов",
+  "description_en": "Defeat the elite pets and trainers of the Dragon Isles with a team of all level 25 Magic pets.",
+  "kind": "family_tamer",
+  "required_family": 5,
+  "tamers": [
+   {
+    "npc_id": 197417,
+    "name": "Arcantus",
+    "species_id": 3401,
+    "tamer_id": "485"
+   },
+   {
+    "npc_id": 197102,
+    "name": "Bakhushek",
+    "tamer_id": "482"
+   },
+   {
+    "npc_id": 197336,
+    "name": "Enyobon",
+    "species_id": 3396,
+    "tamer_id": "487"
+   },
+   {
+    "npc_id": 196264,
+    "name": "Haniko",
+    "tamer_id": "481"
+   },
+   {
+    "npc_id": 196069,
+    "name": "Patchu",
+    "tamer_id": "484"
+   },
+   {
+    "npc_id": 197350,
+    "name": "Setimothes",
+    "tamer_id": "486"
+   },
+   {
+    "npc_id": 197447,
+    "name": "Stormamu",
+    "species_id": 3402,
+    "tamer_id": "483"
+   },
+   {
+    "npc_id": 189376,
+    "name": "Swog",
+    "species_id": 3268,
+    "tamer_id": "480"
+   }
+  ],
+  "notes": "Defeat all 8. Whole team must be Magic. All pets level 25.",
+  "required_count": 8
+ },
+ {
+  "achievement_id": 16510,
+  "name_en": "Mechanical Battler of the Dragon Isles",
+  "name_ru": "Укротитель механики Драконьих островов",
+  "description_en": "Defeat the elite pets and trainers of the Dragon Isles with a team of all level 25 Mechanical pets.",
+  "kind": "family_tamer",
+  "required_family": 9,
+  "tamers": [
+   {
+    "npc_id": 197417,
+    "name": "Arcantus",
+    "species_id": 3401,
+    "tamer_id": "485"
+   },
+   {
+    "npc_id": 197102,
+    "name": "Bakhushek",
+    "tamer_id": "482"
+   },
+   {
+    "npc_id": 197336,
+    "name": "Enyobon",
+    "species_id": 3396,
+    "tamer_id": "487"
+   },
+   {
+    "npc_id": 196264,
+    "name": "Haniko",
+    "tamer_id": "481"
+   },
+   {
+    "npc_id": 196069,
+    "name": "Patchu",
+    "tamer_id": "484"
+   },
+   {
+    "npc_id": 197350,
+    "name": "Setimothes",
+    "tamer_id": "486"
+   },
+   {
+    "npc_id": 197447,
+    "name": "Stormamu",
+    "species_id": 3402,
+    "tamer_id": "483"
+   },
+   {
+    "npc_id": 189376,
+    "name": "Swog",
+    "species_id": 3268,
+    "tamer_id": "480"
+   }
+  ],
+  "notes": "Defeat all 8. Whole team must be Mechanical. All pets level 25.",
+  "required_count": 8
+ },
+ {
+  "achievement_id": 16511,
+  "name_en": "Undead Battler of the Dragon Isles",
+  "name_ru": "Укротитель нежити Драконьих островов",
+  "description_en": "Defeat the elite pets and trainers of the Dragon Isles with a team of all level 25 Undead pets.",
+  "kind": "family_tamer",
+  "required_family": 3,
+  "tamers": [
+   {
+    "npc_id": 197417,
+    "name": "Arcantus",
+    "species_id": 3401,
+    "tamer_id": "485"
+   },
+   {
+    "npc_id": 197102,
+    "name": "Bakhushek",
+    "tamer_id": "482"
+   },
+   {
+    "npc_id": 197336,
+    "name": "Enyobon",
+    "species_id": 3396,
+    "tamer_id": "487"
+   },
+   {
+    "npc_id": 196264,
+    "name": "Haniko",
+    "tamer_id": "481"
+   },
+   {
+    "npc_id": 196069,
+    "name": "Patchu",
+    "tamer_id": "484"
+   },
+   {
+    "npc_id": 197350,
+    "name": "Setimothes",
+    "tamer_id": "486"
+   },
+   {
+    "npc_id": 197447,
+    "name": "Stormamu",
+    "species_id": 3402,
+    "tamer_id": "483"
+   },
+   {
+    "npc_id": 189376,
+    "name": "Swog",
+    "species_id": 3268,
+    "tamer_id": "480"
+   }
+  ],
+  "notes": "Defeat all 8. Whole team must be Undead. All pets level 25.",
+  "required_count": 8
+ },
+ {
+  "achievement_id": 40154,
+  "name_en": "Aquatic Battler of Khaz Algar",
+  "name_ru": "Укротитель воды Каз Алгара",
+  "description_en": "Defeat the pet trainers of Khaz Algar with a team of all level 25 Aquatic pets.",
+  "kind": "family_tamer",
+  "required_family": 8,
+  "tamers": [
+   {
+    "npc_id": 223446,
+    "name": "Collector Dyna",
+    "tamer_id": "524"
+   },
+   {
+    "npc_id": 223444,
+    "name": "Friendhaver Grem",
+    "tamer_id": "526"
+   },
+   {
+    "npc_id": 223442,
+    "name": "Kyrie",
+    "tamer_id": "528"
+   },
+   {
+    "npc_id": 223443,
+    "name": "Ziriak",
+    "tamer_id": "530"
+   }
+  ],
+  "notes": "Defeat all 4. Whole team must be Aquatic. All pets level 25.",
+  "required_count": 4
+ },
+ {
+  "achievement_id": 40155,
+  "name_en": "Beast Battler of Khaz Algar",
+  "name_ru": "Укротитель животных Каз Алгара",
+  "description_en": "Defeat the pet trainers of Khaz Algar with a team of all level 25 Beast pets.",
+  "kind": "family_tamer",
+  "required_family": 7,
+  "tamers": [
+   {
+    "npc_id": 223446,
+    "name": "Collector Dyna",
+    "tamer_id": "524"
+   },
+   {
+    "npc_id": 223444,
+    "name": "Friendhaver Grem",
+    "tamer_id": "526"
+   },
+   {
+    "npc_id": 223442,
+    "name": "Kyrie",
+    "tamer_id": "528"
+   },
+   {
+    "npc_id": 223443,
+    "name": "Ziriak",
+    "tamer_id": "530"
+   }
+  ],
+  "notes": "Defeat all 4. Whole team must be Beast. All pets level 25.",
+  "required_count": 4
+ },
+ {
+  "achievement_id": 40156,
+  "name_en": "Critter Battler of Khaz Algar",
+  "name_ru": "Укротитель зверьков Каз Алгара",
+  "description_en": "Defeat the pet trainers of Khaz Algar with a team of all level 25 Critter pets.",
+  "kind": "family_tamer",
+  "required_family": 4,
+  "tamers": [
+   {
+    "npc_id": 223446,
+    "name": "Collector Dyna",
+    "tamer_id": "524"
+   },
+   {
+    "npc_id": 223444,
+    "name": "Friendhaver Grem",
+    "tamer_id": "526"
+   },
+   {
+    "npc_id": 223442,
+    "name": "Kyrie",
+    "tamer_id": "528"
+   },
+   {
+    "npc_id": 223443,
+    "name": "Ziriak",
+    "tamer_id": "530"
+   }
+  ],
+  "notes": "Defeat all 4. Whole team must be Critter. All pets level 25.",
+  "required_count": 4
+ },
+ {
+  "achievement_id": 40157,
+  "name_en": "Dragonkin Battler of Khaz Algar",
+  "name_ru": "Укротитель драконов Каз Алгара",
+  "description_en": "Defeat the pet trainers of Khaz Algar with a team of all level 25 Dragonkin pets.",
+  "kind": "family_tamer",
+  "required_family": 1,
+  "tamers": [
+   {
+    "npc_id": 223446,
+    "name": "Collector Dyna",
+    "tamer_id": "524"
+   },
+   {
+    "npc_id": 223444,
+    "name": "Friendhaver Grem",
+    "tamer_id": "526"
+   },
+   {
+    "npc_id": 223442,
+    "name": "Kyrie",
+    "tamer_id": "528"
+   },
+   {
+    "npc_id": 223443,
+    "name": "Ziriak",
+    "tamer_id": "530"
+   }
+  ],
+  "notes": "Defeat all 4. Whole team must be Dragonkin. All pets level 25.",
+  "required_count": 4
+ },
+ {
+  "achievement_id": 40158,
+  "name_en": "Elemental Battler of Khaz Algar",
+  "name_ru": "Укротитель элементалей Каз Алгара",
+  "description_en": "Defeat the pet trainers of Khaz Algar with a team of all level 25 Elemental pets.",
+  "kind": "family_tamer",
+  "required_family": 6,
+  "tamers": [
+   {
+    "npc_id": 223446,
+    "name": "Collector Dyna",
+    "tamer_id": "524"
+   },
+   {
+    "npc_id": 223444,
+    "name": "Friendhaver Grem",
+    "tamer_id": "526"
+   },
+   {
+    "npc_id": 223442,
+    "name": "Kyrie",
+    "tamer_id": "528"
+   },
+   {
+    "npc_id": 223443,
+    "name": "Ziriak",
+    "tamer_id": "530"
+   }
+  ],
+  "notes": "Defeat all 4. Whole team must be Elemental. All pets level 25.",
+  "required_count": 4
+ },
+ {
+  "achievement_id": 40161,
+  "name_en": "Flying Battler of Khaz Algar",
+  "name_ru": "Укротитель летунов Каз Алгара",
+  "description_en": "Defeat the pet trainers of Khaz Algar with a team of all level 25 Flying pets.",
+  "kind": "family_tamer",
+  "required_family": 2,
+  "tamers": [
+   {
+    "npc_id": 223446,
+    "name": "Collector Dyna",
+    "tamer_id": "524"
+   },
+   {
+    "npc_id": 223444,
+    "name": "Friendhaver Grem",
+    "tamer_id": "526"
+   },
+   {
+    "npc_id": 223442,
+    "name": "Kyrie",
+    "tamer_id": "528"
+   },
+   {
+    "npc_id": 223443,
+    "name": "Ziriak",
+    "tamer_id": "530"
+   }
+  ],
+  "notes": "Defeat all 4. Whole team must be Flying. All pets level 25.",
+  "required_count": 4
+ },
+ {
+  "achievement_id": 40162,
+  "name_en": "Humanoid Battler of Khaz Algar",
+  "name_ru": "Укротитель гуманоидов Каз Алгара",
+  "description_en": "Defeat the pet trainers of Khaz Algar with a team of all level 25 Humanoid pets.",
+  "kind": "family_tamer",
+  "required_family": 0,
+  "tamers": [
+   {
+    "npc_id": 223446,
+    "name": "Collector Dyna",
+    "tamer_id": "524"
+   },
+   {
+    "npc_id": 223444,
+    "name": "Friendhaver Grem",
+    "tamer_id": "526",
+    "required_family_override": 2
+   },
+   {
+    "npc_id": 223442,
+    "name": "Kyrie",
+    "tamer_id": "528"
+   },
+   {
+    "npc_id": 223443,
+    "name": "Ziriak",
+    "tamer_id": "530"
+   }
+  ],
+  "notes": "DB2 quirk: Friendhaver Grem criterion requires an all-Flying team (shared criterion). Defeat all 4. Whole team must be Humanoid. All pets level 25.",
+  "required_count": 4
+ },
+ {
+  "achievement_id": 40163,
+  "name_en": "Magic Battler of Khaz Algar",
+  "name_ru": "Укротитель магии Каз Алгара",
+  "description_en": "Defeat the pet trainers of Khaz Algar with a team of all level 25 Magic pets.",
+  "kind": "family_tamer",
+  "required_family": 5,
+  "tamers": [
+   {
+    "npc_id": 223446,
+    "name": "Collector Dyna",
+    "tamer_id": "524"
+   },
+   {
+    "npc_id": 223444,
+    "name": "Friendhaver Grem",
+    "tamer_id": "526"
+   },
+   {
+    "npc_id": 223442,
+    "name": "Kyrie",
+    "tamer_id": "528"
+   },
+   {
+    "npc_id": 223443,
+    "name": "Ziriak",
+    "tamer_id": "530"
+   }
+  ],
+  "notes": "Defeat all 4. Whole team must be Magic. All pets level 25.",
+  "required_count": 4
+ },
+ {
+  "achievement_id": 40164,
+  "name_en": "Mechanical Battler of Khaz Algar",
+  "name_ru": "Укротитель механики Каз Алгара",
+  "description_en": "Defeat the pet trainers of Khaz Algar with a team of all level 25 Mechanical pets.",
+  "kind": "family_tamer",
+  "required_family": 9,
+  "tamers": [
+   {
+    "npc_id": 223446,
+    "name": "Collector Dyna",
+    "tamer_id": "524"
+   },
+   {
+    "npc_id": 223444,
+    "name": "Friendhaver Grem",
+    "tamer_id": "526"
+   },
+   {
+    "npc_id": 223442,
+    "name": "Kyrie",
+    "tamer_id": "528"
+   },
+   {
+    "npc_id": 223443,
+    "name": "Ziriak",
+    "tamer_id": "530"
+   }
+  ],
+  "notes": "Defeat all 4. Whole team must be Mechanical. All pets level 25.",
+  "required_count": 4
+ },
+ {
+  "achievement_id": 40165,
+  "name_en": "Undead Battler of Khaz Algar",
+  "name_ru": "Укротитель нежити Каз Алгара",
+  "description_en": "Defeat the pet trainers of Khaz Algar with a team of all level 25 Undead pets.",
+  "kind": "family_tamer",
+  "required_family": 3,
+  "tamers": [
+   {
+    "npc_id": 223446,
+    "name": "Collector Dyna",
+    "tamer_id": "524"
+   },
+   {
+    "npc_id": 223444,
+    "name": "Friendhaver Grem",
+    "tamer_id": "526"
+   },
+   {
+    "npc_id": 223442,
+    "name": "Kyrie",
+    "tamer_id": "528"
+   },
+   {
+    "npc_id": 223443,
+    "name": "Ziriak",
+    "tamer_id": "530"
+   }
+  ],
+  "notes": "Defeat all 4. Whole team must be Undead. All pets level 25.",
+  "required_count": 4
+ },
+ {
+  "achievement_id": 41542,
+  "name_en": "Aquatic Battler of Undermine",
+  "name_ru": "Укротитель воды Нижней Шахты",
+  "description_en": "Defeat the elite pets and trainers of Undermine with a team of all level 25 Aquatic pets.",
+  "kind": "family_tamer",
+  "required_family": 8,
+  "tamers": [
+   {
+    "npc_id": 237701,
+    "name": "Precision Powerdrill",
+    "species_id": 4737,
+    "tamer_id": "536"
+   },
+   {
+    "npc_id": 237703,
+    "name": "Baxx the Purveyor",
+    "tamer_id": "534"
+   },
+   {
+    "npc_id": 237712,
+    "name": "Prezly Wavecutter",
+    "tamer_id": "533"
+   },
+   {
+    "npc_id": 237718,
+    "name": "Creech",
+    "tamer_id": "535"
+   }
+  ],
+  "notes": "Defeat all 4. Whole team must be Aquatic. All pets level 25.",
+  "required_count": 4
+ },
+ {
+  "achievement_id": 41543,
+  "name_en": "Beast Battler of Undermine",
+  "name_ru": "Укротитель животных Нижней Шахты",
+  "description_en": "Defeat the elite pets and trainers of Undermine with a team of all level 25 Beast pets.",
+  "kind": "family_tamer",
+  "required_family": 7,
+  "tamers": [
+   {
+    "npc_id": 237701,
+    "name": "Precision Powerdrill",
+    "species_id": 4737,
+    "tamer_id": "536"
+   },
+   {
+    "npc_id": 237703,
+    "name": "Baxx the Purveyor",
+    "tamer_id": "534"
+   },
+   {
+    "npc_id": 237712,
+    "name": "Prezly Wavecutter",
+    "tamer_id": "533"
+   },
+   {
+    "npc_id": 237718,
+    "name": "Creech",
+    "tamer_id": "535"
+   }
+  ],
+  "notes": "Defeat all 4. Whole team must be Beast. All pets level 25.",
+  "required_count": 4
+ },
+ {
+  "achievement_id": 41541,
+  "name_en": "Critter Battler of Undermine",
+  "name_ru": "Укротитель зверьков Нижней Шахты",
+  "description_en": "Defeat the elite pets and trainers of Undermine with a team of all level 25 Critter pets.",
+  "kind": "family_tamer",
+  "required_family": 4,
+  "tamers": [
+   {
+    "npc_id": 237701,
+    "name": "Precision Powerdrill",
+    "species_id": 4737,
+    "tamer_id": "536"
+   },
+   {
+    "npc_id": 237703,
+    "name": "Baxx the Purveyor",
+    "tamer_id": "534"
+   },
+   {
+    "npc_id": 237712,
+    "name": "Prezly Wavecutter",
+    "tamer_id": "533"
+   },
+   {
+    "npc_id": 237718,
+    "name": "Creech",
+    "tamer_id": "535"
+   }
+  ],
+  "notes": "Defeat all 4. Whole team must be Critter. All pets level 25.",
+  "required_count": 4
+ },
+ {
+  "achievement_id": 41544,
+  "name_en": "Dragonkin Battler of Undermine",
+  "name_ru": "Укротитель драконов Нижней Шахты",
+  "description_en": "Defeat the elite pets and trainers of Undermine with a team of all level 25 Dragonkin pets.",
+  "kind": "family_tamer",
+  "required_family": 1,
+  "tamers": [
+   {
+    "npc_id": 237701,
+    "name": "Precision Powerdrill",
+    "species_id": 4737,
+    "tamer_id": "536"
+   },
+   {
+    "npc_id": 237703,
+    "name": "Baxx the Purveyor",
+    "tamer_id": "534"
+   },
+   {
+    "npc_id": 237712,
+    "name": "Prezly Wavecutter",
+    "tamer_id": "533"
+   },
+   {
+    "npc_id": 237718,
+    "name": "Creech",
+    "tamer_id": "535"
+   }
+  ],
+  "notes": "Defeat all 4. Whole team must be Dragonkin. All pets level 25.",
+  "required_count": 4
+ },
+ {
+  "achievement_id": 41545,
+  "name_en": "Elemental Battler of Undermine",
+  "name_ru": "Укротитель элементалей Нижней Шахты",
+  "description_en": "Defeat the elite pets and trainers of Undermine with a team of all level 25 Elemental pets.",
+  "kind": "family_tamer",
+  "required_family": 6,
+  "tamers": [
+   {
+    "npc_id": 237701,
+    "name": "Precision Powerdrill",
+    "species_id": 4737,
+    "tamer_id": "536"
+   },
+   {
+    "npc_id": 237703,
+    "name": "Baxx the Purveyor",
+    "tamer_id": "534"
+   },
+   {
+    "npc_id": 237712,
+    "name": "Prezly Wavecutter",
+    "tamer_id": "533"
+   },
+   {
+    "npc_id": 237718,
+    "name": "Creech",
+    "tamer_id": "535"
+   }
+  ],
+  "notes": "Defeat all 4. Whole team must be Elemental. All pets level 25.",
+  "required_count": 4
+ },
+ {
+  "achievement_id": 41546,
+  "name_en": "Flying Battler of Undermine",
+  "name_ru": "Укротитель летунов Нижней Шахты",
+  "description_en": "Defeat the elite pets and trainers of Undermine with a team of all level 25 Flying pets.",
+  "kind": "family_tamer",
+  "required_family": 2,
+  "tamers": [
+   {
+    "npc_id": 237701,
+    "name": "Precision Powerdrill",
+    "species_id": 4737,
+    "tamer_id": "536"
+   },
+   {
+    "npc_id": 237703,
+    "name": "Baxx the Purveyor",
+    "tamer_id": "534"
+   },
+   {
+    "npc_id": 237712,
+    "name": "Prezly Wavecutter",
+    "tamer_id": "533"
+   },
+   {
+    "npc_id": 237718,
+    "name": "Creech",
+    "tamer_id": "535"
+   }
+  ],
+  "notes": "Defeat all 4. Whole team must be Flying. All pets level 25.",
+  "required_count": 4
+ },
+ {
+  "achievement_id": 41547,
+  "name_en": "Humanoid Battler of Undermine",
+  "name_ru": "Укротитель гуманоидов Нижней Шахты",
+  "description_en": "Defeat the elite pets and trainers of Undermine with a team of all level 25 Humanoid pets.",
+  "kind": "family_tamer",
+  "required_family": 0,
+  "tamers": [
+   {
+    "npc_id": 237701,
+    "name": "Precision Powerdrill",
+    "species_id": 4737,
+    "tamer_id": "536"
+   },
+   {
+    "npc_id": 237703,
+    "name": "Baxx the Purveyor",
+    "tamer_id": "534"
+   },
+   {
+    "npc_id": 237712,
+    "name": "Prezly Wavecutter",
+    "tamer_id": "533"
+   },
+   {
+    "npc_id": 237718,
+    "name": "Creech",
+    "tamer_id": "535"
+   }
+  ],
+  "notes": "Defeat all 4. Whole team must be Humanoid. All pets level 25.",
+  "required_count": 4
+ },
+ {
+  "achievement_id": 41548,
+  "name_en": "Magic Battler of Undermine",
+  "name_ru": "Укротитель магии Нижней Шахты",
+  "description_en": "Defeat the elite pets and trainers of Undermine with a team of all level 25 Magic pets.",
+  "kind": "family_tamer",
+  "required_family": 5,
+  "tamers": [
+   {
+    "npc_id": 237701,
+    "name": "Precision Powerdrill",
+    "species_id": 4737,
+    "tamer_id": "536"
+   },
+   {
+    "npc_id": 237703,
+    "name": "Baxx the Purveyor",
+    "tamer_id": "534"
+   },
+   {
+    "npc_id": 237712,
+    "name": "Prezly Wavecutter",
+    "tamer_id": "533"
+   },
+   {
+    "npc_id": 237718,
+    "name": "Creech",
+    "tamer_id": "535"
+   }
+  ],
+  "notes": "Defeat all 4. Whole team must be Magic. All pets level 25.",
+  "required_count": 4
+ },
+ {
+  "achievement_id": 41549,
+  "name_en": "Mechanical Battler of Undermine",
+  "name_ru": "Укротитель механики Нижней Шахты",
+  "description_en": "Defeat the elite pets and trainers of Undermine with a team of all level 25 Mechanical pets.",
+  "kind": "family_tamer",
+  "required_family": 9,
+  "tamers": [
+   {
+    "npc_id": 237701,
+    "name": "Precision Powerdrill",
+    "species_id": 4737,
+    "tamer_id": "536"
+   },
+   {
+    "npc_id": 237703,
+    "name": "Baxx the Purveyor",
+    "tamer_id": "534"
+   },
+   {
+    "npc_id": 237712,
+    "name": "Prezly Wavecutter",
+    "tamer_id": "533"
+   },
+   {
+    "npc_id": 237718,
+    "name": "Creech",
+    "tamer_id": "535"
+   }
+  ],
+  "notes": "Defeat all 4. Whole team must be Mechanical. All pets level 25.",
+  "required_count": 4
+ },
+ {
+  "achievement_id": 41550,
+  "name_en": "Undead Battler of Undermine",
+  "name_ru": "Укротитель нежити Нижней Шахты",
+  "description_en": "Defeat the elite pets and trainers of Undermine with a team of all level 25 Undead pets.",
+  "kind": "family_tamer",
+  "required_family": 3,
+  "tamers": [
+   {
+    "npc_id": 237701,
+    "name": "Precision Powerdrill",
+    "species_id": 4737,
+    "tamer_id": "536"
+   },
+   {
+    "npc_id": 237703,
+    "name": "Baxx the Purveyor",
+    "tamer_id": "534"
+   },
+   {
+    "npc_id": 237712,
+    "name": "Prezly Wavecutter",
+    "tamer_id": "533"
+   },
+   {
+    "npc_id": 237718,
+    "name": "Creech",
+    "tamer_id": "535"
+   }
+  ],
+  "notes": "Defeat all 4. Whole team must be Undead. All pets level 25.",
+  "required_count": 4
+ },
+ {
+  "achievement_id": 60942,
+  "name_en": "Aquatic Battler of Northrend",
+  "name_ru": "Укротитель воды Нордскола",
+  "description_en": "Defeat the following trainers of Northrend with a team of all level 25 Aquatic pets.",
+  "kind": "family_tamer",
+  "required_family": 8,
+  "tamers": [
+   {
+    "npc_id": 66635,
+    "name": "Beegle Blastfuse",
+    "tamer_id": "117"
+   },
+   {
+    "npc_id": 66638,
+    "name": "Okrut Dragonwaste",
+    "tamer_id": "116"
+   },
+   {
+    "npc_id": 66675,
+    "name": "Major Payne",
+    "tamer_id": "119"
+   },
+   {
+    "npc_id": 66636,
+    "name": "Nearly Headless Jacob",
+    "tamer_id": "115"
+   },
+   {
+    "npc_id": 66639,
+    "name": "Gutretch",
+    "tamer_id": "118"
+   }
+  ],
+  "notes": "Defeat all 5. Whole team must be Aquatic. All pets level 25.",
+  "required_count": 5
+ },
+ {
+  "achievement_id": 60951,
+  "name_en": "Beast Battler of Northrend",
+  "name_ru": "Укротитель животных Нордскола",
+  "description_en": "Defeat the following trainers of Northrend with a team of all level 25 Beast pets.",
+  "kind": "family_tamer",
+  "required_family": 7,
+  "tamers": [
+   {
+    "npc_id": 66635,
+    "name": "Beegle Blastfuse",
+    "tamer_id": "117"
+   },
+   {
+    "npc_id": 66638,
+    "name": "Okrut Dragonwaste",
+    "tamer_id": "116"
+   },
+   {
+    "npc_id": 66675,
+    "name": "Major Payne",
+    "tamer_id": "119"
+   },
+   {
+    "npc_id": 66636,
+    "name": "Nearly Headless Jacob",
+    "tamer_id": "115"
+   },
+   {
+    "npc_id": 66639,
+    "name": "Gutretch",
+    "tamer_id": "118"
+   }
+  ],
+  "notes": "Defeat all 5. Whole team must be Beast. All pets level 25.",
+  "required_count": 5
+ },
+ {
+  "achievement_id": 60943,
+  "name_en": "Critter Battler of Northrend",
+  "name_ru": "Укротитель зверьков Нордскола",
+  "description_en": "Defeat the following trainers of Northrend with a team of all level 25 Critter pets.",
+  "kind": "family_tamer",
+  "required_family": 4,
+  "tamers": [
+   {
+    "npc_id": 66635,
+    "name": "Beegle Blastfuse",
+    "tamer_id": "117"
+   },
+   {
+    "npc_id": 66638,
+    "name": "Okrut Dragonwaste",
+    "tamer_id": "116"
+   },
+   {
+    "npc_id": 66675,
+    "name": "Major Payne",
+    "tamer_id": "119"
+   },
+   {
+    "npc_id": 66636,
+    "name": "Nearly Headless Jacob",
+    "tamer_id": "115"
+   },
+   {
+    "npc_id": 66639,
+    "name": "Gutretch",
+    "tamer_id": "118"
+   }
+  ],
+  "notes": "Defeat all 5. Whole team must be Critter. All pets level 25.",
+  "required_count": 5
+ },
+ {
+  "achievement_id": 60944,
+  "name_en": "Dragonkin Battler of Northrend",
+  "name_ru": "Укротитель драконов Нордскола",
+  "description_en": "Defeat the following trainers of Northrend with a team of all level 25 Dragonkin pets.",
+  "kind": "family_tamer",
+  "required_family": 1,
+  "tamers": [
+   {
+    "npc_id": 66635,
+    "name": "Beegle Blastfuse",
+    "tamer_id": "117"
+   },
+   {
+    "npc_id": 66638,
+    "name": "Okrut Dragonwaste",
+    "tamer_id": "116"
+   },
+   {
+    "npc_id": 66675,
+    "name": "Major Payne",
+    "tamer_id": "119"
+   },
+   {
+    "npc_id": 66636,
+    "name": "Nearly Headless Jacob",
+    "tamer_id": "115"
+   },
+   {
+    "npc_id": 66639,
+    "name": "Gutretch",
+    "tamer_id": "118"
+   }
+  ],
+  "notes": "Defeat all 5. Whole team must be Dragonkin. All pets level 25.",
+  "required_count": 5
+ },
+ {
+  "achievement_id": 60948,
+  "name_en": "Elemental Battler of Northrend",
+  "name_ru": "Укротитель элементалей Нордскола",
+  "description_en": "Defeat the following trainers of Northrend with a team of all level 25 Elemental pets.",
+  "kind": "family_tamer",
+  "required_family": 6,
+  "tamers": [
+   {
+    "npc_id": 66635,
+    "name": "Beegle Blastfuse",
+    "tamer_id": "117"
+   },
+   {
+    "npc_id": 66638,
+    "name": "Okrut Dragonwaste",
+    "tamer_id": "116"
+   },
+   {
+    "npc_id": 66675,
+    "name": "Major Payne",
+    "tamer_id": "119"
+   },
+   {
+    "npc_id": 66636,
+    "name": "Nearly Headless Jacob",
+    "tamer_id": "115"
+   },
+   {
+    "npc_id": 66639,
+    "name": "Gutretch",
+    "tamer_id": "118"
+   }
+  ],
+  "notes": "Defeat all 5. Whole team must be Elemental. All pets level 25.",
+  "required_count": 5
+ },
+ {
+  "achievement_id": 60949,
+  "name_en": "Flying Battler of Northrend",
+  "name_ru": "Укротитель летунов Нордскола",
+  "description_en": "Defeat the following trainers of Northrend with a team of all level 25 Flying pets.",
+  "kind": "family_tamer",
+  "required_family": 2,
+  "tamers": [
+   {
+    "npc_id": 66635,
+    "name": "Beegle Blastfuse",
+    "tamer_id": "117"
+   },
+   {
+    "npc_id": 66638,
+    "name": "Okrut Dragonwaste",
+    "tamer_id": "116"
+   },
+   {
+    "npc_id": 66675,
+    "name": "Major Payne",
+    "tamer_id": "119"
+   },
+   {
+    "npc_id": 66636,
+    "name": "Nearly Headless Jacob",
+    "tamer_id": "115"
+   },
+   {
+    "npc_id": 66639,
+    "name": "Gutretch",
+    "tamer_id": "118"
+   }
+  ],
+  "notes": "Defeat all 5. Whole team must be Flying. All pets level 25.",
+  "required_count": 5
+ },
+ {
+  "achievement_id": 60950,
+  "name_en": "Humanoid Battler of Northrend",
+  "name_ru": "Укротитель гуманоидов Нордскола",
+  "description_en": "Defeat the following trainers of Northrend with a team of all level 25 Humanoid pets.",
+  "kind": "family_tamer",
+  "required_family": 0,
+  "tamers": [
+   {
+    "npc_id": 66635,
+    "name": "Beegle Blastfuse",
+    "tamer_id": "117"
+   },
+   {
+    "npc_id": 66638,
+    "name": "Okrut Dragonwaste",
+    "tamer_id": "116"
+   },
+   {
+    "npc_id": 66675,
+    "name": "Major Payne",
+    "tamer_id": "119"
+   },
+   {
+    "npc_id": 66636,
+    "name": "Nearly Headless Jacob",
+    "tamer_id": "115"
+   },
+   {
+    "npc_id": 66639,
+    "name": "Gutretch",
+    "tamer_id": "118"
+   }
+  ],
+  "notes": "Defeat all 5. Whole team must be Humanoid. All pets level 25.",
+  "required_count": 5
+ },
+ {
+  "achievement_id": 60952,
+  "name_en": "Magic Battler of Northrend",
+  "name_ru": "Укротитель магии Нордскола",
+  "description_en": "Defeat the following trainers of Northrend with a team of all level 25 Magic pets.",
+  "kind": "family_tamer",
+  "required_family": 5,
+  "tamers": [
+   {
+    "npc_id": 66635,
+    "name": "Beegle Blastfuse",
+    "tamer_id": "117"
+   },
+   {
+    "npc_id": 66638,
+    "name": "Okrut Dragonwaste",
+    "tamer_id": "116"
+   },
+   {
+    "npc_id": 66675,
+    "name": "Major Payne",
+    "tamer_id": "119"
+   },
+   {
+    "npc_id": 66636,
+    "name": "Nearly Headless Jacob",
+    "tamer_id": "115"
+   },
+   {
+    "npc_id": 66639,
+    "name": "Gutretch",
+    "tamer_id": "118"
+   }
+  ],
+  "notes": "Defeat all 5. Whole team must be Magic. All pets level 25.",
+  "required_count": 5
+ },
+ {
+  "achievement_id": 60953,
+  "name_en": "Mechanical Battler of Northrend",
+  "name_ru": "Укротитель механики Нордскола",
+  "description_en": "Defeat the following trainers of Northrend with a team of all level 25 Mechanical pets.",
+  "kind": "family_tamer",
+  "required_family": 9,
+  "tamers": [
+   {
+    "npc_id": 66635,
+    "name": "Beegle Blastfuse",
+    "tamer_id": "117"
+   },
+   {
+    "npc_id": 66638,
+    "name": "Okrut Dragonwaste",
+    "tamer_id": "116"
+   },
+   {
+    "npc_id": 66675,
+    "name": "Major Payne",
+    "tamer_id": "119"
+   },
+   {
+    "npc_id": 66636,
+    "name": "Nearly Headless Jacob",
+    "tamer_id": "115"
+   },
+   {
+    "npc_id": 66639,
+    "name": "Gutretch",
+    "tamer_id": "118"
+   }
+  ],
+  "notes": "Defeat all 5. Whole team must be Mechanical. All pets level 25.",
+  "required_count": 5
+ },
+ {
+  "achievement_id": 60954,
+  "name_en": "Undead Battler of Northrend",
+  "name_ru": "Укротитель нежити Нордскола",
+  "description_en": "Defeat the following trainers of Northrend with a team of all level 25 Undead pets.",
+  "kind": "family_tamer",
+  "required_family": 3,
+  "tamers": [
+   {
+    "npc_id": 66635,
+    "name": "Beegle Blastfuse",
+    "tamer_id": "117"
+   },
+   {
+    "npc_id": 66638,
+    "name": "Okrut Dragonwaste",
+    "tamer_id": "116"
+   },
+   {
+    "npc_id": 66675,
+    "name": "Major Payne",
+    "tamer_id": "119"
+   },
+   {
+    "npc_id": 66636,
+    "name": "Nearly Headless Jacob",
+    "tamer_id": "115"
+   },
+   {
+    "npc_id": 66639,
+    "name": "Gutretch",
+    "tamer_id": "118"
+   }
+  ],
+  "notes": "Defeat all 5. Whole team must be Undead. All pets level 25.",
+  "required_count": 5
+ },
+ {
+  "achievement_id": 61029,
+  "name_en": "Aquatic Battler of Eastern Kingdoms",
+  "name_ru": "Укротитель воды Восточных королевств",
+  "description_en": "Defeat the following trainers of Eastern Kingdoms with a team of all level 25 Aquatic pets.",
+  "kind": "family_tamer",
+  "required_family": 8,
+  "tamers": [
+   {
+    "npc_id": 64330,
+    "name": "Julia Stevens",
+    "tamer_id": "64330"
+   },
+   {
+    "npc_id": 65648,
+    "name": "Old MacDonald",
+    "tamer_id": "65648"
+   },
+   {
+    "npc_id": 65651,
+    "name": "Lindsay",
+    "tamer_id": "65651"
+   },
+   {
+    "npc_id": 65655,
+    "name": "Eric Davidson",
+    "tamer_id": "65655"
+   },
+   {
+    "npc_id": 63194,
+    "name": "Steven Lisbane",
+    "tamer_id": "63194"
+   },
+   {
+    "npc_id": 65656,
+    "name": "Bill Buckler",
+    "tamer_id": "65656"
+   },
+   {
+    "npc_id": 66478,
+    "name": "David Kosse",
+    "tamer_id": "66478"
+   },
+   {
+    "npc_id": 66512,
+    "name": "Deiza Plaguehorn",
+    "tamer_id": "66512"
+   },
+   {
+    "npc_id": 66515,
+    "name": "Kortas Darkhammer",
+    "tamer_id": "66515"
+   },
+   {
+    "npc_id": 66520,
+    "name": "Durin Darkhammer",
+    "tamer_id": "66520"
+   },
+   {
+    "npc_id": 66518,
+    "name": "Everessa",
+    "tamer_id": "66518"
+   },
+   {
+    "npc_id": 66522,
+    "name": "Lydia Accoste",
+    "tamer_id": "133"
+   }
+  ],
+  "notes": "Defeat all 12. Whole team must be Aquatic. All pets level 25.",
+  "required_count": 12
+ },
+ {
+  "achievement_id": 61030,
+  "name_en": "Beast Battler of Eastern Kingdoms",
+  "name_ru": "Укротитель животных Восточных королевств",
+  "description_en": "Defeat the following trainers of Eastern Kingdoms with a team of all level 25 Beast pets.",
+  "kind": "family_tamer",
+  "required_family": 7,
+  "tamers": [
+   {
+    "npc_id": 64330,
+    "name": "Julia Stevens",
+    "tamer_id": "64330"
+   },
+   {
+    "npc_id": 65648,
+    "name": "Old MacDonald",
+    "tamer_id": "65648"
+   },
+   {
+    "npc_id": 65651,
+    "name": "Lindsay",
+    "tamer_id": "65651"
+   },
+   {
+    "npc_id": 65655,
+    "name": "Eric Davidson",
+    "tamer_id": "65655"
+   },
+   {
+    "npc_id": 63194,
+    "name": "Steven Lisbane",
+    "tamer_id": "63194"
+   },
+   {
+    "npc_id": 65656,
+    "name": "Bill Buckler",
+    "tamer_id": "65656"
+   },
+   {
+    "npc_id": 66478,
+    "name": "David Kosse",
+    "tamer_id": "66478"
+   },
+   {
+    "npc_id": 66512,
+    "name": "Deiza Plaguehorn",
+    "tamer_id": "66512"
+   },
+   {
+    "npc_id": 66515,
+    "name": "Kortas Darkhammer",
+    "tamer_id": "66515"
+   },
+   {
+    "npc_id": 66520,
+    "name": "Durin Darkhammer",
+    "tamer_id": "66520"
+   },
+   {
+    "npc_id": 66518,
+    "name": "Everessa",
+    "tamer_id": "66518"
+   },
+   {
+    "npc_id": 66522,
+    "name": "Lydia Accoste",
+    "tamer_id": "133"
+   }
+  ],
+  "notes": "Defeat all 12. Whole team must be Beast. All pets level 25.",
+  "required_count": 12
+ },
+ {
+  "achievement_id": 61031,
+  "name_en": "Critter Battler of Eastern Kingdoms",
+  "name_ru": "Укротитель зверьков Восточных королевств",
+  "description_en": "Defeat the following trainers of Eastern Kingdoms with a team of all level 25 Critter pets.",
+  "kind": "family_tamer",
+  "required_family": 4,
+  "tamers": [
+   {
+    "npc_id": 64330,
+    "name": "Julia Stevens",
+    "tamer_id": "64330"
+   },
+   {
+    "npc_id": 65648,
+    "name": "Old MacDonald",
+    "tamer_id": "65648"
+   },
+   {
+    "npc_id": 65651,
+    "name": "Lindsay",
+    "tamer_id": "65651"
+   },
+   {
+    "npc_id": 65655,
+    "name": "Eric Davidson",
+    "tamer_id": "65655"
+   },
+   {
+    "npc_id": 63194,
+    "name": "Steven Lisbane",
+    "tamer_id": "63194"
+   },
+   {
+    "npc_id": 65656,
+    "name": "Bill Buckler",
+    "tamer_id": "65656"
+   },
+   {
+    "npc_id": 66478,
+    "name": "David Kosse",
+    "tamer_id": "66478"
+   },
+   {
+    "npc_id": 66512,
+    "name": "Deiza Plaguehorn",
+    "tamer_id": "66512"
+   },
+   {
+    "npc_id": 66515,
+    "name": "Kortas Darkhammer",
+    "tamer_id": "66515"
+   },
+   {
+    "npc_id": 66520,
+    "name": "Durin Darkhammer",
+    "tamer_id": "66520"
+   },
+   {
+    "npc_id": 66518,
+    "name": "Everessa",
+    "tamer_id": "66518"
+   },
+   {
+    "npc_id": 66522,
+    "name": "Lydia Accoste",
+    "tamer_id": "133"
+   }
+  ],
+  "notes": "Defeat all 12. Whole team must be Critter. All pets level 25.",
+  "required_count": 12
+ },
+ {
+  "achievement_id": 61032,
+  "name_en": "Dragonkin Battler of Eastern Kingdoms",
+  "name_ru": "Укротитель драконов Восточных королевств",
+  "description_en": "Defeat the following trainers of Eastern Kingdoms with a team of all level 25 Dragonkin pets.",
+  "kind": "family_tamer",
+  "required_family": 1,
+  "tamers": [
+   {
+    "npc_id": 64330,
+    "name": "Julia Stevens",
+    "tamer_id": "64330"
+   },
+   {
+    "npc_id": 65648,
+    "name": "Old MacDonald",
+    "tamer_id": "65648"
+   },
+   {
+    "npc_id": 65651,
+    "name": "Lindsay",
+    "tamer_id": "65651"
+   },
+   {
+    "npc_id": 65655,
+    "name": "Eric Davidson",
+    "tamer_id": "65655"
+   },
+   {
+    "npc_id": 63194,
+    "name": "Steven Lisbane",
+    "tamer_id": "63194"
+   },
+   {
+    "npc_id": 65656,
+    "name": "Bill Buckler",
+    "tamer_id": "65656"
+   },
+   {
+    "npc_id": 66478,
+    "name": "David Kosse",
+    "tamer_id": "66478"
+   },
+   {
+    "npc_id": 66512,
+    "name": "Deiza Plaguehorn",
+    "tamer_id": "66512"
+   },
+   {
+    "npc_id": 66515,
+    "name": "Kortas Darkhammer",
+    "tamer_id": "66515"
+   },
+   {
+    "npc_id": 66520,
+    "name": "Durin Darkhammer",
+    "tamer_id": "66520"
+   },
+   {
+    "npc_id": 66518,
+    "name": "Everessa",
+    "tamer_id": "66518"
+   },
+   {
+    "npc_id": 66522,
+    "name": "Lydia Accoste",
+    "tamer_id": "133"
+   }
+  ],
+  "notes": "Defeat all 12. Whole team must be Dragonkin. All pets level 25.",
+  "required_count": 12
+ },
+ {
+  "achievement_id": 61033,
+  "name_en": "Elemental Battler of Eastern Kingdoms",
+  "name_ru": "Укротитель элементалей Восточных королевств",
+  "description_en": "Defeat the following trainers of Eastern Kingdoms with a team of all level 25 Elemental pets.",
+  "kind": "family_tamer",
+  "required_family": 6,
+  "tamers": [
+   {
+    "npc_id": 64330,
+    "name": "Julia Stevens",
+    "tamer_id": "64330"
+   },
+   {
+    "npc_id": 65648,
+    "name": "Old MacDonald",
+    "tamer_id": "65648"
+   },
+   {
+    "npc_id": 65651,
+    "name": "Lindsay",
+    "tamer_id": "65651"
+   },
+   {
+    "npc_id": 65655,
+    "name": "Eric Davidson",
+    "tamer_id": "65655"
+   },
+   {
+    "npc_id": 63194,
+    "name": "Steven Lisbane",
+    "tamer_id": "63194"
+   },
+   {
+    "npc_id": 65656,
+    "name": "Bill Buckler",
+    "tamer_id": "65656"
+   },
+   {
+    "npc_id": 66478,
+    "name": "David Kosse",
+    "tamer_id": "66478"
+   },
+   {
+    "npc_id": 66512,
+    "name": "Deiza Plaguehorn",
+    "tamer_id": "66512"
+   },
+   {
+    "npc_id": 66515,
+    "name": "Kortas Darkhammer",
+    "tamer_id": "66515"
+   },
+   {
+    "npc_id": 66520,
+    "name": "Durin Darkhammer",
+    "tamer_id": "66520"
+   },
+   {
+    "npc_id": 66518,
+    "name": "Everessa",
+    "tamer_id": "66518"
+   },
+   {
+    "npc_id": 66522,
+    "name": "Lydia Accoste",
+    "tamer_id": "133"
+   }
+  ],
+  "notes": "Defeat all 12. Whole team must be Elemental. All pets level 25.",
+  "required_count": 12
+ },
+ {
+  "achievement_id": 61034,
+  "name_en": "Flying Battler of Eastern Kingdoms",
+  "name_ru": "Укротитель летунов Восточных королевств",
+  "description_en": "Defeat the following trainers of Eastern Kingdoms with a team of all level 25 Flying pets.",
+  "kind": "family_tamer",
+  "required_family": 2,
+  "tamers": [
+   {
+    "npc_id": 64330,
+    "name": "Julia Stevens",
+    "tamer_id": "64330"
+   },
+   {
+    "npc_id": 65648,
+    "name": "Old MacDonald",
+    "tamer_id": "65648"
+   },
+   {
+    "npc_id": 65651,
+    "name": "Lindsay",
+    "tamer_id": "65651"
+   },
+   {
+    "npc_id": 65655,
+    "name": "Eric Davidson",
+    "tamer_id": "65655"
+   },
+   {
+    "npc_id": 63194,
+    "name": "Steven Lisbane",
+    "tamer_id": "63194"
+   },
+   {
+    "npc_id": 65656,
+    "name": "Bill Buckler",
+    "tamer_id": "65656"
+   },
+   {
+    "npc_id": 66478,
+    "name": "David Kosse",
+    "tamer_id": "66478"
+   },
+   {
+    "npc_id": 66512,
+    "name": "Deiza Plaguehorn",
+    "tamer_id": "66512"
+   },
+   {
+    "npc_id": 66515,
+    "name": "Kortas Darkhammer",
+    "tamer_id": "66515"
+   },
+   {
+    "npc_id": 66520,
+    "name": "Durin Darkhammer",
+    "tamer_id": "66520"
+   },
+   {
+    "npc_id": 66518,
+    "name": "Everessa",
+    "tamer_id": "66518"
+   },
+   {
+    "npc_id": 66522,
+    "name": "Lydia Accoste",
+    "tamer_id": "133"
+   }
+  ],
+  "notes": "Defeat all 12. Whole team must be Flying. All pets level 25.",
+  "required_count": 12
+ },
+ {
+  "achievement_id": 61035,
+  "name_en": "Humanoid Battler of Eastern Kingdoms",
+  "name_ru": "Укротитель гуманоидов Восточных королевств",
+  "description_en": "Defeat the following trainers of Eastern Kingdoms with a team of all level 25 Humanoid pets.",
+  "kind": "family_tamer",
+  "required_family": 0,
+  "tamers": [
+   {
+    "npc_id": 64330,
+    "name": "Julia Stevens",
+    "tamer_id": "64330"
+   },
+   {
+    "npc_id": 65648,
+    "name": "Old MacDonald",
+    "tamer_id": "65648"
+   },
+   {
+    "npc_id": 65651,
+    "name": "Lindsay",
+    "tamer_id": "65651"
+   },
+   {
+    "npc_id": 65655,
+    "name": "Eric Davidson",
+    "tamer_id": "65655"
+   },
+   {
+    "npc_id": 63194,
+    "name": "Steven Lisbane",
+    "tamer_id": "63194"
+   },
+   {
+    "npc_id": 65656,
+    "name": "Bill Buckler",
+    "tamer_id": "65656"
+   },
+   {
+    "npc_id": 66478,
+    "name": "David Kosse",
+    "tamer_id": "66478"
+   },
+   {
+    "npc_id": 66512,
+    "name": "Deiza Plaguehorn",
+    "tamer_id": "66512"
+   },
+   {
+    "npc_id": 66515,
+    "name": "Kortas Darkhammer",
+    "tamer_id": "66515"
+   },
+   {
+    "npc_id": 66520,
+    "name": "Durin Darkhammer",
+    "tamer_id": "66520"
+   },
+   {
+    "npc_id": 66518,
+    "name": "Everessa",
+    "tamer_id": "66518"
+   },
+   {
+    "npc_id": 66522,
+    "name": "Lydia Accoste",
+    "tamer_id": "133"
+   }
+  ],
+  "notes": "Defeat all 12. Whole team must be Humanoid. All pets level 25.",
+  "required_count": 12
+ },
+ {
+  "achievement_id": 61036,
+  "name_en": "Magic Battler of Eastern Kingdoms",
+  "name_ru": "Укротитель магии Восточных королевств",
+  "description_en": "Defeat the following trainers of Eastern Kingdoms with a team of all level 25 Magic pets.",
+  "kind": "family_tamer",
+  "required_family": 5,
+  "tamers": [
+   {
+    "npc_id": 64330,
+    "name": "Julia Stevens",
+    "tamer_id": "64330"
+   },
+   {
+    "npc_id": 65648,
+    "name": "Old MacDonald",
+    "tamer_id": "65648"
+   },
+   {
+    "npc_id": 65651,
+    "name": "Lindsay",
+    "tamer_id": "65651"
+   },
+   {
+    "npc_id": 65655,
+    "name": "Eric Davidson",
+    "tamer_id": "65655"
+   },
+   {
+    "npc_id": 63194,
+    "name": "Steven Lisbane",
+    "tamer_id": "63194"
+   },
+   {
+    "npc_id": 65656,
+    "name": "Bill Buckler",
+    "tamer_id": "65656"
+   },
+   {
+    "npc_id": 66478,
+    "name": "David Kosse",
+    "tamer_id": "66478"
+   },
+   {
+    "npc_id": 66512,
+    "name": "Deiza Plaguehorn",
+    "tamer_id": "66512"
+   },
+   {
+    "npc_id": 66515,
+    "name": "Kortas Darkhammer",
+    "tamer_id": "66515"
+   },
+   {
+    "npc_id": 66520,
+    "name": "Durin Darkhammer",
+    "tamer_id": "66520"
+   },
+   {
+    "npc_id": 66518,
+    "name": "Everessa",
+    "tamer_id": "66518"
+   },
+   {
+    "npc_id": 66522,
+    "name": "Lydia Accoste",
+    "tamer_id": "133"
+   }
+  ],
+  "notes": "Defeat all 12. Whole team must be Magic. All pets level 25.",
+  "required_count": 12
+ },
+ {
+  "achievement_id": 61037,
+  "name_en": "Mechanical Battler of Eastern Kingdoms",
+  "name_ru": "Укротитель механики Восточных королевств",
+  "description_en": "Defeat the following trainers of Eastern Kingdoms with a team of all level 25 Mechanical pets.",
+  "kind": "family_tamer",
+  "required_family": 9,
+  "tamers": [
+   {
+    "npc_id": 64330,
+    "name": "Julia Stevens",
+    "tamer_id": "64330"
+   },
+   {
+    "npc_id": 65648,
+    "name": "Old MacDonald",
+    "tamer_id": "65648"
+   },
+   {
+    "npc_id": 65651,
+    "name": "Lindsay",
+    "tamer_id": "65651"
+   },
+   {
+    "npc_id": 65655,
+    "name": "Eric Davidson",
+    "tamer_id": "65655"
+   },
+   {
+    "npc_id": 63194,
+    "name": "Steven Lisbane",
+    "tamer_id": "63194"
+   },
+   {
+    "npc_id": 65656,
+    "name": "Bill Buckler",
+    "tamer_id": "65656"
+   },
+   {
+    "npc_id": 66478,
+    "name": "David Kosse",
+    "tamer_id": "66478"
+   },
+   {
+    "npc_id": 66512,
+    "name": "Deiza Plaguehorn",
+    "tamer_id": "66512"
+   },
+   {
+    "npc_id": 66515,
+    "name": "Kortas Darkhammer",
+    "tamer_id": "66515"
+   },
+   {
+    "npc_id": 66520,
+    "name": "Durin Darkhammer",
+    "tamer_id": "66520"
+   },
+   {
+    "npc_id": 66518,
+    "name": "Everessa",
+    "tamer_id": "66518"
+   },
+   {
+    "npc_id": 66522,
+    "name": "Lydia Accoste",
+    "tamer_id": "133"
+   }
+  ],
+  "notes": "Defeat all 12. Whole team must be Mechanical. All pets level 25.",
+  "required_count": 12
+ },
+ {
+  "achievement_id": 61028,
+  "name_en": "Undead Battler of Eastern Kingdoms",
+  "name_ru": "Укротитель нежити Восточных королевств",
+  "description_en": "Defeat the following trainers of Eastern Kingdoms with a team of all level 25 Undead pets.",
+  "kind": "family_tamer",
+  "required_family": 3,
+  "tamers": [
+   {
+    "npc_id": 64330,
+    "name": "Julia Stevens",
+    "tamer_id": "64330"
+   },
+   {
+    "npc_id": 65648,
+    "name": "Old MacDonald",
+    "tamer_id": "65648"
+   },
+   {
+    "npc_id": 65651,
+    "name": "Lindsay",
+    "tamer_id": "65651"
+   },
+   {
+    "npc_id": 65655,
+    "name": "Eric Davidson",
+    "tamer_id": "65655"
+   },
+   {
+    "npc_id": 63194,
+    "name": "Steven Lisbane",
+    "tamer_id": "63194"
+   },
+   {
+    "npc_id": 65656,
+    "name": "Bill Buckler",
+    "tamer_id": "65656"
+   },
+   {
+    "npc_id": 66478,
+    "name": "David Kosse",
+    "tamer_id": "66478"
+   },
+   {
+    "npc_id": 66512,
+    "name": "Deiza Plaguehorn",
+    "tamer_id": "66512"
+   },
+   {
+    "npc_id": 66515,
+    "name": "Kortas Darkhammer",
+    "tamer_id": "66515"
+   },
+   {
+    "npc_id": 66520,
+    "name": "Durin Darkhammer",
+    "tamer_id": "66520"
+   },
+   {
+    "npc_id": 66518,
+    "name": "Everessa",
+    "tamer_id": "66518"
+   },
+   {
+    "npc_id": 66522,
+    "name": "Lydia Accoste",
+    "tamer_id": "133"
+   }
+  ],
+  "notes": "Defeat all 12. Whole team must be Undead. All pets level 25.",
+  "required_count": 12
+ },
+ {
+  "achievement_id": 61041,
+  "name_en": "Aquatic Battler of Kalimdor",
+  "name_ru": "Укротитель воды Калимдора",
+  "description_en": "Defeat the following trainers of Kalimdor with a team of all level 25 Aquatic pets.",
+  "kind": "family_tamer",
+  "required_family": 8,
+  "tamers": [
+   {
+    "npc_id": 66126,
+    "name": "Zunta",
+    "tamer_id": "66126"
+   },
+   {
+    "npc_id": 66135,
+    "name": "Dagra the Fierce",
+    "tamer_id": "66135"
+   },
+   {
+    "npc_id": 66136,
+    "name": "Analynn",
+    "tamer_id": "66136"
+   },
+   {
+    "npc_id": 66137,
+    "name": "Zonya the Sadist",
+    "tamer_id": "66137"
+   },
+   {
+    "npc_id": 66372,
+    "name": "Merda Stronghoof",
+    "tamer_id": "66372"
+   },
+   {
+    "npc_id": 66352,
+    "name": "Traitor Gluk",
+    "tamer_id": "66352"
+   },
+   {
+    "npc_id": 66412,
+    "name": "Elena Flutterfly",
+    "tamer_id": "66412"
+   },
+   {
+    "npc_id": 66422,
+    "name": "Cassandra Kaboom",
+    "tamer_id": "66422"
+   },
+   {
+    "npc_id": 66436,
+    "name": "Grazzle the Great",
+    "tamer_id": "66436"
+   },
+   {
+    "npc_id": 66442,
+    "name": "Zoltan",
+    "tamer_id": "66442"
+   },
+   {
+    "npc_id": 66452,
+    "name": "Kela Grimtotem",
+    "tamer_id": "66452"
+   },
+   {
+    "npc_id": 66466,
+    "name": "Stone Cold Trixxy",
+    "tamer_id": "129"
+   }
+  ],
+  "notes": "Defeat all 12. Whole team must be Aquatic. All pets level 25.",
+  "required_count": 12
+ },
+ {
+  "achievement_id": 61042,
+  "name_en": "Beast Battler of Kalimdor",
+  "name_ru": "Укротитель животных Калимдора",
+  "description_en": "Defeat the following trainers of Kalimdor with a team of all level 25 Beast pets.",
+  "kind": "family_tamer",
+  "required_family": 7,
+  "tamers": [
+   {
+    "npc_id": 66126,
+    "name": "Zunta",
+    "tamer_id": "66126"
+   },
+   {
+    "npc_id": 66135,
+    "name": "Dagra the Fierce",
+    "tamer_id": "66135"
+   },
+   {
+    "npc_id": 66136,
+    "name": "Analynn",
+    "tamer_id": "66136"
+   },
+   {
+    "npc_id": 66137,
+    "name": "Zonya the Sadist",
+    "tamer_id": "66137"
+   },
+   {
+    "npc_id": 66372,
+    "name": "Merda Stronghoof",
+    "tamer_id": "66372"
+   },
+   {
+    "npc_id": 66352,
+    "name": "Traitor Gluk",
+    "tamer_id": "66352"
+   },
+   {
+    "npc_id": 66412,
+    "name": "Elena Flutterfly",
+    "tamer_id": "66412"
+   },
+   {
+    "npc_id": 66422,
+    "name": "Cassandra Kaboom",
+    "tamer_id": "66422"
+   },
+   {
+    "npc_id": 66436,
+    "name": "Grazzle the Great",
+    "tamer_id": "66436"
+   },
+   {
+    "npc_id": 66442,
+    "name": "Zoltan",
+    "tamer_id": "66442"
+   },
+   {
+    "npc_id": 66452,
+    "name": "Kela Grimtotem",
+    "tamer_id": "66452"
+   },
+   {
+    "npc_id": 66466,
+    "name": "Stone Cold Trixxy",
+    "tamer_id": "129"
+   }
+  ],
+  "notes": "Defeat all 12. Whole team must be Beast. All pets level 25.",
+  "required_count": 12
+ },
+ {
+  "achievement_id": 61043,
+  "name_en": "Critter Battler of Kalimdor",
+  "name_ru": "Укротитель зверьков Калимдора",
+  "description_en": "Defeat the following trainers of Kalimdor with a team of all level 25 Critter pets.",
+  "kind": "family_tamer",
+  "required_family": 4,
+  "tamers": [
+   {
+    "npc_id": 66126,
+    "name": "Zunta",
+    "tamer_id": "66126"
+   },
+   {
+    "npc_id": 66135,
+    "name": "Dagra the Fierce",
+    "tamer_id": "66135"
+   },
+   {
+    "npc_id": 66136,
+    "name": "Analynn",
+    "tamer_id": "66136"
+   },
+   {
+    "npc_id": 66137,
+    "name": "Zonya the Sadist",
+    "tamer_id": "66137"
+   },
+   {
+    "npc_id": 66372,
+    "name": "Merda Stronghoof",
+    "tamer_id": "66372"
+   },
+   {
+    "npc_id": 66352,
+    "name": "Traitor Gluk",
+    "tamer_id": "66352"
+   },
+   {
+    "npc_id": 66412,
+    "name": "Elena Flutterfly",
+    "tamer_id": "66412"
+   },
+   {
+    "npc_id": 66422,
+    "name": "Cassandra Kaboom",
+    "tamer_id": "66422"
+   },
+   {
+    "npc_id": 66436,
+    "name": "Grazzle the Great",
+    "tamer_id": "66436"
+   },
+   {
+    "npc_id": 66442,
+    "name": "Zoltan",
+    "tamer_id": "66442"
+   },
+   {
+    "npc_id": 66452,
+    "name": "Kela Grimtotem",
+    "tamer_id": "66452"
+   },
+   {
+    "npc_id": 66466,
+    "name": "Stone Cold Trixxy",
+    "tamer_id": "129"
+   }
+  ],
+  "notes": "Defeat all 12. Whole team must be Critter. All pets level 25.",
+  "required_count": 12
+ },
+ {
+  "achievement_id": 61044,
+  "name_en": "Dragonkin Battler of Kalimdor",
+  "name_ru": "Укротитель драконов Калимдора",
+  "description_en": "Defeat the following trainers of Kalimdor with a team of all level 25 Dragonkin pets.",
+  "kind": "family_tamer",
+  "required_family": 1,
+  "tamers": [
+   {
+    "npc_id": 66126,
+    "name": "Zunta",
+    "tamer_id": "66126"
+   },
+   {
+    "npc_id": 66135,
+    "name": "Dagra the Fierce",
+    "tamer_id": "66135"
+   },
+   {
+    "npc_id": 66136,
+    "name": "Analynn",
+    "tamer_id": "66136"
+   },
+   {
+    "npc_id": 66137,
+    "name": "Zonya the Sadist",
+    "tamer_id": "66137"
+   },
+   {
+    "npc_id": 66372,
+    "name": "Merda Stronghoof",
+    "tamer_id": "66372"
+   },
+   {
+    "npc_id": 66352,
+    "name": "Traitor Gluk",
+    "tamer_id": "66352"
+   },
+   {
+    "npc_id": 66412,
+    "name": "Elena Flutterfly",
+    "tamer_id": "66412"
+   },
+   {
+    "npc_id": 66422,
+    "name": "Cassandra Kaboom",
+    "tamer_id": "66422"
+   },
+   {
+    "npc_id": 66436,
+    "name": "Grazzle the Great",
+    "tamer_id": "66436"
+   },
+   {
+    "npc_id": 66442,
+    "name": "Zoltan",
+    "tamer_id": "66442"
+   },
+   {
+    "npc_id": 66452,
+    "name": "Kela Grimtotem",
+    "tamer_id": "66452"
+   },
+   {
+    "npc_id": 66466,
+    "name": "Stone Cold Trixxy",
+    "tamer_id": "129"
+   }
+  ],
+  "notes": "Defeat all 12. Whole team must be Dragonkin. All pets level 25.",
+  "required_count": 12
+ },
+ {
+  "achievement_id": 61045,
+  "name_en": "Elemental Battler of Kalimdor",
+  "name_ru": "Укротитель элементалей Калимдора",
+  "description_en": "Defeat the following trainers of Kalimdor with a team of all level 25 Elemental pets.",
+  "kind": "family_tamer",
+  "required_family": 6,
+  "tamers": [
+   {
+    "npc_id": 66126,
+    "name": "Zunta",
+    "tamer_id": "66126"
+   },
+   {
+    "npc_id": 66135,
+    "name": "Dagra the Fierce",
+    "tamer_id": "66135"
+   },
+   {
+    "npc_id": 66136,
+    "name": "Analynn",
+    "tamer_id": "66136"
+   },
+   {
+    "npc_id": 66137,
+    "name": "Zonya the Sadist",
+    "tamer_id": "66137"
+   },
+   {
+    "npc_id": 66372,
+    "name": "Merda Stronghoof",
+    "tamer_id": "66372"
+   },
+   {
+    "npc_id": 66352,
+    "name": "Traitor Gluk",
+    "tamer_id": "66352"
+   },
+   {
+    "npc_id": 66412,
+    "name": "Elena Flutterfly",
+    "tamer_id": "66412"
+   },
+   {
+    "npc_id": 66422,
+    "name": "Cassandra Kaboom",
+    "tamer_id": "66422"
+   },
+   {
+    "npc_id": 66436,
+    "name": "Grazzle the Great",
+    "tamer_id": "66436"
+   },
+   {
+    "npc_id": 66442,
+    "name": "Zoltan",
+    "tamer_id": "66442"
+   },
+   {
+    "npc_id": 66452,
+    "name": "Kela Grimtotem",
+    "tamer_id": "66452"
+   },
+   {
+    "npc_id": 66466,
+    "name": "Stone Cold Trixxy",
+    "tamer_id": "129"
+   }
+  ],
+  "notes": "Defeat all 12. Whole team must be Elemental. All pets level 25.",
+  "required_count": 12
+ },
+ {
+  "achievement_id": 61046,
+  "name_en": "Flying Battler of Kalimdor",
+  "name_ru": "Укротитель летунов Калимдора",
+  "description_en": "Defeat the following trainers of Kalimdor with a team of all level 25 Flying pets.",
+  "kind": "family_tamer",
+  "required_family": 2,
+  "tamers": [
+   {
+    "npc_id": 66126,
+    "name": "Zunta",
+    "tamer_id": "66126"
+   },
+   {
+    "npc_id": 66135,
+    "name": "Dagra the Fierce",
+    "tamer_id": "66135"
+   },
+   {
+    "npc_id": 66136,
+    "name": "Analynn",
+    "tamer_id": "66136"
+   },
+   {
+    "npc_id": 66137,
+    "name": "Zonya the Sadist",
+    "tamer_id": "66137"
+   },
+   {
+    "npc_id": 66372,
+    "name": "Merda Stronghoof",
+    "tamer_id": "66372"
+   },
+   {
+    "npc_id": 66352,
+    "name": "Traitor Gluk",
+    "tamer_id": "66352"
+   },
+   {
+    "npc_id": 66412,
+    "name": "Elena Flutterfly",
+    "tamer_id": "66412"
+   },
+   {
+    "npc_id": 66422,
+    "name": "Cassandra Kaboom",
+    "tamer_id": "66422"
+   },
+   {
+    "npc_id": 66436,
+    "name": "Grazzle the Great",
+    "tamer_id": "66436"
+   },
+   {
+    "npc_id": 66442,
+    "name": "Zoltan",
+    "tamer_id": "66442"
+   },
+   {
+    "npc_id": 66452,
+    "name": "Kela Grimtotem",
+    "tamer_id": "66452"
+   },
+   {
+    "npc_id": 66466,
+    "name": "Stone Cold Trixxy",
+    "tamer_id": "129"
+   }
+  ],
+  "notes": "Defeat all 12. Whole team must be Flying. All pets level 25.",
+  "required_count": 12
+ },
+ {
+  "achievement_id": 61047,
+  "name_en": "Humanoid Battler of Kalimdor",
+  "name_ru": "Укротитель гуманоидов Калимдора",
+  "description_en": "Defeat the following trainers of Kalimdor with a team of all level 25 Humanoid pets.",
+  "kind": "family_tamer",
+  "required_family": 0,
+  "tamers": [
+   {
+    "npc_id": 66126,
+    "name": "Zunta",
+    "tamer_id": "66126"
+   },
+   {
+    "npc_id": 66135,
+    "name": "Dagra the Fierce",
+    "tamer_id": "66135"
+   },
+   {
+    "npc_id": 66136,
+    "name": "Analynn",
+    "tamer_id": "66136"
+   },
+   {
+    "npc_id": 66137,
+    "name": "Zonya the Sadist",
+    "tamer_id": "66137"
+   },
+   {
+    "npc_id": 66372,
+    "name": "Merda Stronghoof",
+    "tamer_id": "66372"
+   },
+   {
+    "npc_id": 66352,
+    "name": "Traitor Gluk",
+    "tamer_id": "66352"
+   },
+   {
+    "npc_id": 66412,
+    "name": "Elena Flutterfly",
+    "tamer_id": "66412"
+   },
+   {
+    "npc_id": 66422,
+    "name": "Cassandra Kaboom",
+    "tamer_id": "66422"
+   },
+   {
+    "npc_id": 66436,
+    "name": "Grazzle the Great",
+    "tamer_id": "66436"
+   },
+   {
+    "npc_id": 66442,
+    "name": "Zoltan",
+    "tamer_id": "66442"
+   },
+   {
+    "npc_id": 66452,
+    "name": "Kela Grimtotem",
+    "tamer_id": "66452"
+   },
+   {
+    "npc_id": 66466,
+    "name": "Stone Cold Trixxy",
+    "tamer_id": "129"
+   }
+  ],
+  "notes": "Defeat all 12. Whole team must be Humanoid. All pets level 25.",
+  "required_count": 12
+ },
+ {
+  "achievement_id": 61048,
+  "name_en": "Magic Battler of Kalimdor",
+  "name_ru": "Укротитель магии Калимдора",
+  "description_en": "Defeat the following trainers of Kalimdor with a team of all level 25 Magic pets.",
+  "kind": "family_tamer",
+  "required_family": 5,
+  "tamers": [
+   {
+    "npc_id": 66126,
+    "name": "Zunta",
+    "tamer_id": "66126"
+   },
+   {
+    "npc_id": 66135,
+    "name": "Dagra the Fierce",
+    "tamer_id": "66135"
+   },
+   {
+    "npc_id": 66136,
+    "name": "Analynn",
+    "tamer_id": "66136"
+   },
+   {
+    "npc_id": 66137,
+    "name": "Zonya the Sadist",
+    "tamer_id": "66137"
+   },
+   {
+    "npc_id": 66372,
+    "name": "Merda Stronghoof",
+    "tamer_id": "66372"
+   },
+   {
+    "npc_id": 66352,
+    "name": "Traitor Gluk",
+    "tamer_id": "66352"
+   },
+   {
+    "npc_id": 66412,
+    "name": "Elena Flutterfly",
+    "tamer_id": "66412"
+   },
+   {
+    "npc_id": 66422,
+    "name": "Cassandra Kaboom",
+    "tamer_id": "66422"
+   },
+   {
+    "npc_id": 66436,
+    "name": "Grazzle the Great",
+    "tamer_id": "66436"
+   },
+   {
+    "npc_id": 66442,
+    "name": "Zoltan",
+    "tamer_id": "66442"
+   },
+   {
+    "npc_id": 66452,
+    "name": "Kela Grimtotem",
+    "tamer_id": "66452"
+   },
+   {
+    "npc_id": 66466,
+    "name": "Stone Cold Trixxy",
+    "tamer_id": "129"
+   }
+  ],
+  "notes": "Defeat all 12. Whole team must be Magic. All pets level 25.",
+  "required_count": 12
+ },
+ {
+  "achievement_id": 61049,
+  "name_en": "Mechanical Battler of Kalimdor",
+  "name_ru": "Укротитель механики Калимдора",
+  "description_en": "Defeat the following trainers of Kalimdor with a team of all level 25 Mechanical pets.",
+  "kind": "family_tamer",
+  "required_family": 9,
+  "tamers": [
+   {
+    "npc_id": 66126,
+    "name": "Zunta",
+    "tamer_id": "66126"
+   },
+   {
+    "npc_id": 66135,
+    "name": "Dagra the Fierce",
+    "tamer_id": "66135"
+   },
+   {
+    "npc_id": 66136,
+    "name": "Analynn",
+    "tamer_id": "66136"
+   },
+   {
+    "npc_id": 66137,
+    "name": "Zonya the Sadist",
+    "tamer_id": "66137"
+   },
+   {
+    "npc_id": 66372,
+    "name": "Merda Stronghoof",
+    "tamer_id": "66372"
+   },
+   {
+    "npc_id": 66352,
+    "name": "Traitor Gluk",
+    "tamer_id": "66352"
+   },
+   {
+    "npc_id": 66412,
+    "name": "Elena Flutterfly",
+    "tamer_id": "66412"
+   },
+   {
+    "npc_id": 66422,
+    "name": "Cassandra Kaboom",
+    "tamer_id": "66422"
+   },
+   {
+    "npc_id": 66436,
+    "name": "Grazzle the Great",
+    "tamer_id": "66436"
+   },
+   {
+    "npc_id": 66442,
+    "name": "Zoltan",
+    "tamer_id": "66442"
+   },
+   {
+    "npc_id": 66452,
+    "name": "Kela Grimtotem",
+    "tamer_id": "66452"
+   },
+   {
+    "npc_id": 66466,
+    "name": "Stone Cold Trixxy",
+    "tamer_id": "129"
+   }
+  ],
+  "notes": "Defeat all 12. Whole team must be Mechanical. All pets level 25.",
+  "required_count": 12
+ },
+ {
+  "achievement_id": 61050,
+  "name_en": "Undead Battler of Kalimdor",
+  "name_ru": "Укротитель нежити Калимдора",
+  "description_en": "Defeat the following trainers of Kalimdor with a team of all level 25 Undead pets.",
+  "kind": "family_tamer",
+  "required_family": 3,
+  "tamers": [
+   {
+    "npc_id": 66126,
+    "name": "Zunta",
+    "tamer_id": "66126"
+   },
+   {
+    "npc_id": 66135,
+    "name": "Dagra the Fierce",
+    "tamer_id": "66135"
+   },
+   {
+    "npc_id": 66136,
+    "name": "Analynn",
+    "tamer_id": "66136"
+   },
+   {
+    "npc_id": 66137,
+    "name": "Zonya the Sadist",
+    "tamer_id": "66137"
+   },
+   {
+    "npc_id": 66372,
+    "name": "Merda Stronghoof",
+    "tamer_id": "66372"
+   },
+   {
+    "npc_id": 66352,
+    "name": "Traitor Gluk",
+    "tamer_id": "66352"
+   },
+   {
+    "npc_id": 66412,
+    "name": "Elena Flutterfly",
+    "tamer_id": "66412"
+   },
+   {
+    "npc_id": 66422,
+    "name": "Cassandra Kaboom",
+    "tamer_id": "66422"
+   },
+   {
+    "npc_id": 66436,
+    "name": "Grazzle the Great",
+    "tamer_id": "66436"
+   },
+   {
+    "npc_id": 66442,
+    "name": "Zoltan",
+    "tamer_id": "66442"
+   },
+   {
+    "npc_id": 66452,
+    "name": "Kela Grimtotem",
+    "tamer_id": "66452"
+   },
+   {
+    "npc_id": 66466,
+    "name": "Stone Cold Trixxy",
+    "tamer_id": "129"
+   }
+  ],
+  "notes": "Defeat all 12. Whole team must be Undead. All pets level 25.",
+  "required_count": 12
+ },
+ {
+  "achievement_id": 62466,
+  "name_en": "Aquatic Battler of Outland",
+  "name_ru": "Укротитель воды Запределья",
+  "description_en": "Defeat the trainers of Outland with a team of all level 25 Aquatic pets.",
+  "kind": "family_tamer",
+  "required_family": 8,
+  "tamers": [
+   {
+    "npc_id": 66550,
+    "name": "Nicki Tinytech",
+    "tamer_id": "124"
+   },
+   {
+    "npc_id": 66552,
+    "name": "Narrok",
+    "tamer_id": "122"
+   },
+   {
+    "npc_id": 66557,
+    "name": "Bloodknight Antari",
+    "tamer_id": "125"
+   },
+   {
+    "npc_id": 66553,
+    "name": "Morulu The Elder",
+    "tamer_id": "121"
+   },
+   {
+    "npc_id": 66551,
+    "name": "Ras'an",
+    "tamer_id": "123"
+   }
+  ],
+  "notes": "Defeat all 5. Whole team must be Aquatic. All pets level 25.",
+  "required_count": 5
+ },
+ {
+  "achievement_id": 62467,
+  "name_en": "Beast Battler of Outland",
+  "name_ru": "Укротитель животных Запределья",
+  "description_en": "Defeat the trainers of Outland with a team of all level 25 Beast pets.",
+  "kind": "family_tamer",
+  "required_family": 7,
+  "tamers": [
+   {
+    "npc_id": 66550,
+    "name": "Nicki Tinytech",
+    "tamer_id": "124"
+   },
+   {
+    "npc_id": 66552,
+    "name": "Narrok",
+    "tamer_id": "122"
+   },
+   {
+    "npc_id": 66557,
+    "name": "Bloodknight Antari",
+    "tamer_id": "125"
+   },
+   {
+    "npc_id": 66553,
+    "name": "Morulu The Elder",
+    "tamer_id": "121"
+   },
+   {
+    "npc_id": 66551,
+    "name": "Ras'an",
+    "tamer_id": "123"
+   }
+  ],
+  "notes": "Defeat all 5. Whole team must be Beast. All pets level 25.",
+  "required_count": 5
+ },
+ {
+  "achievement_id": 62468,
+  "name_en": "Critter Battler of Outland",
+  "name_ru": "Укротитель зверьков Запределья",
+  "description_en": "Defeat the trainers of Outland with a team of all level 25 Beast pets.",
+  "kind": "family_tamer",
+  "required_family": 4,
+  "tamers": [
+   {
+    "npc_id": 66550,
+    "name": "Nicki Tinytech",
+    "tamer_id": "124"
+   },
+   {
+    "npc_id": 66552,
+    "name": "Narrok",
+    "tamer_id": "122"
+   },
+   {
+    "npc_id": 66557,
+    "name": "Bloodknight Antari",
+    "tamer_id": "125"
+   },
+   {
+    "npc_id": 66553,
+    "name": "Morulu The Elder",
+    "tamer_id": "121"
+   },
+   {
+    "npc_id": 66551,
+    "name": "Ras'an",
+    "tamer_id": "123"
+   }
+  ],
+  "notes": "Defeat all 5. Whole team must be Critter. All pets level 25.",
+  "required_count": 5
+ },
+ {
+  "achievement_id": 62469,
+  "name_en": "Dragonkin Battler of Outland",
+  "name_ru": "Укротитель драконов Запределья",
+  "description_en": "Defeat the trainers of Outland with a team of all level 25 Dragonkin pets.",
+  "kind": "family_tamer",
+  "required_family": 1,
+  "tamers": [
+   {
+    "npc_id": 66550,
+    "name": "Nicki Tinytech",
+    "tamer_id": "124"
+   },
+   {
+    "npc_id": 66552,
+    "name": "Narrok",
+    "tamer_id": "122"
+   },
+   {
+    "npc_id": 66557,
+    "name": "Bloodknight Antari",
+    "tamer_id": "125"
+   },
+   {
+    "npc_id": 66553,
+    "name": "Morulu The Elder",
+    "tamer_id": "121"
+   },
+   {
+    "npc_id": 66551,
+    "name": "Ras'an",
+    "tamer_id": "123"
+   }
+  ],
+  "notes": "Defeat all 5. Whole team must be Dragonkin. All pets level 25.",
+  "required_count": 5
+ },
+ {
+  "achievement_id": 62470,
+  "name_en": "Elemental Battler of Outland",
+  "name_ru": "Укротитель элементалей Запределья",
+  "description_en": "Defeat the trainers of Outland with a team of all level 25 Elemental pets.",
+  "kind": "family_tamer",
+  "required_family": 6,
+  "tamers": [
+   {
+    "npc_id": 66550,
+    "name": "Nicki Tinytech",
+    "tamer_id": "124"
+   },
+   {
+    "npc_id": 66552,
+    "name": "Narrok",
+    "tamer_id": "122"
+   },
+   {
+    "npc_id": 66557,
+    "name": "Bloodknight Antari",
+    "tamer_id": "125"
+   },
+   {
+    "npc_id": 66553,
+    "name": "Morulu The Elder",
+    "tamer_id": "121"
+   },
+   {
+    "npc_id": 66551,
+    "name": "Ras'an",
+    "tamer_id": "123"
+   }
+  ],
+  "notes": "Defeat all 5. Whole team must be Elemental. All pets level 25.",
+  "required_count": 5
+ },
+ {
+  "achievement_id": 62471,
+  "name_en": "Flying Battler of Outland",
+  "name_ru": "Укротитель летунов Запределья",
+  "description_en": "Defeat the trainers of Outland with a team of all level 25 Flying pets.",
+  "kind": "family_tamer",
+  "required_family": 2,
+  "tamers": [
+   {
+    "npc_id": 66550,
+    "name": "Nicki Tinytech",
+    "tamer_id": "124"
+   },
+   {
+    "npc_id": 66552,
+    "name": "Narrok",
+    "tamer_id": "122"
+   },
+   {
+    "npc_id": 66557,
+    "name": "Bloodknight Antari",
+    "tamer_id": "125"
+   },
+   {
+    "npc_id": 66553,
+    "name": "Morulu The Elder",
+    "tamer_id": "121"
+   },
+   {
+    "npc_id": 66551,
+    "name": "Ras'an",
+    "tamer_id": "123"
+   }
+  ],
+  "notes": "Defeat all 5. Whole team must be Flying. All pets level 25.",
+  "required_count": 5
+ },
+ {
+  "achievement_id": 62472,
+  "name_en": "Humanoid Battler of Outland",
+  "name_ru": "Укротитель гуманоидов Запределья",
+  "description_en": "Defeat the trainers of Outland with a team of all level 25 Humanoid pets.",
+  "kind": "family_tamer",
+  "required_family": 0,
+  "tamers": [
+   {
+    "npc_id": 66550,
+    "name": "Nicki Tinytech",
+    "tamer_id": "124"
+   },
+   {
+    "npc_id": 66552,
+    "name": "Narrok",
+    "tamer_id": "122"
+   },
+   {
+    "npc_id": 66557,
+    "name": "Bloodknight Antari",
+    "tamer_id": "125"
+   },
+   {
+    "npc_id": 66553,
+    "name": "Morulu The Elder",
+    "tamer_id": "121"
+   },
+   {
+    "npc_id": 66551,
+    "name": "Ras'an",
+    "tamer_id": "123"
+   }
+  ],
+  "notes": "Defeat all 5. Whole team must be Humanoid. All pets level 25.",
+  "required_count": 5
+ },
+ {
+  "achievement_id": 62473,
+  "name_en": "Magic Battler of Outland",
+  "name_ru": "Укротитель магии Запределья",
+  "description_en": "Defeat the trainers of Outland with a team of all level 25 Magic pets.",
+  "kind": "family_tamer",
+  "required_family": 5,
+  "tamers": [
+   {
+    "npc_id": 66550,
+    "name": "Nicki Tinytech",
+    "tamer_id": "124"
+   },
+   {
+    "npc_id": 66552,
+    "name": "Narrok",
+    "tamer_id": "122"
+   },
+   {
+    "npc_id": 66557,
+    "name": "Bloodknight Antari",
+    "tamer_id": "125"
+   },
+   {
+    "npc_id": 66553,
+    "name": "Morulu The Elder",
+    "tamer_id": "121"
+   },
+   {
+    "npc_id": 66551,
+    "name": "Ras'an",
+    "tamer_id": "123"
+   }
+  ],
+  "notes": "Defeat all 5. Whole team must be Magic. All pets level 25.",
+  "required_count": 5
+ },
+ {
+  "achievement_id": 62474,
+  "name_en": "Mechanical Battler of Outland",
+  "name_ru": "Укротитель механизмов Запределья",
+  "description_en": "Defeat the trainers of Outland with a team of all level 25 Mechanical pets.",
+  "kind": "family_tamer",
+  "required_family": 9,
+  "tamers": [
+   {
+    "npc_id": 66550,
+    "name": "Nicki Tinytech",
+    "tamer_id": "124"
+   },
+   {
+    "npc_id": 66552,
+    "name": "Narrok",
+    "tamer_id": "122"
+   },
+   {
+    "npc_id": 66557,
+    "name": "Bloodknight Antari",
+    "tamer_id": "125"
+   },
+   {
+    "npc_id": 66553,
+    "name": "Morulu The Elder",
+    "tamer_id": "121"
+   },
+   {
+    "npc_id": 66551,
+    "name": "Ras'an",
+    "tamer_id": "123"
+   }
+  ],
+  "notes": "Defeat all 5. Whole team must be Mechanical. All pets level 25.",
+  "required_count": 5
+ },
+ {
+  "achievement_id": 62475,
+  "name_en": "Undead Battler of Outland",
+  "name_ru": "Укротитель нежити Запределья",
+  "description_en": "Defeat the trainers of Outland with a team of all level 25 Undead pets.",
+  "kind": "family_tamer",
+  "required_family": 3,
+  "tamers": [
+   {
+    "npc_id": 66550,
+    "name": "Nicki Tinytech",
+    "tamer_id": "124"
+   },
+   {
+    "npc_id": 66552,
+    "name": "Narrok",
+    "tamer_id": "122"
+   },
+   {
+    "npc_id": 66557,
+    "name": "Bloodknight Antari",
+    "tamer_id": "125"
+   },
+   {
+    "npc_id": 66553,
+    "name": "Morulu The Elder",
+    "tamer_id": "121"
+   },
+   {
+    "npc_id": 66551,
+    "name": "Ras'an",
+    "tamer_id": "123"
+   }
+  ],
+  "notes": "Defeat all 5. Whole team must be Undead. All pets level 25.",
+  "required_count": 5
+ },
+ {
+  "achievement_id": 62476,
+  "name_en": "Aquatic Battler of Cataclysm",
+  "name_ru": "Укротитель воды Cataclysm",
+  "description_en": "Defeat the trainers of Cataclysm with a team of all level 25 Aquatic pets.",
+  "kind": "family_tamer",
+  "required_family": 8,
+  "tamers": [
+   {
+    "npc_id": 66819,
+    "name": "Brok",
+    "tamer_id": "130"
+   },
+   {
+    "npc_id": 66815,
+    "name": "Bordin Steadyfist",
+    "tamer_id": "127"
+   },
+   {
+    "npc_id": 66822,
+    "name": "Goz Banefury",
+    "tamer_id": "134"
+   },
+   {
+    "npc_id": 66824,
+    "name": "Obalis",
+    "tamer_id": "131"
+   }
+  ],
+  "notes": "Defeat all 4. Whole team must be Aquatic. All pets level 25.",
+  "required_count": 4
+ },
+ {
+  "achievement_id": 62477,
+  "name_en": "Beast Battler of Cataclysm",
+  "name_ru": "Укротитель животных Cataclysm",
+  "description_en": "Defeat the trainers of Cataclysm with a team of all level 25 Beast pets.",
+  "kind": "family_tamer",
+  "required_family": 7,
+  "tamers": [
+   {
+    "npc_id": 66819,
+    "name": "Brok",
+    "tamer_id": "130"
+   },
+   {
+    "npc_id": 66815,
+    "name": "Bordin Steadyfist",
+    "tamer_id": "127"
+   },
+   {
+    "npc_id": 66822,
+    "name": "Goz Banefury",
+    "tamer_id": "134"
+   },
+   {
+    "npc_id": 66824,
+    "name": "Obalis",
+    "tamer_id": "131"
+   }
+  ],
+  "notes": "Defeat all 4. Whole team must be Beast. All pets level 25.",
+  "required_count": 4
+ },
+ {
+  "achievement_id": 62478,
+  "name_en": "Critter Battler of Cataclysm",
+  "name_ru": "Укротитель зверьков Cataclysm",
+  "description_en": "Defeat the trainers of Cataclysm with a team of all level 25 Critter pets.",
+  "kind": "family_tamer",
+  "required_family": 4,
+  "tamers": [
+   {
+    "npc_id": 66819,
+    "name": "Brok",
+    "tamer_id": "130"
+   },
+   {
+    "npc_id": 66815,
+    "name": "Bordin Steadyfist",
+    "tamer_id": "127"
+   },
+   {
+    "npc_id": 66822,
+    "name": "Goz Banefury",
+    "tamer_id": "134"
+   },
+   {
+    "npc_id": 66824,
+    "name": "Obalis",
+    "tamer_id": "131"
+   }
+  ],
+  "notes": "Defeat all 4. Whole team must be Critter. All pets level 25.",
+  "required_count": 4
+ },
+ {
+  "achievement_id": 62479,
+  "name_en": "Dragonkin Battler of Cataclysm",
+  "name_ru": "Укротитель драконов Cataclysm",
+  "description_en": "Defeat the trainers of Cataclysm with a team of all level 25 Dragonkin pets.",
+  "kind": "family_tamer",
+  "required_family": 1,
+  "tamers": [
+   {
+    "npc_id": 66819,
+    "name": "Brok",
+    "tamer_id": "130"
+   },
+   {
+    "npc_id": 66815,
+    "name": "Bordin Steadyfist",
+    "tamer_id": "127"
+   },
+   {
+    "npc_id": 66822,
+    "name": "Goz Banefury",
+    "tamer_id": "134"
+   },
+   {
+    "npc_id": 66824,
+    "name": "Obalis",
+    "tamer_id": "131"
+   }
+  ],
+  "notes": "Defeat all 4. Whole team must be Dragonkin. All pets level 25.",
+  "required_count": 4
+ },
+ {
+  "achievement_id": 62480,
+  "name_en": "Elemental Battler of Cataclysm",
+  "name_ru": "Укротитель элементалей Cataclysm",
+  "description_en": "Defeat the trainers of Cataclysm with a team of all level 25 Elemental pets.",
+  "kind": "family_tamer",
+  "required_family": 6,
+  "tamers": [
+   {
+    "npc_id": 66819,
+    "name": "Brok",
+    "tamer_id": "130"
+   },
+   {
+    "npc_id": 66815,
+    "name": "Bordin Steadyfist",
+    "tamer_id": "127"
+   },
+   {
+    "npc_id": 66822,
+    "name": "Goz Banefury",
+    "tamer_id": "134"
+   },
+   {
+    "npc_id": 66824,
+    "name": "Obalis",
+    "tamer_id": "131"
+   }
+  ],
+  "notes": "Defeat all 4. Whole team must be Elemental. All pets level 25.",
+  "required_count": 4
+ },
+ {
+  "achievement_id": 62481,
+  "name_en": "Flying Battler of Cataclysm",
+  "name_ru": "Укротитель летунов Cataclysm",
+  "description_en": "Defeat the trainers of Cataclysm with a team of all level 25 Flying pets.",
+  "kind": "family_tamer",
+  "required_family": 2,
+  "tamers": [
+   {
+    "npc_id": 66819,
+    "name": "Brok",
+    "tamer_id": "130"
+   },
+   {
+    "npc_id": 66815,
+    "name": "Bordin Steadyfist",
+    "tamer_id": "127"
+   },
+   {
+    "npc_id": 66822,
+    "name": "Goz Banefury",
+    "tamer_id": "134"
+   },
+   {
+    "npc_id": 66824,
+    "name": "Obalis",
+    "tamer_id": "131"
+   }
+  ],
+  "notes": "Defeat all 4. Whole team must be Flying. All pets level 25.",
+  "required_count": 4
+ },
+ {
+  "achievement_id": 62482,
+  "name_en": "Humanoid Battler of Cataclysm",
+  "name_ru": "Укротитель гуманоидов Cataclysm",
+  "description_en": "Defeat the trainers of Cataclysm with a team of all level 25 Humanoid pets.",
+  "kind": "family_tamer",
+  "required_family": 0,
+  "tamers": [
+   {
+    "npc_id": 66819,
+    "name": "Brok",
+    "tamer_id": "130"
+   },
+   {
+    "npc_id": 66815,
+    "name": "Bordin Steadyfist",
+    "tamer_id": "127"
+   },
+   {
+    "npc_id": 66822,
+    "name": "Goz Banefury",
+    "tamer_id": "134"
+   },
+   {
+    "npc_id": 66824,
+    "name": "Obalis",
+    "tamer_id": "131"
+   }
+  ],
+  "notes": "Defeat all 4. Whole team must be Humanoid. All pets level 25.",
+  "required_count": 4
+ },
+ {
+  "achievement_id": 62483,
+  "name_en": "Magic Battler of Cataclysm",
+  "name_ru": "Укротитель магии Cataclysm",
+  "description_en": "Defeat the trainers of Cataclysm with a team of all level 25 Magic pets.",
+  "kind": "family_tamer",
+  "required_family": 5,
+  "tamers": [
+   {
+    "npc_id": 66819,
+    "name": "Brok",
+    "tamer_id": "130"
+   },
+   {
+    "npc_id": 66815,
+    "name": "Bordin Steadyfist",
+    "tamer_id": "127"
+   },
+   {
+    "npc_id": 66822,
+    "name": "Goz Banefury",
+    "tamer_id": "134"
+   },
+   {
+    "npc_id": 66824,
+    "name": "Obalis",
+    "tamer_id": "131"
+   }
+  ],
+  "notes": "Defeat all 4. Whole team must be Magic. All pets level 25.",
+  "required_count": 4
+ },
+ {
+  "achievement_id": 62487,
+  "name_en": "Mechanical Battler of Cataclysm",
+  "name_ru": "Укротитель механизмов Cataclysm",
+  "description_en": "Defeat the trainers of Cataclysm with a team of all level 25 Mechanical pets.",
+  "kind": "family_tamer",
+  "required_family": 9,
+  "tamers": [
+   {
+    "npc_id": 66819,
+    "name": "Brok",
+    "tamer_id": "130"
+   },
+   {
+    "npc_id": 66815,
+    "name": "Bordin Steadyfist",
+    "tamer_id": "127"
+   },
+   {
+    "npc_id": 66822,
+    "name": "Goz Banefury",
+    "tamer_id": "134"
+   },
+   {
+    "npc_id": 66824,
+    "name": "Obalis",
+    "tamer_id": "131"
+   }
+  ],
+  "notes": "Defeat all 4. Whole team must be Mechanical. All pets level 25.",
+  "required_count": 4
+ },
+ {
+  "achievement_id": 62488,
+  "name_en": "Undead Battler of Cataclysm",
+  "name_ru": "Укротитель нежити Cataclysm",
+  "description_en": "Defeat the trainers of Cataclysm with a team of all level 25 Undead pets.",
+  "kind": "family_tamer",
+  "required_family": 3,
+  "tamers": [
+   {
+    "npc_id": 66819,
+    "name": "Brok",
+    "tamer_id": "130"
+   },
+   {
+    "npc_id": 66815,
+    "name": "Bordin Steadyfist",
+    "tamer_id": "127"
+   },
+   {
+    "npc_id": 66822,
+    "name": "Goz Banefury",
+    "tamer_id": "134"
+   },
+   {
+    "npc_id": 66824,
+    "name": "Obalis",
+    "tamer_id": "131"
+   }
+  ],
+  "notes": "Defeat all 4. Whole team must be Undead. All pets level 25.",
+  "required_count": 4
+ }
+]

@@ -1,0 +1,9 @@
+## Interface: 120100
+## Title: BPAdvisor
+## Notes: Shows the pet battle state as a QR code for the phone advisor. Read-only, no automation.
+## Author: BP project
+## Version: 0.1
+## SavedVariables: BPAdvisorDB
+
+qr.lua
+BPAdvisor.lua

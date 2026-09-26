@@ -1,0 +1,411 @@
+{
+ "battles": 17,
+ "pets": [
+  {
+   "species": 2842,
+   "count": 9,
+   "breeds": {
+    "4": 9
+   },
+   "choices": {
+    "221": 4,
+    "121": 1,
+    "???": 2,
+    "211": 1,
+    "?11": 1
+   }
+  },
+  {
+   "species": 844,
+   "count": 4,
+   "breeds": {
+    "5": 4
+   },
+   "choices": {
+    "122": 4
+   }
+  },
+  {
+   "species": 1155,
+   "count": 4,
+   "breeds": {
+    "6": 4
+   },
+   "choices": {
+    "12?": 2,
+    "11?": 1,
+    "??2": 1
+   }
+  },
+  {
+   "species": 1177,
+   "count": 3,
+   "breeds": {
+    "6": 2,
+    "10": 1
+   },
+   "choices": {
+    "122": 2,
+    "???": 1
+   }
+  },
+  {
+   "species": 1427,
+   "count": 3,
+   "breeds": {
+    "3": 1,
+    "12": 1,
+    "7": 1
+   },
+   "choices": {
+    "222": 2,
+    "2??": 1
+   }
+  },
+  {
+   "species": 1639,
+   "count": 2,
+   "breeds": {
+    "7": 2
+   },
+   "choices": {
+    "222": 2
+   }
+  },
+  {
+   "species": 1523,
+   "count": 2,
+   "breeds": {
+    "5": 2
+   },
+   "choices": {
+    "1?1": 2
+   }
+  },
+  {
+   "species": 2703,
+   "count": 2,
+   "breeds": {
+    "9": 2
+   },
+   "choices": {
+    "122": 2
+   }
+  },
+  {
+   "species": 3376,
+   "count": 2,
+   "breeds": {
+    "3": 2
+   },
+   "choices": {
+    "112": 2
+   }
+  },
+  {
+   "species": 3482,
+   "count": 2,
+   "breeds": {
+    "6": 2
+   },
+   "choices": {
+    "?2?": 1,
+    "12?": 1
+   }
+  },
+  {
+   "species": 1932,
+   "count": 1,
+   "breeds": {
+    "7": 1
+   },
+   "choices": {
+    "211": 1
+   }
+  },
+  {
+   "species": 519,
+   "count": 1,
+   "breeds": {
+    "9": 1
+   },
+   "choices": {
+    "22?": 1
+   }
+  },
+  {
+   "species": 496,
+   "count": 1,
+   "breeds": {
+    "12": 1
+   },
+   "choices": {
+    "211": 1
+   }
+  },
+  {
+   "species": 1162,
+   "count": 1,
+   "breeds": {
+    "8": 1
+   },
+   "choices": {
+    "111": 1
+   }
+  },
+  {
+   "species": 2089,
+   "count": 1,
+   "breeds": {
+    "10": 1
+   },
+   "choices": {
+    "?11": 1
+   }
+  },
+  {
+   "species": 4307,
+   "count": 1,
+   "breeds": {
+    "6": 1
+   },
+   "choices": {
+    "???": 1
+   }
+  },
+  {
+   "species": 429,
+   "count": 1,
+   "breeds": {
+    "6": 1
+   },
+   "choices": {
+    "1?1": 1
+   }
+  },
+  {
+   "species": 4647,
+   "count": 1,
+   "breeds": {
+    "11": 1
+   },
+   "choices": {
+    "121": 1
+   }
+  },
+  {
+   "species": 1574,
+   "count": 1,
+   "breeds": {
+    "8": 1
+   },
+   "choices": {
+    "221": 1
+   }
+  },
+  {
+   "species": 515,
+   "count": 1,
+   "breeds": {
+    "10": 1
+   },
+   "choices": {
+    "1??": 1
+   }
+  },
+  {
+   "species": 119,
+   "count": 1,
+   "breeds": {
+    "3": 1
+   },
+   "choices": {
+    "11?": 1
+   }
+  },
+  {
+   "species": 1166,
+   "count": 1,
+   "breeds": {
+    "8": 1
+   },
+   "choices": {
+    "???": 1
+   }
+  },
+  {
+   "species": 1626,
+   "count": 1,
+   "breeds": {
+    "12": 1
+   },
+   "choices": {
+    "???": 1
+   }
+  },
+  {
+   "species": 4297,
+   "count": 1,
+   "breeds": {
+    "8": 1
+   },
+   "choices": {
+    "111": 1
+   }
+  },
+  {
+   "species": 412,
+   "count": 1,
+   "breeds": {
+    "5": 1
+   },
+   "choices": {
+    "?1?": 1
+   }
+  },
+  {
+   "species": 1432,
+   "count": 1,
+   "breeds": {
+    "5": 1
+   },
+   "choices": {
+    "121": 1
+   }
+  },
+  {
+   "species": 3244,
+   "count": 1,
+   "breeds": {
+    "7": 1
+   },
+   "choices": {
+    "?11": 1
+   }
+  },
+  {
+   "species": 1163,
+   "count": 1,
+   "breeds": {
+    "6": 1
+   },
+   "choices": {
+    "?11": 1
+   }
+  }
+ ],
+ "teams": [
+  {
+   "species": [
+    844,
+    1639,
+    2842
+   ],
+   "count": 2
+  },
+  {
+   "species": [
+    844,
+    1523,
+    2842
+   ],
+   "count": 2
+  },
+  {
+   "species": [
+    1177,
+    2703,
+    3376
+   ],
+   "count": 2
+  },
+  {
+   "species": [
+    519,
+    1155,
+    1932
+   ],
+   "count": 1
+  },
+  {
+   "species": [
+    496,
+    1155,
+    1162
+   ],
+   "count": 1
+  },
+  {
+   "species": [
+    1155,
+    2089,
+    2842
+   ],
+   "count": 1
+  },
+  {
+   "species": [
+    1155,
+    2842,
+    4307
+   ],
+   "count": 1
+  },
+  {
+   "species": [
+    429,
+    1574,
+    4647
+   ],
+   "count": 1
+  },
+  {
+   "species": [
+    1427,
+    1427,
+    1427
+   ],
+   "count": 1
+  },
+  {
+   "species": [
+    119,
+    515,
+    1166
+   ],
+   "count": 1
+  },
+  {
+   "species": [
+    412,
+    1626,
+    4297
+   ],
+   "count": 1
+  },
+  {
+   "species": [
+    1177,
+    2842,
+    3482
+   ],
+   "count": 1
+  },
+  {
+   "species": [
+    1432,
+    2842,
+    3482
+   ],
+   "count": 1
+  },
+  {
+   "species": [
+    1163,
+    2842,
+    3244
+   ],
+   "count": 1
+  }
+ ]
+}

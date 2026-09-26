@@ -1,0 +1,19 @@
+{
+ "_note": "Extracted via browser from g_listviews on https://www.wowhead.com/battle-pets (listview 'petspecies', 2972 rows) and https://www.wowhead.com/battle-pet-abilities (listview 'pet-abilities', 857 rows). curl gets HTTP 202 AWS WAF challenge. breeds = bitmask, bit (breedId-3). species.type 1-based family; ability.type 0-based family.",
+ "petspecies_sample": [
+  {"species":39,"name":"Mechanical Squirrel","type":10,"health":8.5,"power":7.5,"speed":8,"breeds":256,"abilities":[384,389,459,202,392,278],"npc":{"id":2671},"minquality":2,"category":3,"source":[1,2,28],"icon":"inv_pet_mechanicalsquirrel","model":7937},
+  {"species":1387,"name":"Iron Starlette","type":10,"h":8,"p":8.5,"s":7.5,"breeds":186,"abilities":[459,566,208,390,640,282],"npc":77221},
+  {"species":68,"name":"Great Horned Owl","type":3,"h":8,"p":8,"s":8,"breeds":25,"abilities":[112,784,517,184,190,518],"npc":7553}
+ ],
+ "tamer_npc_66126_pets_listview": [
+  {"species":889,"name":"Mumtar","type":5,"abilities":[119,155,706],"minlevel":2,"maxlevel":2,"minquality":1,"breeds":1,"npc":66144},
+  {"species":890,"name":"Spike","type":8,"abilities":[429,357,355],"minlevel":2,"maxlevel":2,"minquality":1,"breeds":1,"npc":66145}
+ ],
+ "pet_abilities_sample": [
+  {"accuracy":100,"cooldown":3,"damage":27,"duration":9,"icon":"spell_frost_icestorm","id":206,"name":"Call Blizzard","type":6},
+  {"accuracy":100,"cooldown":5,"damage":45,"duration":5,"icon":"inv_misc_stormlordsfavor","id":204,"name":"Call Lightning","type":9},
+  {"accuracy":100,"cooldown":3,"damage":10,"healing":300,"icon":"spell_shadow_bloodboil","id":1043,"name":"Drain Blood","type":3},
+  {"accuracy":100,"cooldown":5,"duration":2,"healing":70,"icon":"ability_repair","id":278,"name":"Repair","type":9},
+  {"accuracy":50,"cooldown":3,"damage":40,"icon":"ability_priest_darkness","id":517,"name":"Nocturnal Strike","type":2}
+ ]
+}

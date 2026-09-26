@@ -1,0 +1,18 @@
+{
+ "_comment": "Hand-written NPC scripts (tdBattlePetScript syntax) that override wow-petsim where it has none or 'use(random)'. Key: npc id -> pet slot -> lines. Derived from BPLogger logs; see bp/validate/ai_check.py.",
+ "_notes": {
+  "223446": "Collector Dyna: rotation hypothesis from 2 logs was falsified by a 3rd battle (Quake round 1, voluntary swap after stun). Kept wow-petsim 'use(random)'."
+ },
+ "223446": {
+  "_source": "Collector Dyna: abilities random (petsim), but swaps out a stunned/asleep pet (2 of 2 logged cases)",
+  "swap_when_cc": true
+ },
+ "223442": {
+  "_source": "Kyrie (Miniature Army): Sir Pounce alternates Leap with Rake (when ready) / Pounce, 4 logged battles; others random",
+  "2": [
+   "use(Leap:364) [last_played>1]",
+   "use(Rake:492)",
+   "use(Pounce:535)"
+  ]
+ }
+}
