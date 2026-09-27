@@ -39,6 +39,11 @@
    "species": 513,
    "name": "Qiraji Guardling",
    "breed": "P/S"
+  },
+  {
+   "species": 513,
+   "name": "Qiraji Guardling",
+   "breed": "B/B"
   }
  ]
 }

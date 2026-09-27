@@ -331,9 +331,11 @@ def add_aura(battle, holder, aid, caster, duration, max_allowed=0, next_attack=F
     cap = max(1, max_allowed or 1)
     if existing and len(existing) >= cap:
         if cap == 1:
+            # a refresh keeps the first caster (whose power scales the ticks): logs 2026-09-27, a second
+            # Poisoned from a weaker pet and a second Swarm of Flies from another Bullfrog both still hit
+            # with the first caster's numbers, for the new duration
             a = existing[0]
             a.duration = duration
-            a.caster = caster
             a.age = 0
             a.fresh = True
             return a
@@ -415,6 +417,9 @@ def roll_hit(battle, ctx: Ctx, target: Pet, accuracy):
                  or (target.state(C.S_FLYING) > 0 and ctx.caster.state(C.S_FLYING) > 0))
         if not reach:
             probe_count(battle, "unreachable", target)
+            key = (_src(ctx), target.name)
+            if battle.forced_miss and battle.forced_miss.get(key):
+                battle.forced_miss[key].pop(0)  # log replay: this is the logged miss, not a later roll
             return False
     acc = accuracy + ctx.caster.state(C.S_ACCURACY)
     if enemy:

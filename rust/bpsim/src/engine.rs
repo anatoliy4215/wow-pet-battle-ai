@@ -938,9 +938,9 @@ impl Battle {
         let existing: Vec<usize> = self.aura_list(h).iter().enumerate().filter(|(_, x)| x.aid == aid).map(|(i, _)| i).collect();
         if !existing.is_empty() && existing.len() >= cap {
             if cap == 1 {
+                // a refresh keeps the first caster (logs 2026-09-27: Poisoned, Swarm of Flies)
                 let x = &mut self.aura_list_mut(h)[existing[0]];
                 x.duration = duration;
-                x.caster = caster;
                 x.age = 0;
                 x.fresh = true;
                 return Some(x.uid);
