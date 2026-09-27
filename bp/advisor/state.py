@@ -15,6 +15,8 @@ from ..sim.battle import Battle
 from ..sim.data import PetSpec, game_data
 from ..validate.replay import _auras
 
+PRIORITY_SPEED = 16250  # seen in QR scans 2026-09-26/27: Anubisath Idol 244 / 16494, Void-Scarred 242 / 16492
+
 
 class Reader:
     def __init__(self, b):
@@ -66,7 +68,10 @@ def build(st):
             slots = gd.species[p["species"]]["abilities"]
             ab = [a if a else slots[k][0] for k, a in enumerate(p["abilities"])]
             pct = p["speed_pct"]
-            speed = round(p["speed"] * 100 / (100 + pct)) if pct > -100 and pct else p["speed"]
+            raw = p["speed"]
+            if raw >= PRIORITY_SPEED:  # the game shows "goes first" (Deflection...) as +16250 speed
+                raw -= PRIORITY_SPEED  # (Anubisath 244 -> 16494); the simulator gives priority itself
+            speed = round(raw * 100 / (100 + pct)) if pct > -100 and pct else raw
             specs.append(PetSpec(species=p["species"], abilities=ab, level=p["level"] or 25, quality=3, breed=3,
                                  stats=(p["maxhp"], p["power"], speed)))
         teams.append(specs)

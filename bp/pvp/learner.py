@@ -138,17 +138,21 @@ def main():
     stats = defaultdict(list)
     first_upd = upd
     print(f"stage 2 learner from update {upd}", flush=True)
+    bad_shards = set()
     while True:
         # ingest new shards
         new = 0
         for p in sorted(shard_root.glob("*/*.npz")):
-            if p.parent == used_dir or p.name.endswith(".tmp.npz"):
+            if p.parent == used_dir or p.name.endswith(".tmp.npz") or p in bad_shards:
                 continue
             try:
                 d = load_shard(p)
-            except Exception as ex:
-                print("bad shard", p.name, ex, flush=True)
-                p.unlink(missing_ok=True)
+            except Exception as ex:  # e.g. cut short by a power loss
+                print("bad shard", p.name, str(ex)[:100], flush=True)
+                try:
+                    p.unlink(missing_ok=True)
+                except OSError:  # Windows may still hold the failed reader's handle
+                    bad_shards.add(p)
                 continue
             buf.add(d)
             new += len(d["z"])

@@ -68,10 +68,15 @@ def main():
         net, mtime = n, m
         print(f"weights loaded (update {ck.get('update')})", flush=True)
 
-    while not os.path.exists(args.weights):
-        print("waiting for weights...", flush=True)
-        time.sleep(10)
-    load()
+    while True:  # wait for readable weights (the learner may still be writing them, or a power
+        # loss may have left a broken file that the learner replaces when it starts)
+        try:
+            load()
+            break
+        except Exception as e:
+            print("waiting for weights:", str(e)[:80], flush=True)
+            mtime = 0.0
+            time.sleep(10)
 
     def new_starts(n):
         res = []
