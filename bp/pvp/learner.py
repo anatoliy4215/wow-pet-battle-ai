@@ -90,9 +90,12 @@ def main():
     ap.add_argument("--micro", type=int, default=1024)
     ap.add_argument("--lr", type=float, default=5e-5)
     ap.add_argument("--resume", action="store_true")
-    ap.add_argument("--quiet", action="store_true", help="no dashboard / benchmark (tests)")
+    ap.add_argument("--quiet", action="store_true",
+                    help="no dashboard / benchmark / exam / ratings: GPU training only (tests, the remote node)")
     ap.add_argument("--minutes", type=float, default=0, help="stop after this long: save, publish, refresh ratings")
     ap.add_argument("--steps", type=int, default=0, help="stop after this many updates (same finish as --minutes)")
+    ap.add_argument("--reload", type=int, default=0,
+                    help="at start, refill the replay buffer from this many newest already-used shards")
     ap.add_argument("--duty", type=float, default=1.0, help="share of time the GPU trains (0.7: pauses so the PC stays quieter)")
     args = ap.parse_args()
 
@@ -127,8 +130,8 @@ def main():
         tmp.replace(ROOT / args.weights)
 
     publish()
-    suite = tactics.build_suite(n=300)
-    pairs = bench.make_pairs()
+    suite = tactics.build_suite(n=300) if not args.quiet else None
+    pairs = bench.make_pairs() if not args.quiet else None
     early = {}
     buf = Buffer(args.buffer)
     rng = np.random.default_rng(0)
@@ -139,6 +142,14 @@ def main():
     first_upd = upd
     print(f"stage 2 learner from update {upd}", flush=True)
     bad_shards = set()
+    if args.reload:  # a restart (update, crash, reboot) keeps the buffer instead of starting empty
+        for p in sorted(used_dir.glob("*.npz"), key=lambda x: x.stat().st_mtime)[-args.reload:]:
+            try:
+                buf.add(load_shard(p))
+            except Exception:
+                pass
+        buf.seen = 0  # the training budget counts new samples only
+        print(f"buffer refilled with {buf.n} samples", flush=True)
     while True:
         # ingest new shards
         new = 0
@@ -231,7 +242,7 @@ def main():
                         row["bench_early"], _ = bench.play(net, early["net"], pairs, seed=2, record=None)
                 except Exception as ex:
                     print("bench error", ex, flush=True)
-            if upd % 10 == 0:
+            if upd % 10 == 0 and not args.quiet:
                 torch.cuda.empty_cache()  # bench / exam batches reserve GPU memory; on Windows that also
                 # counts as committed RAM (the PC swapped with the actor on the same GPU)
                 for k, v in tactics.evaluate(net, suite).items():

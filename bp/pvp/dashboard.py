@@ -376,6 +376,14 @@ def main():
     lg = League(ROOT / "checkpoints" / "pvp" / "league")
     lg.load_state(ck.get("league", {}))
     n = sum(v.numel() for v in ck["model"].values())
+    # training on the remote node runs --quiet: its benchmark / exam rows come from bp.cloud.node
+    ev = ROOT / "logs" / "remote_evals.json"
+    if ev.exists():
+        rows = {r["upd"]: r for r in ck["history"]}
+        for e in json.loads(ev.read_text(encoding="utf-8")):
+            near = max((u for u in rows if u <= (e.get("upd") or 0)), default=None)
+            if near is not None:
+                rows[near].update({k: v for k, v in e.items() if k.startswith(("bench_", "tac_"))})
     render(ROOT / "logs" / "pvp_dashboard.html", ck["history"], lg, n, time.time(), ck["history"][-1]["upd"])
 
 
