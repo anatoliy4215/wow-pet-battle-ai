@@ -6,6 +6,7 @@ __pycache__/
 *.pyc
 .pytest_cache/
 rust/bpsim/target/
+rust/poker/target/
 # trained models and training output (large, regenerated)
 checkpoints/
 logs/

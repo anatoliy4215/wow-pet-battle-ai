@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#0b1f17">
+<title>Холдем против бота</title>
+<style>
+:root {
+  --bg: #0b1f17; --felt: #0f5132; --felt2: #0a3d25; --rim: #3b2a1a; --ink: #f3f5f2; --muted: #a7c2b4;
+  --gold: #f2c14e; --red: #d64545; --card: #fbfbf8; --shadow: 0 6px 18px rgba(0,0,0,.35);
+  --btn: #1c2f27; --btn-ink: #e8efe9; --accent: #2f9e6b; --danger: #b84040;
+}
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+[hidden] { display: none !important; }
+html, body { margin: 0; height: 100%; background: var(--bg); color: var(--ink);
+  font: 15px/1.35 -apple-system, "SF Pro Text", "Segoe UI", Roboto, sans-serif; }
+body { display: flex; flex-direction: column; min-height: 100dvh; padding: env(safe-area-inset-top) 12px calc(env(safe-area-inset-bottom) + 10px); }
+header { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 2px 6px; gap: 8px; }
+header h1 { font-size: 17px; margin: 0; font-weight: 650; }
+.stats { font-size: 12.5px; color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; }
+.stats b { color: var(--ink); }
+.table { position: relative; flex: 1; min-height: 360px; border-radius: 42% / 22%; margin: 4px 0 10px;
+  background: radial-gradient(ellipse at center, var(--felt) 0%, var(--felt2) 78%); border: 7px solid var(--rim);
+  box-shadow: inset 0 0 40px rgba(0,0,0,.45), var(--shadow); display: flex; flex-direction: column;
+  justify-content: space-between; align-items: center; padding: 14px 10px; }
+.seat { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.who { font-size: 13px; color: var(--muted); display: flex; gap: 8px; align-items: center; }
+.who .stack { color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; }
+.btnmark { background: var(--ink); color: #111; border-radius: 50%; width: 18px; height: 18px; font-size: 11px;
+  display: inline-flex; align-items: center; justify-content: center; font-weight: 700; }
+.cards { display: flex; gap: 6px; }
+.card { width: 44px; height: 62px; border-radius: 7px; background: var(--card); color: #111; box-shadow: 0 2px 6px rgba(0,0,0,.35);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; font-weight: 700; line-height: 1; }
+.card .r { font-size: 21px; } .card .s { font-size: 19px; margin-top: 2px; }
+.card.red { color: var(--red); }
+.card.back { background: repeating-linear-gradient(45deg, #7d1f2c 0 6px, #942636 6px 12px); border: 3px solid #f5f0e6; }
+.card.slot { background: rgba(255,255,255,.06); box-shadow: none; border: 1.5px dashed rgba(255,255,255,.18); }
+.big .card { width: 54px; height: 76px; } .big .card .r { font-size: 26px; } .big .card .s { font-size: 23px; }
+.middle { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.pot { background: rgba(0,0,0,.35); padding: 3px 12px; border-radius: 12px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.bet { min-height: 22px; font-size: 13px; color: var(--gold); font-weight: 600; font-variant-numeric: tabular-nums; }
+.bubble { min-height: 20px; font-size: 13px; color: var(--ink); background: rgba(0,0,0,.35); padding: 2px 10px; border-radius: 10px; }
+.bubble:empty { background: none; }
+.handname { font-size: 12.5px; color: var(--muted); min-height: 16px; }
+.controls { display: grid; gap: 8px; }
+.row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.sizes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+button { font: inherit; border: 0; border-radius: 12px; padding: 13px 8px; background: var(--btn); color: var(--btn-ink);
+  font-weight: 600; min-height: 48px; touch-action: manipulation; }
+button:active { transform: scale(.98); }
+button:disabled { opacity: .35; }
+button.fold { background: var(--danger); color: #fff; }
+button.call { background: #2b5d8a; color: #fff; }
+button.raise { background: var(--accent); color: #fff; }
+.sizes button { min-height: 38px; padding: 8px 4px; font-size: 13px; background: #16241e; }
+.sizes button.on { outline: 2px solid var(--gold); }
+input[type=range] { width: 100%; accent-color: var(--gold); }
+.log { font-size: 12.5px; color: var(--muted); min-height: 34px; max-height: 70px; overflow: hidden; }
+.result { position: fixed; inset: auto 12px calc(env(safe-area-inset-bottom) + 12px); background: #102a20; border: 1px solid #2c5a45;
+  border-radius: 16px; padding: 14px; box-shadow: var(--shadow); display: none; text-align: center; }
+.result.show { display: block; }
+.result .msg { font-size: 17px; font-weight: 700; margin-bottom: 4px; }
+.result .sub { color: var(--muted); font-size: 13px; margin-bottom: 10px; }
+.result button { width: 100%; background: var(--gold); color: #1a1a1a; }
+.err { color: #ffb4b4; text-align: center; padding: 20px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Холдем 1 на 1</h1>
+  <div class="stats" id="stats">…</div>
+</header>
+
+<div class="table">
+  <div class="seat">
+    <div class="who"><span id="botName">Бот</span><span class="stack" id="botStack"></span><span class="btnmark" id="botBtn" hidden>D</span></div>
+    <div class="cards" id="botCards"></div>
+    <div class="bubble" id="botSays"></div>
+    <div class="bet" id="botBet"></div>
+  </div>
+  <div class="middle">
+    <div class="cards" id="board"></div>
+    <div class="pot" id="pot"></div>
+  </div>
+  <div class="seat">
+    <div class="bet" id="myBet"></div>
+    <div class="cards big" id="myCards"></div>
+    <div class="handname" id="myHand"></div>
+    <div class="who"><span>Вы</span><span class="stack" id="myStack"></span><span class="btnmark" id="myBtn" hidden>D</span></div>
+  </div>
+</div>
+
+<div class="controls" id="controls">
+  <div class="sizes" id="sizes">
+    <button data-f="0.5">½ банка</button><button data-f="0.75">¾</button><button data-f="1">банк</button><button data-f="all">олл-ин</button>
+  </div>
+  <input type="range" id="slider" min="0" max="100" value="0">
+  <div class="row">
+    <button class="fold" id="bFold">Фолд</button>
+    <button class="call" id="bCall">Чек</button>
+    <button class="raise" id="bRaise">Бет</button>
+  </div>
+  <div class="log" id="log"></div>
+</div>
+
+<div class="result" id="result">
+  <div class="msg" id="resMsg"></div>
+  <div class="sub" id="resSub"></div>
+  <button id="bNext">Следующая раздача</button>
+</div>
+
+<script>
+(() => {
+const $ = id => document.getElementById(id);
+const SUIT = { c: "♣", d: "♦", h: "♥", s: "♠" };
+const RANK = r => r === "T" ? "10" : r;
+const bb = x => {
+  const v = x / 2;
+  return (Number.isInteger(v) ? v : v.toFixed(1)) + " BB";
+};
+let key = new URLSearchParams(location.search).get("k");
+try { if (key) localStorage.setItem("pokerKey", key); else key = localStorage.getItem("pokerKey"); } catch (e) {}
+let tid = null;
+try { tid = localStorage.getItem("pokerTable"); } catch (e) {}
+let st = null, raiseTo = 0, busy = false;
+
+async function api(path, body) {
+  const r = await fetch("/poker/api/" + path, { method: "POST", headers: { "Content-Type": "application/json", "X-Token": key || "" },
+    body: JSON.stringify(body || {}) });
+  return r.json();
+}
+
+function card(c, cls) {
+  const d = document.createElement("div");
+  if (!c) { d.className = "card " + (cls || "back"); return d; }
+  const s = c[1];
+  d.className = "card" + (s === "h" || s === "d" ? " red" : "");
+  d.innerHTML = `<span class="r">${RANK(c[0])}</span><span class="s">${SUIT[s]}</span>`;
+  return d;
+}
+
+function fill(el, cards, n, cls) {
+  el.innerHTML = "";
+  for (let i = 0; i < n; i++) el.appendChild(card(cards && cards[i], cards && cards[i] ? "" : cls));
+}
+
+const ACT = { fold: "фолд", check: "чек", call: "колл", raise: "рейз" };
+const STREET = ["префлоп", "флоп", "тёрн", "ривер", "вскрытие"];
+
+function describe(h, me) {
+  const who = h[1] === 0 ? "Вы" : "Бот";
+  let t = ACT[h[2]];
+  if (h[2] === "raise") t = (h[3] > 0 ? "ставка/рейз до " + bb(h[3]) : "рейз");
+  return `${who}: ${t}`;
+}
+
+function render() {
+  if (!st) return;
+  const me = 0, bot = 1;
+  const m = st.match;
+  $("stats").innerHTML = `раздача <b>${m.hands}</b> · итог <b>${m.net >= 0 ? "+" : ""}${bb(m.net)}</b><br>${m.bb_per_100} BB/100`;
+  $("botName").textContent = m.bot;
+  $("botStack").textContent = bb(st.stacks[bot]);
+  $("myStack").textContent = bb(st.stacks[me]);
+  $("botBtn").hidden = st.button !== bot;
+  $("myBtn").hidden = st.button !== me;
+  fill($("botCards"), st.opp_hole, 2, "back");
+  fill($("myCards"), st.hole, 2);
+  fill($("board"), st.board, 5, "slot");
+  $("pot").textContent = "Банк " + bb(st.pot);
+  $("botBet").textContent = st.over ? "" : (st.street_in[bot] ? bb(st.street_in[bot]) : "");
+  $("myBet").textContent = st.over ? "" : (st.street_in[me] ? bb(st.street_in[me]) : "");
+  $("myHand").textContent = st.hand_name || "";
+  const last = st.history.filter(h => h[1] === bot).slice(-1)[0];
+  $("botSays").textContent = last && !st.over ? describe(last) : "";
+  $("log").innerHTML = st.history.slice(-4).map(h => `${STREET[h[0]]} · ${describe(h)}`).join("<br>");
+
+  const L = st.legal;
+  const can = !!L && !busy;
+  $("bFold").disabled = !can || !L.fold;
+  $("bCall").disabled = !can;
+  $("bCall").textContent = L && L.call > 0 ? "Колл " + bb(L.call) : "Чек";
+  const canRaise = can && L.max_raise > 0;
+  $("bRaise").disabled = !canRaise;
+  $("slider").disabled = !canRaise;
+  document.querySelectorAll("#sizes button").forEach(b => b.disabled = !canRaise);
+  if (canRaise) {
+    if (raiseTo < L.min_raise || raiseTo > L.max_raise) raiseTo = L.min_raise;
+    $("slider").min = L.min_raise; $("slider").max = L.max_raise; $("slider").value = raiseTo;
+    const facing = st.street_in[bot] > st.street_in[me];
+    const allin = raiseTo === L.max_raise;
+    $("bRaise").textContent = allin ? "Олл-ин " + bb(raiseTo) : (facing || st.street === 0 ? "Рейз до " : "Бет ") + bb(raiseTo);
+  } else {
+    $("bRaise").textContent = "Рейз";
+  }
+
+  if (st.over) {
+    const r = st.result[me];
+    $("resMsg").textContent = r > 0 ? `Вы выиграли ${bb(r)}` : r < 0 ? `Вы проиграли ${bb(-r)}` : "Ничья";
+    let sub = "";
+    if (st.folded === 1) sub = "Бот сбросил карты";
+    else if (st.folded === 0) sub = "Вы сбросили карты";
+    else sub = `У вас: ${st.hand_name || "—"} · у бота: ${st.opp_hand_name || "—"}`;
+    $("resSub").textContent = sub;
+    $("result").classList.add("show");
+  } else {
+    $("result").classList.remove("show");
+  }
+}
+
+function sizeTo(f) {
+  const L = st.legal;
+  if (f === "all") return L.max_raise;
+  const me = 0, bot = 1;
+  const call = L.call || 0;
+  const potAfter = st.pot + call;
+  return Math.round(Math.min(L.max_raise, Math.max(L.min_raise, st.street_in[bot] + potAfter * parseFloat(f))));
+}
+
+async function send(kind, to) {
+  if (busy) return;
+  busy = true; render();
+  try {
+    const r = await api("act", { id: tid, kind, to });
+    if (r.error) return fail(r);
+    st = r;
+  } finally { busy = false; render(); }
+}
+
+async function start(fresh) {
+  let r = null;
+  if (tid && !fresh) r = await api("state", { id: tid });
+  if (!r || r.error) r = await api("new");
+  if (r.error) return fail(r);
+  tid = r.id;
+  try { localStorage.setItem("pokerTable", tid); } catch (e) {}
+  st = r; render();
+}
+
+function fail(r) {
+  if (r.gone) return start(true);
+  document.body.innerHTML = `<div class="err">${r.error || "ошибка"}</div>`;
+}
+
+$("bFold").onclick = () => send("fold");
+$("bCall").onclick = () => send(st.legal && st.legal.call > 0 ? "call" : "check");
+$("bRaise").onclick = () => send("raise", raiseTo);
+$("slider").oninput = e => { raiseTo = parseInt(e.target.value, 10); render(); };
+document.querySelectorAll("#sizes button").forEach(b => b.onclick = () => { raiseTo = sizeTo(b.dataset.f); render(); });
+$("bNext").onclick = async () => {
+  if (busy) return;
+  busy = true;
+  try { const r = await api("next", { id: tid }); if (r.error) return fail(r); st = r; raiseTo = 0; }
+  finally { busy = false; render(); }
+};
+if (!key) { document.body.innerHTML = '<div class="err">Нужен ключ: откройте ссылку с ?k=...</div>'; return; }
+start(false);
+})();
+</script>
+</body>
+</html>

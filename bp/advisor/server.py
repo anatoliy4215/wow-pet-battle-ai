@@ -266,7 +266,11 @@ def make_handler(adv, tok):
         def do_GET(self):
             path = self.path.split("?")[0]
             query = self.path.split("?", 1)[1] if "?" in self.path else ""
-            if path in ("/", "/index.html"):
+            if path.startswith("/poker"):
+                from ..poker import server as poker
+                if not poker.handle_get(self, path):
+                    self._send(404, {"error": "not found"})
+            elif path in ("/", "/index.html"):
                 self._send(200, (WEB / "index.html").read_bytes(), "text/html; charset=utf-8")
             elif path == "/dashboard" and f"k={tok}" in query.split("&"):
                 self._send(200, (ROOT / "logs" / "pvp_dashboard.html").read_bytes(), "text/html; charset=utf-8")
@@ -276,6 +280,17 @@ def make_handler(adv, tok):
                 self._send(404, {"error": "not found"})
 
         def do_POST(self):
+            if self.path.startswith("/poker/api/"):  # heads-up hold'em vs the bot (bp/poker)
+                if self.headers.get("X-Token") != tok:
+                    return self._send(403, {"error": "нужен ключ: откройте ссылку с ?k=..."})
+                try:
+                    from ..poker import server as poker
+                    n = int(self.headers.get("Content-Length") or 0)
+                    body = json.loads(self.rfile.read(n) or b"{}")
+                    return self._send(200, poker.handle_post(self, self.path.split("?")[0], body))
+                except Exception as ex:
+                    traceback.print_exc()
+                    return self._send(400, {"error": str(ex)[:200]})
             if self.path.startswith("/api/exclude"):
                 if self.headers.get("X-Token") != tok:
                     return self._send(403, {"error": "нет ключа"})

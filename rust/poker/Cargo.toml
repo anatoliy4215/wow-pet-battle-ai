@@ -1,0 +1,21 @@
+[package]
+name = "bppoker"
+version = "0.1.0"
+edition = "2021"
+description = "Heads-up no-limit hold'em engine, hand evaluator and bots (used from Python via PyO3)"
+
+[lib]
+name = "bppoker"
+crate-type = ["cdylib", "rlib"]
+
+[features]
+default = ["python"]
+python = ["pyo3/extension-module"]
+
+[dependencies]
+pyo3 = { version = "0.23", optional = true }
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
