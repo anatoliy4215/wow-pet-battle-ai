@@ -24,7 +24,7 @@ import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-HOST = os.environ.get("BP_NODE_HOST", "")
+HOST = os.environ.get("BP_NODE_HOST", "")  # the node's address (e.g. its Tailscale IP)
 PORT = int(os.environ.get("BP_NODE_PORT", "2222"))
 KEY = Path.home() / ".ssh" / "bp_node_ed25519"
 SSH_OPTS = ["-o", "StrictHostKeyChecking=no", "-o", "UserKnownHostsFile=/dev/null", "-o", "LogLevel=ERROR",
@@ -36,7 +36,13 @@ LEARNER = ("cd /workspace/bp && exec python -m bp.pvp.learner --resume --quiet -
            "--weights /workspace/ckpt/actor.pt --shards /workspace/shards --buffer 2000000 --reload 450")
 
 
+def _need_host():
+    if not HOST:
+        raise RuntimeError("set BP_NODE_HOST to the training node's address")
+
+
 def ssh(cmd, timeout=600, check=True):
+    _need_host()
     r = subprocess.run(["ssh", "-i", str(KEY), "-p", str(PORT), *SSH_OPTS, f"root@{HOST}", cmd],
                        capture_output=True, text=True, timeout=timeout, encoding="utf-8", errors="replace")
     if check and r.returncode != 0:
@@ -45,11 +51,13 @@ def ssh(cmd, timeout=600, check=True):
 
 
 def scp_to(local, remote, timeout=1800):
+    _need_host()
     subprocess.run(["scp", "-i", str(KEY), "-P", str(PORT), *SSH_OPTS, str(local), f"root@{HOST}:{remote}"],
                    check=True, capture_output=True, timeout=timeout)
 
 
 def scp_from(remote, local, timeout=1800):
+    _need_host()
     subprocess.run(["scp", "-i", str(KEY), "-P", str(PORT), *SSH_OPTS, f"root@{HOST}:{remote}", str(local)],
                    check=True, capture_output=True, timeout=timeout)
 

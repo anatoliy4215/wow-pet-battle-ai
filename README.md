@@ -1,4 +1,39 @@
-# БП — нейросеть для битв питомцев WoW
+# WoW Pet Battle AI
+
+A from-scratch **World of Warcraft pet battle simulator** (Python + a fast Rust port) and neural networks trained on it by self-play:
+
+- **Simulator** — every ability effect opcode of the game (89 of them, documented in [docs/opcodes.md](docs/opcodes.md)), passives, weather, breeds; damage, health and aura-duration formulas **checked against real in-game battle logs** (see below and `tests/`).
+- **PvE model** — PPO agent that beats tamer NPCs (their scripts in tdBattlePetScript syntax) and writes step-by-step plans.
+- **PvP model** — 11.8M-parameter transformer trained with league self-play (PFSP) + one-round look-ahead search; sees only what a player sees (hidden enemy abilities are "one of two"). Wins ~81–83% against a greedy bot.
+- **Team builder** — picks a team from your collection against the current meta.
+- **Addons** — `BPLogger` records battles (full state every round) and exports your collection; `BPAdvisor` shows the battle state as a QR code that a phone page scans to get the model's advice.
+- **Rust engine** (`rust/bpsim`) — the simulator, features and search as a Python extension for fast self-play.
+
+The project is archived (October 2026). Trained models and battle logs are attached to the
+[`archive-2026-10-11` release](https://github.com/anatoliy4215/wow-pet-battle-ai/releases/tag/archive-2026-10-11);
+how to restore everything is in [docs/ARCHIVE.md](docs/ARCHIVE.md) (Russian).
+
+**Verified mechanics** (from logs):
+`health = (base+breed)·5·lvl·q + 100`, `power/speed = (base+breed)·lvl·q`;
+`damage = Points·(1+Power/20) · family · modifiers + flat`, rounded down; `crit = floor(damage·1.5)`;
+aura duration does not count the round it was applied; Humanoid heals 4% max hp at round end if it dealt damage.
+
+Quick start (Windows, Python 3.13, CUDA build of PyTorch):
+```
+py -3.13 -m venv .venv
+.venv\Scripts\python.exe -m pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu128
+.venv\Scripts\python.exe -m bp.data.fetch
+.venv\Scripts\python.exe -m bp.data.build
+.venv\Scripts\python.exe -m pytest tests
+```
+
+Notes: this is a research / hobby project. The addons only read the game state and never automate anything.
+`bp/poker` and `rust/poker` are an unrelated side experiment (heads-up hold'em engine and bot) that shares the advisor server.
+Code is MIT-licensed; game data and third-party references are not (see [LICENSE](LICENSE)).
+
+---
+
+# По-русски: БП — нейросеть для битв питомцев WoW
 
 ## Структура
 - `bp/data/fetch.py` — скачивает игровые таблицы (wago.tools), данные тренеров (wow-petsim), породы (BattlePetBreedID) в `data/raw/`
@@ -42,3 +77,6 @@ start_pvp_training.bat                              (PvP: старт / прод�
 
 ## Архив
 Проект в архиве: как восстановить и где лежат модели — [docs/ARCHIVE.md](docs/ARCHIVE.md).
+
+## Лицензия
+Код — MIT ([LICENSE](LICENSE)). Игровые данные и сторонние файлы в `data/raw/` под неё не подпадают.
